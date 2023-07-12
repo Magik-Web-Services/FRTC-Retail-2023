@@ -1,0 +1,9 @@
+This script ccurrently runs on PHP5.4 and possibly 5.6. I would like it to run on the latest stable PHP version. I think it's PHP 8.2.
+
+Some of these files contain a lot of CSS and JS and very little PHP. All of these PHP files are messy, they contain CSS and JS mixed in. Some CSS has inline PHP, mainly echo's that won't need altered.
+
+Let me know if it can be done.
+
+This will ask for a license when you open the chat page, so let me know when you need it. I can create a license for localhost I believe.
+
+Thanks.

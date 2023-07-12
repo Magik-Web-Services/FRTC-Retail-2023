@@ -1,0 +1,20 @@
+@import 'http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek-ext,cyrillic-ext,greek,vietnamese,cyrillic,latin-ext';
+ul#css-login{
+	margin:0;list-style:none;padding:5px 5px 5px 0;background-color:none;border-width:0;border-style:solid;border-color:;font-size:0;z-index:999;position:relative;display:inline-block;zoom:1;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;
+	*display:inline;}
+ul#css-login li{
+	display:block;white-space:nowrap;font-size:0;float:left;}
+* html ul#css-login li a{
+	display:inline-block;}
+ul#css-login>li{
+	margin:0 0 0 5px;}
+ul#css-login a:active, ul#css-login a:focus{
+	outline-style:none;}
+ul#css-login a{
+	display:block;vertical-align:middle;text-align:left;text-decoration:none;font:14px Verdana,Geneva,sans-serif;color:#ffffff;cursor:pointer;padding:7px 12px;background-color:;background-repeat:repeat;border-width:0px;border-style:none;border-color:;}
+ul#css-login li:hover>a,ul#css-login li a.pressed{
+	border-style:none;color:#ffffff;text-decoration:none;}
+ul#css-login li.top-login-menu>a{
+	background-color:#860000;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;}
+ul#css-login li.top-login-menu:hover>a,ul#css-login li.top-login-menu a.pressed{
+	background-color:#6c0000;}

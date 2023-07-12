@@ -1,0 +1,460 @@
+@media (min-width: 1025px) and (max-width: 1200px) {
+.topnav a {
+    padding: 4px 14px !important;
+}
+
+ul.topmenu.headermaintopleft.col-md-3 {
+    width: 100%;
+}
+.topmenu.col-md-12.col-sm-6 img {
+    height: auto;
+    width: 230px;
+}
+.topmenu.hhhhhff {
+    width: 50%;
+    float: left;
+}
+.phone-header.col-md-4.col-sm-12 {
+    width: 48%;
+}
+.formmmmm .dgdkj input {
+    width: 100%;
+}
+.text_banner {
+    width: 70% !important;
+	top: 100% !important;
+}
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+
+.topnav a {
+    padding: 4px 12px !important;
+}
+.formmmmm .dgdkj input {
+    width: 100%;
+}
+
+ul.topmenu.headermaintopleft.col-md-3 {
+    width: 100%;
+}
+.topmenu.col-md-12.col-sm-6 img {
+    height: auto;
+    width: 230px;
+}
+.topmenu.hhhhhff {
+    width: 50%;
+    float: left;
+}
+.phone-header.col-md-4.col-sm-12 {
+    width: 48%;
+}
+.text_banner {
+    width: 70% !important;
+		    top: 20% !important;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {  
+.topmenu.col-md-6.col-sm-6 img {
+  height: auto;
+  width: 239px;
+}
+.member_sec_top {
+    padding: 15px 0 18px;
+
+}
+.col1 {
+    width: 33.3% !important;
+    float: left;
+    margin: 0 0 !important;
+    box-sizing: border-box;
+}
+.hide-on-med-and-down {
+    display: none;
+}
+.formmmmm .dgdkj input {
+    width: 100%;
+}
+.topnav {
+    padding: 0 37px;
+}
+.phone-header {
+    padding: 12px 37px !important;
+}
+.footer_input_reg select {
+    width: 100%;
+}
+.image-setion:last-child {
+    float: inherit !important;
+}
+.image-setion {
+    margin: 0 0 35px !important;
+}
+.afte_login_vk {
+    float: left;
+    width: 100%;
+}
+.text_banner {
+    width: 80% !important;
+	    top: 30% !important;
+}
+}
+
+@media (max-width: 767px) { 
+
+.registeration_input_sec, .footer_input_reg > input, .footer_input_reg select {
+    margin: 0 0 10px;
+}
+.dfngbodjb div p, .Information_bottom div p{
+	 margin: 0 0 5px;
+}
+
+
+
+
+
+.col-md-l2.hide-on-med-and-down {
+    display: none;
+}
+.topmenu.col-md-12.col-sm-6 img {
+    width: 263px;
+    text-align: center;
+}
+.topmenu {
+    display: inherit;
+}
+.pinkcs {
+    padding: 14px 0 9px;
+}
+.dropdown {
+    position: absolute;
+    width: 104px;
+    right: 0;
+    bottom: 42px;
+}
+.row.bac_colour {
+    padding-top: 52px;
+}
+.mob-menu-dest {
+    float: left;
+    width: 100%;
+    overflow: scroll;
+    height: 300px;
+}
+
+
+
+.card-title {
+    padding: 5px 3px !important;
+    background: none;
+    float: left;
+}
+	.col1 {
+    width: 50% !important;
+    float: left;
+    margin: 0 0 !important;
+    box-sizing: border-box;
+}
+
+.mobile-menu {
+    float: left;
+    width: 100%;
+    display: block;
+    background-color: #000000bf;
+    position: fixed;
+    height: 100%;
+    z-index: 9;
+}
+.mobile-menu.transparent-bac_colour {
+    height: auto;
+}
+
+
+
+/* Mobile header top bar background color  */
+
+.top-mob-header {
+    background-color: #000;
+    padding: 10px 10px;
+	
+  /* mobile header top bar opacity/transparency */
+	opacity: 0.9;
+}
+
+
+
+
+
+/* Mobile drop down menu background color */
+
+
+.toggle-mob-menu {
+    padding: 10px 10px;
+    float: left;
+    width: 270px;
+    background-color: #000;
+    /* border-top: 1px solid #ca3291; */
+    position: fixed;
+    height: 100%;
+    left: 0px;
+    display: none;
+	min-height: 250px;
+    overflow: scroll;
+}
+#style-3::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: transparent !important;
+}
+.transparent-bac_colour{
+	background-color: transparent;	
+}
+.toggle-mob-menu.slide {
+    left: 0;
+}
+
+
+/* mobile join button text color */
+
+.login-btn a {
+    color: #fff;
+    padding: 12px 0px;
+	width: 100%;
+    text-align: center;
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+
+
+
+
+.login-btn {
+    text-align: center;
+    padding-bottom: 11px;
+    /* border-bottom: 1px solid #ca3291; */
+    margin-bottom: 30px;
+}
+
+.pinkcs.desktopmenu {
+    display: none;
+}
+.mob-logo {
+    text-align: center;
+}
+.mob-logo img {
+    max-width: 180px;
+}
+
+
+/* Hamburger toggle button main color */
+
+.toggle-btn {
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    border-radius: 3px;
+    float: left;
+    padding: 9px 7px;
+}
+
+
+
+/* Hamburger toggle button 3 line color */
+
+.tog-bor {
+    height: 3px;
+    background-color: #777;
+    float: left;
+    width: 100%;
+    margin: 1px 0 3px 0;
+}
+
+
+
+
+
+
+/*  mobile dropdown menu secondary droopdwon text color */
+
+.drop-menu-mob {
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 10px;
+    display: block;
+    font-weight: normal;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+/* mobile secondary dropdown background color */
+
+.drop-data-mob {
+    display: none;
+    background-color: #000 !important;
+}
+.mob-menu-dest {
+    float: left;
+    width: 100%;
+}
+.drop-menu-mob .fa {
+    float: right;
+    font-size: 21px;
+    vertical-align: middle;
+}
+
+
+
+/* mobile category drop down text color */
+
+.collection-mob.drop-data-mob a.collection-item {
+    border: none;
+    display: block;
+    padding: 8px 13px;
+    font-size: 16px;
+	    color: #ffcc00;
+}
+
+
+
+
+/* Mobile drop down menu text color */
+
+.mob-menu-dest a {
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 10px;
+    display: block;
+}
+.main-drop-sec.mob-menu-category {
+    float: left;
+    width: 100%;
+}
+/* vinod inner_page */
+.login_sec_cloud {
+    width: 100% !important;
+}
+.dgjh {
+    text-align: center;
+}
+.dgjhright {
+    text-align: center;
+    margin: 11px 0 16px;
+}
+.image-setion {
+    margin: 0 0 35px !important;
+}
+.image-setion:last-child {
+    float: inherit !important;
+}
+
+.formmmmm .dgdkj input {
+    width: 100%;
+}
+/* form.registration-froms {
+    width: 100% !important;
+} */
+.member_sec_top {
+    padding: 16px 0 20px;
+}
+.dfngbodjb .col-md-2.register_content {
+    padding: 0;
+}
+.dfngbodjb .col-md-10 {
+    padding: 0;
+}
+.footer_input_reg select {
+    width: 100%;
+}
+.Information_bottom .col-md-10.footer_input_reg {
+    padding: 0;
+}
+.Information_bottom .col-md-2.register_content {
+    padding: 0;
+}
+.cil_right_sec_img {
+    text-align: left;
+}
+.main-container-cllss li.topmenu:last-child {
+    float: left;
+    width: 100%;
+    margin:  34px 0 0;
+}
+.first_seciton_right_side input {
+    width: 100%;
+}
+.first_seciton_right_side select {
+    width: 100%;
+}
+.first_seciton_right_side textarea {
+    width: 100%;
+}
+
+.update_profile_seciton_sec .col-md-12 {
+    padding: 0;
+}
+
+.update_profile_seciton_sec .col-md-10 {
+    padding: 0;
+}
+.update_profile_seciton_sec .col-md-2 {
+    padding: 0;
+}
+.header_sec_man .text_banner {
+	
+    display: none !important;
+}
+.login form .enviar {
+  width: 100% !important;
+}
+}
+@media (min-width: 560px) and (max-width: 775px) {   
+}
+@media (min-width: 641px) and (max-width: 767px) {  
+.col1 {
+    width: 33.3% !important;
+    float: left;
+    margin: 0 0 !important;
+    box-sizing: border-box;
+}
+}
+@media (min-width: 481px) and (max-width: 640px) {  
+
+}
+@media (min-width: 400px) and (max-width: 480px) {   
+.login form {
+  width: 270px !important;
+}
+.login {
+  max-width: 340px !important;
+  width: 100% !important;
+}
+.login .olvido .col {
+  text-align: left !important;
+}
+}
+@media (min-width: 200px) and (max-width: 399px) {   
+
+.register-left-seciton {
+     font-size: 13px;
+}
+.register-right-seciton {
+    font-size: 13px;
+}
+
+.pagination a {
+    padding: 3px 11px;
+    margin: 0 4px;
+}
+.login form {
+  width: 190px !important;
+}
+.login {
+  max-width: 240px !important;
+  width: 100% !important;
+}
+.login .olvido .col {
+  text-align: left !important;
+}
+}
+

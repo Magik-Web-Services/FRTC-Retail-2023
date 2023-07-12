@@ -1,0 +1,39 @@
+ul#css3menu1,ul#css3menu1 ul{
+	margin:0;list-style:none;padding:0;background-color:none;border-width:0;border-style:solid;border-color:;}
+ul#css3menu1 ul{
+	visibility:hidden;position:absolute;right:0;top:100%;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";opacity:0;-moz-transition:all 0.5s;-webkit-transition:opacity 0.5s;-o-transition:opacity 0.5s,visibility 0.5s;transition:opacity 0.5s;background-color:#000000;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;padding:0 3px 3px;filter:alpha(opacity=95)}
+ul#css3menu1 li:hover>ul{
+	visibility:visible;opacity:1;}
+ul#css3menu1 li{
+	position:relative;display:block;white-space:nowrap;font-size:0;float:left;}
+ul#css3menu1 li:hover{
+	z-index:1;}
+ul#css3menu1>li:hover>ul{
+	opacity:0.95;}
+ul#css3menu1{
+	font-size:0;z-index:999;position:relative;display:inline-block;zoom:1;padding:5px 5px 5px 0;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;
+	*display:inline;}
+* html ul#css3menu1 li a{
+	display:inline-block;}
+ul#css3menu1>li{
+	margin:0 0 0 5px;}
+ul#css3menu1 ul>li{
+	margin:5px 0 0;}
+ul#css3menu1 a:active, ul#css3menu1 a:focus{
+	outline-style:none;}
+ul#css3menu1 a{
+	display:block;vertical-align:middle;text-align:left;text-decoration:none;font:bold 13px Arial,Helvetica,sans-serif;color:#FFFFFF;cursor:pointer;padding:7px 12px;background-color:;background-repeat:repeat;border-width:0px;border-style:none;border-color:;}
+ul#css3menu1 ul li{
+	float:none;margin:3px 0 0;}
+ul#css3menu1 ul a{
+	text-align:left;padding:7px;background-color:#000000;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;font:bold 13px Arial,Helvetica,sans-serif;color:#FFFFFF;text-decoration:none;}
+ul#css3menu1 li:hover>a,ul#css3menu1 li a.pressed{
+	border-style:none;color:#FFFFFF;text-decoration:none;}
+ul#css3menu1 span{
+	display:block;overflow:visible;background-image:url("arrowmain.gif");background-position:left center;background-repeat:no-repeat;padding-left:20px;}
+ul#css3menu1 ul li:hover>a,ul#css3menu1 ul li a.pressed{
+	background-color:#aa0000;color:#FFFFFF;text-decoration:none;}
+ul#css3menu1 li.topmenu>a{
+	background-color:#aa0000;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;}
+ul#css3menu1 li.topmenu:hover>a,ul#css3menu1 li.topmenu a.pressed{
+	background-color:#000000;}
