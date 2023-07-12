@@ -1,4 +1,4 @@
-<? if (!isset($_COOKIE["id"]) || $_COOKIE['usertype']!="chatusers" )
+<?php if (!isset($_COOKIE["id"]) || $_COOKIE['usertype']!="chatusers" )
 
 {
 

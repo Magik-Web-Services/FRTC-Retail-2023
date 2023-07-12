@@ -1,4 +1,4 @@
-<? session_start();
+<?php session_start();
 ob_start();
 include('../../dbase.php');
 ?><html>
@@ -9,7 +9,7 @@ include('../../dbase.php');
 	<h1>LOADING.......</h1>
 	</center>
 	
-	<? //session_start();
+	<?php //session_start();
 //
 // $_SESSION['test']="Ravi Raghav";.
 $amt=$_REQUEST['amount'];

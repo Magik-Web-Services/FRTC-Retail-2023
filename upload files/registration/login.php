@@ -169,7 +169,7 @@ a:active {
 
           <td width="210" align="right" valign="top" class="form_definitions"><div align="right">Username:</div></td>
 
-          <td align="left" valign="top"><input name="accountUser" type="text" id="accountUser" value="<? echo $_GET[user];?>" size="24" maxlength="24"></td>
+          <td align="left" valign="top"><input name="accountUser" type="text" id="accountUser" value="<?php echo $_GET[user];?>" size="24" maxlength="24"></td>
 
           </tr>
 

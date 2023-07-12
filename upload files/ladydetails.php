@@ -35,7 +35,7 @@ function GetAge($Birthdate)
 ?>
 
 
-<? if (isset($_COOKIE["usertype"])){
+<?php if (isset($_COOKIE["usertype"])){
 
 	
     include("_main.header.logged.in.php");	
@@ -208,34 +208,34 @@ mysql_query("UPDATE chatmodels SET cpm='$_POST[cpm]',epercentage='$_POST[epc]' W
   <table width="1000" height="62" border="0" cellpadding="0" cellspacing="0">
     <tr>
       <td width="410" background="images/ladydetails-top-bar.png"><div align="center">
-        <h2 align="left">&nbsp;&nbsp;&nbsp;&nbsp;<? echo $tempUser ?>'s Profile</h2>
+        <h2 align="left">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $tempUser ?>'s Profile</h2>
       </div></td>
-      <td width="192" background="images/ladydetails-top-bar.png"><div class="hoverbox" align="center"><a href="liveshow.php?model=<? echo $tempUser ?>"><img src="images/live-chat-button.png" alt="LIVE CHAT" width="192" height="44" border="0" /></a></div></td>
-      <td width="192" background="images/ladydetails-top-bar.png"><div class="hoverbox" align="center"><a href="videos.php?model=<? echo $tempUser ?>"><img src="images/my-videos-button.png" alt="MY VIDEOS" width="192" height="44" border="0" /></a></div></td>
-      <td width="206" background="images/ladydetails-top-bar.png"><div class="hoverbox" align="left"><a href="addfavourite.php?user=<? echo $tempUser ?>&ok=ok"><img src="images/make-favorite-button.png" alt="ADD AS FAVORITE" width="192" height="44" border="0" /></a></div></td>
+      <td width="192" background="images/ladydetails-top-bar.png"><div class="hoverbox" align="center"><a href="liveshow.php?model=<?php echo $tempUser ?>"><img src="images/live-chat-button.png" alt="LIVE CHAT" width="192" height="44" border="0" /></a></div></td>
+      <td width="192" background="images/ladydetails-top-bar.png"><div class="hoverbox" align="center"><a href="videos.php?model=<?php echo $tempUser ?>"><img src="images/my-videos-button.png" alt="MY VIDEOS" width="192" height="44" border="0" /></a></div></td>
+      <td width="206" background="images/ladydetails-top-bar.png"><div class="hoverbox" align="left"><a href="addfavourite.php?user=<?php echo $tempUser ?>&ok=ok"><img src="images/make-favorite-button.png" alt="ADD AS FAVORITE" width="192" height="44" border="0" /></a></div></td>
     </tr>
   </table>
   <table width="1000" border="0" cellpadding="0">
     <tr>
-      <td width="265"><div class="hoverbox" align="left"><a href="liveshow.php?model=<? echo $tempUser ?>"><img src="../models/<? echo $tempUser."/thumbnail.jpg" ?>" alt="Performer thumbnail image" width="250" height="200" border="0" /></a></div></td>
+      <td width="265"><div class="hoverbox" align="left"><a href="liveshow.php?model=<?php echo $tempUser ?>"><img src="../models/<?php echo $tempUser."/thumbnail.jpg" ?>" alt="Performer thumbnail image" width="250" height="200" border="0" /></a></div></td>
       
       <td width="725" valign="top"><table width="725" border="0" cellpadding="0">
         <tr>
-          <td width="64"><b><? echo $tBirthD; ?></b></td>
-          <td width="131"><b><? echo $tL3; ?></b></td>
-          <td width="124"><b><? echo $tL1; ?></b></td>
-		  <td width="108"><b><? echo $tEthnic; ?></b></td>
-          <td width="111"><b><? echo $tWeight." ".$tWeightM; ?></b></td>
-           <td width="175"><b><? echo $tHeight." ".$tHeightM; ?></b></td>
+          <td width="64"><b><?php echo $tBirthD; ?></b></td>
+          <td width="131"><b><?php echo $tL3; ?></b></td>
+          <td width="124"><b><?php echo $tL1; ?></b></td>
+		  <td width="108"><b><?php echo $tEthnic; ?></b></td>
+          <td width="111"><b><?php echo $tWeight." ".$tWeightM; ?></b></td>
+           <td width="175"><b><?php echo $tHeight." ".$tHeightM; ?></b></td>
         </tr>
       </table>
-        <h3><? echo $tMessage;?></h3></p></td>
+        <h3><?php echo $tMessage;?></h3></p></td>
     </tr>
   </table>
       <table width="1000" height="62" border="0" cellpadding="0">
         <tr>
           <td background="images/ladydetails-top-bar.png"><div align="center">
-            <h2><? echo $tempUser; ?>'s &nbsp;Photo Gallery </h2>
+            <h2><?php echo $tempUser; ?>'s &nbsp;Photo Gallery </h2>
           </div></td>
         </tr>
   </table>

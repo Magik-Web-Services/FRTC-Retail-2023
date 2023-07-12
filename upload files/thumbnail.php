@@ -82,4 +82,4 @@ body { margin-left: 0px;margin-top: 0px;}
 	}
 
   ?>
-   <embed flashvars="&fuser=<? echo $sUser; ?>&fmodel=<? echo $_GET[model]; ?>&fid=<? echo $sId; ?>&fmoney=<? echo $nMoney;?>&favorite=<? echo $nFav;?>&freetime=<? echo $freetime;?>&connection=<? echo $connection_string;?>&cpm=<? echo $cpm; ?>" src="thumbnail.swf" width="250" height="200" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>
+   <embed flashvars="&fuser=<?php echo $sUser; ?>&fmodel=<?php echo $_GET[model]; ?>&fid=<?php echo $sId; ?>&fmoney=<?php echo $nMoney;?>&favorite=<?php echo $nFav;?>&freetime=<?php echo $freetime;?>&connection=<?php echo $connection_string;?>&cpm=<?php echo $cpm; ?>" src="thumbnail.swf" width="250" height="200" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>

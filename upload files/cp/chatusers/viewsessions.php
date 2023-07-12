@@ -73,19 +73,19 @@ include("_members.header.php");
     padding: 7px 0;
 }
 .viewsession_pagination span a {
-    background-color: #<? echo $paginationBackgroundColor;  ?>;
-    color: #<? echo $paginationTextColor;  ?>;
+    background-color: #<?php echo $paginationBackgroundColor;  ?>;
+    color: #<?php echo $paginationTextColor;  ?>;
     padding: 4px 8px;
     margin-right: 5px;
-	border: 1px solid #<? echo $paginationBorderColor;  ?>;
+	border: 1px solid #<?php echo $paginationBorderColor;  ?>;
 }
 
 .viewsession_pagination span b, .viewsession_pagination span a:hover  {
-    background-color: #<? echo $paginationBackgroundColorHover;  ?>;
-    color: #<? echo $paginationTextColorHover;  ?>;
+    background-color: #<?php echo $paginationBackgroundColorHover;  ?>;
+    color: #<?php echo $paginationTextColorHover;  ?>;
     padding: 4px 8px;
     margin-right: 5px;
-	border: 1px solid #<? echo $paginationBorderColorHover;  ?>;
+	border: 1px solid #<?php echo $paginationBorderColorHover;  ?>;
 }
 
 

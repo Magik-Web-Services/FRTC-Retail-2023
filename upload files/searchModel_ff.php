@@ -87,7 +87,7 @@ a:active {
 <!--<table width="100%" height="38" border="0" align="center" bgcolor="#8F0000">
   <tr>
   <td align="center"><h4 class="style1">&nbsp;</h4>
-    <form method="post" action="<? echo $PHP_SELF ?>">
+    <form method="post" action="<?php echo $PHP_SELF ?>">
       &nbsp;
       <table width="720" height="120" border="0" cellpadding="0" cellspacing="0" background="images/search_models_search_bg.png">
         <tr>

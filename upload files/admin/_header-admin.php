@@ -244,7 +244,7 @@ $start=($page-1)*$perpage;
     <tr>
       <td class="links" align="center"><a href ="index.php"><i class="fas fa-gavel"></i> Admin</a></td>
 	  
-      <td class="links" align="center" style="padding-right:20px !important;"><p><a href="newsubscriptions.php"><i class="fas fa-address-card"></i> Pending <div class="new"><b style="color:#fff !important;"><? echo $nPending; ?></b></div></a></p></td>
+      <td class="links" align="center" style="padding-right:20px !important;"><p><a href="newsubscriptions.php"><i class="fas fa-address-card"></i> Pending <div class="new"><b style="color:#fff !important;"><?php echo $nPending; ?></b></div></a></p></td>
 	  
       <td class="links" align="center"><a href="payments.php"><i class="fas fa-dollar-sign"></i> Payouts</a></td>
 	  

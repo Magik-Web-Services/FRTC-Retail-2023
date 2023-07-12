@@ -23,13 +23,13 @@ include("_header-admin.php")
             <h1 align="center">WAIT!</h1>
             <p align="center">&nbsp;</p>
             <p align="center"><b>Are you sure you want to block the account for:</b></p>
-            <p align="center"><span class="a_small_title"><h2 align="center"><b><? echo $_POST['username'];?></b><br>
+            <p align="center"><span class="a_small_title"><h2 align="center"><b><?php echo $_POST['username'];?></b><br>
               </p>
           </h2></span></div></td>
         </tr>
         <tr align="center">
-          <td width="300" class="big_title"><a href="doblockaccount.php?id=<? echo $_POST['id'];?>&type=<? echo $_POST['type']; ?>&username=<?echo $_POST['username'];?>">Yes block this account</a> </td>
-          <td width="290" class="big_title"><a href="<? if($_POST['type']=="model"){echo"modelviewdetails";} else if ($_POST['type']=="member"){echo"memberviewdetails";} else if ($_POST['type']=="sop"){echo"sopviewdetails";}?>.php?id=<? echo $_POST['id'];?>">Return to account information </a></td>
+          <td width="300" class="big_title"><a href="doblockaccount.php?id=<?php echo $_POST['id'];?>&type=<?php echo $_POST['type']; ?>&username=<?echo $_POST['username'];?>">Yes block this account</a> </td>
+          <td width="290" class="big_title"><a href="<?php if($_POST['type']=="model"){echo"modelviewdetails";} else if ($_POST['type']=="member"){echo"memberviewdetails";} else if ($_POST['type']=="sop"){echo"sopviewdetails";}?>.php?id=<?php echo $_POST['id'];?>">Return to account information </a></td>
         </tr>
       </table>
       <p><br>	

@@ -242,7 +242,7 @@ function textCounter(field,field2,maxlimit)
 				</tr>
 
 
-					<form method="post" action="<? echo $PHP_SELF?>" >
+					<form method="post" action="<?php echo $PHP_SELF?>" >
 					<td align="center">
 					    
 						<p>
@@ -273,7 +273,7 @@ function textCounter(field,field2,maxlimit)
 			</td>
 		</tr>
 		<tr>
-			<form method="post" action="<? echo $PHP_SELF?>" >
+			<form method="post" action="<?php echo $PHP_SELF?>" >
 			<td align="center">
 				<input type="text" name="srn" value="" placeholder="Enter broadcaster name..." style="width:300px;"/>
 			</td>
@@ -289,10 +289,10 @@ function textCounter(field,field2,maxlimit)
   </td>
 	</tr>
   <tr>
-    <td bgcolor="#F8F8F8" class="small_title"><p class="message"><strong>Broadcaster funds earned total: $<? echo $tempMoneyEarned;?><br>
-        Site funds earned from Broadcasters total: $<? echo $sitemoney; ?> <br>
-        Unpaid Broadcaster funds total: $<? echo $tempMoneyEarned-$tempMoneySent ?><br>
-    Site funds earned from Broadcasters total (last 7 days): $<? echo $sitemoney30; ?></strong></p></td>
+    <td bgcolor="#F8F8F8" class="small_title"><p class="message"><strong>Broadcaster funds earned total: $<?php echo $tempMoneyEarned;?><br>
+        Site funds earned from Broadcasters total: $<?php echo $sitemoney; ?> <br>
+        Unpaid Broadcaster funds total: $<?php echo $tempMoneyEarned-$tempMoneySent ?><br>
+    Site funds earned from Broadcasters total (last 7 days): $<?php echo $sitemoney30; ?></strong></p></td>
   </tr>
 </table>
 

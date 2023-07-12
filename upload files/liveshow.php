@@ -231,7 +231,7 @@ while ($row = mysql_fetch_array($result)) {
 	</p>
 	<style type="text/css">
 		body {
-			background-color: #<? echo $mainSiteBackgroundColor;  ?> !important;
+			background-color: #<?php echo $mainSiteBackgroundColor;  ?> !important;
 
 		}
 
@@ -428,8 +428,8 @@ while ($row = mysql_fetch_array($result)) {
 		.viewss {
 			float: left;
 			width: 100%;
-			background-color: #<? echo $thumbBarColor2 ?>;
-			color: #<? echo $thumbTextColor ?>;
+			background-color: #<?php echo $thumbBarColor2 ?>;
+			color: #<?php echo $thumbTextColor ?>;
 		}
 
 		@media (max-width: 480px) {
@@ -460,8 +460,8 @@ while ($row = mysql_fetch_array($result)) {
 			</div>
 			<div class="col-md-12 fisrt-secitonss">
 				<div class="col-md-3 col-sm-6 col-xs-12 myslslsl">
-					<a class="showThumbnail oopsshere" href="liveshow.php?model=<? echo $tempUser; ?>" rel="<? echo $tempUser; ?>">
-						<img class="lazy" src="models/<? echo $tempUser; ?>/thumbnail.jpg" src2="models/<? echo $tempUser; ?>/thumbnail.jpg" data-original="models/<? echo $tempUser; ?>/thumbnail.jpg" width="100%" height="" border="0">
+					<a class="showThumbnail oopsshere" href="liveshow.php?model=<?php echo $tempUser; ?>" rel="<?php echo $tempUser; ?>">
+						<img class="lazy" src="models/<?php echo $tempUser; ?>/thumbnail.jpg" src2="models/<?php echo $tempUser; ?>/thumbnail.jpg" data-original="models/<?php echo $tempUser; ?>/thumbnail.jpg" width="100%" height="" border="0">
 					</a>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 myslslsl biosss">
@@ -515,11 +515,11 @@ while ($row = mysql_fetch_array($result)) {
 							</li>
 						<?php } else { ?>
 							<li class="topmenulivehsow">
-								<a class="bio" href="addfavourite.php?user=<? echo $tempUser ?>&ok=ok" style="height:10px;line-height:10px;"> Follow </a>
+								<a class="bio" href="addfavourite.php?user=<?php echo $tempUser ?>&ok=ok" style="height:10px;line-height:10px;"> Follow </a>
 							</li>
 						<?php } ?>
 						<li class="topmenulivehsow">
-							<a class="bio" href="liveshowchat.php?model=<? echo $tempUser ?>" id="bio" style="height:10px;line-height:10px;"> Live Chat </a>
+							<a class="bio" href="liveshowchat.php?model=<?php echo $tempUser ?>" id="bio" style="height:10px;line-height:10px;"> Live Chat </a>
 						</li>
 
 					</ul>

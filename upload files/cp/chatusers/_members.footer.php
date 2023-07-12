@@ -240,7 +240,7 @@ body,td,th {
 
           <td bgcolor="#000000"><div class="links" align="center">
 
-            <p><a href="#">Copyright © <? echo $copyrightYear ?> <? echo $sitename?>. All Rights Reserved.</a></p>
+            <p><a href="#">Copyright © <?php echo $copyrightYear ?> <?php echo $sitename?>. All Rights Reserved.</a></p>
 
             </div></td>
 

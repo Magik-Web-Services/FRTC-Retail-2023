@@ -119,7 +119,7 @@ body,td,th {
 	  <table width="75%" border="0" cellspacing="10" bgcolor="#000000">
         <tr>
           <td bgcolor="#000000"><div class="links" align="center">
-            <p><a href="#">Copyright © <? echo $copyrightYear ?> <? echo $sitename?>. All Rights Reserved. </a><a href="#"></a></p>
+            <p><a href="#">Copyright © <?php echo $copyrightYear ?> <?php echo $sitename?>. All Rights Reserved. </a><a href="#"></a></p>
             </div></td>
         </tr>
       </table>

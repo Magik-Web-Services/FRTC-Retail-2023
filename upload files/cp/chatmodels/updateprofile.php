@@ -602,7 +602,7 @@ if(($tempgender=="Female") OR ($tempgender=="TMTOF")){ ?>
 			<div class="col-md-4 col-sm-4 col-xs-12 current_thumailll_secc_top">
 				<div align="updated_picture">
 				<?php if(isset($_FILES['ImageFile']['name'])){ ?>
-				<img id="pic" src="../../models/<? echo $username; ?>/<?php echo $new_site; ?>thumbnail.jpg">
+				<img id="pic" src="../../models/<?php echo $username; ?>/<?php echo $new_site; ?>thumbnail.jpg">
 				<?php } else {
 					/*echo"<pre>";
 					print_r($_COOKIE);echo"</pre>";*/
@@ -611,10 +611,10 @@ if(($tempgender=="Female") OR ($tempgender=="TMTOF")){ ?>
 				if(isset($_SESSION['img'])){	
 				//print_r($_SESSION);
 				?>
-				<img id="pic" src="../../models/<? echo $username; ?>/<?php echo $_SESSION['img']; ?>thumbnail.jpg">
+				<img id="pic" src="../../models/<?php echo $username; ?>/<?php echo $_SESSION['img']; ?>thumbnail.jpg">
 				<?php 
 				} else {
-					?><img id="pic" src="../../models/<? echo $username; ?>/thumbnail.jpg"><?php
+					?><img id="pic" src="../../models/<?php echo $username; ?>/thumbnail.jpg"><?php
 				}
 				}
 				?>
@@ -741,18 +741,18 @@ if(($tempgender=="Female") OR ($tempgender=="TMTOF")){ ?>
 								?>
 							</select>
 							<select name="month" id="month">
-								<option value="Jan" <? if ($tMonth=="Jan"){ echo "selected";}?>>January</option>
-								<option value="Feb" <? if ($tMonth=="Feb"){ echo "selected";}?>>February</option>
-								<option value="Mar" <? if ($tMonth=="Mar"){ echo "selected";}?>>March</option>
-								<option value="Apr" <? if ($tMonth=="Apr"){ echo "selected";}?>>April</option>
-								<option value="May" <? if ($tMonth=="May"){ echo "selected";}?>>May</option>
-								<option value="Jun" <? if ($tMonth=="Jun"){ echo "selected";}?>>June</option>
-								<option value="Jul" <? if ($tMonth=="Jul"){ echo "selected";}?>>July</option>
-								<option value="Aug" <? if ($tMonth=="Aug"){ echo "selected";}?>>August</option>
-								<option value="Sep" <? if ($tMonth=="Sep"){ echo "selected";}?>>September</option>
-								<option value="Oct" <? if ($tMonth=="Oct"){ echo "selected";}?>>October</option>
-								<option value="Nov" <? if ($tMonth=="Nov"){ echo "selected";}?>>November</option>
-								<option value="Dec" <? if ($tMonth=="Dec"){ echo "selected";}?>>December</option>
+								<option value="Jan" <?php if ($tMonth=="Jan"){ echo "selected";}?>>January</option>
+								<option value="Feb" <?php if ($tMonth=="Feb"){ echo "selected";}?>>February</option>
+								<option value="Mar" <?php if ($tMonth=="Mar"){ echo "selected";}?>>March</option>
+								<option value="Apr" <?php if ($tMonth=="Apr"){ echo "selected";}?>>April</option>
+								<option value="May" <?php if ($tMonth=="May"){ echo "selected";}?>>May</option>
+								<option value="Jun" <?php if ($tMonth=="Jun"){ echo "selected";}?>>June</option>
+								<option value="Jul" <?php if ($tMonth=="Jul"){ echo "selected";}?>>July</option>
+								<option value="Aug" <?php if ($tMonth=="Aug"){ echo "selected";}?>>August</option>
+								<option value="Sep" <?php if ($tMonth=="Sep"){ echo "selected";}?>>September</option>
+								<option value="Oct" <?php if ($tMonth=="Oct"){ echo "selected";}?>>October</option>
+								<option value="Nov" <?php if ($tMonth=="Nov"){ echo "selected";}?>>November</option>
+								<option value="Dec" <?php if ($tMonth=="Dec"){ echo "selected";}?>>December</option>
 							</select>
 							<select name="year" id="year">
 								<?php
@@ -869,7 +869,7 @@ if(($tempgender=="Female") OR ($tempgender=="TMTOF")){ ?>
 						<div class="first_seciton_right_side">
 							<div align="">
 								<input disabled  maxlength="6" size="6" value="285" id="counter" class="msg-areaa">
-								<textarea onkeyup="textCounter(this,'counter',285);" name="Message" cols="50" rows="8" id="Message"><? echo $tMessage;?></textarea>
+								<textarea onkeyup="textCounter(this,'counter',285);" name="Message" cols="50" rows="8" id="Message"><?php echo $tMessage;?></textarea>
 							</div>
 						</div>
 					</div>
@@ -1195,7 +1195,7 @@ if(($tempgender=="Female") OR ($tempgender=="TMTOF")){ ?>
 					</div>
 					<div class="col-md-10">
 						<div class="first_seciton_right_side">
-							<input name="City" type="text" id="City" value="<? echo $tempCity;?>" size="24" maxlength="24">
+							<input name="City" type="text" id="City" value="<?php echo $tempCity;?>" size="24" maxlength="24">
 						</div>
 					</div>					
 					<div class="col-md-2">	

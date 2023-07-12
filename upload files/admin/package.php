@@ -109,7 +109,7 @@ mysql_query("delete from package where id='$_GET[delete]' ");
 <table width="1010" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="#F8F8F8">
 <tr>
 	<td align="center">
-	<table><form method="post" action="<? echo $PHP_SELF?>" >
+	<table><form method="post" action="<?php echo $PHP_SELF?>" >
 
 <tr>
 			<td align="center">

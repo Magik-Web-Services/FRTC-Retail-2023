@@ -10,24 +10,24 @@ include("settings.php");
 <head>
 
 
-	<meta property=og:image content="<? echo $siteurl ?>og-img.jpg">
+	<meta property=og:image content="<?php echo $siteurl ?>og-img.jpg">
 
-	<meta name="description" content="<? echo $sitename ?>">
+	<meta name="description" content="<?php echo $sitename ?>">
 
 	<!-- Facebook Meta Tags -->
-	<meta property="og:url" content="<? echo $siteurl; ?>">
+	<meta property="og:url" content="<?php echo $siteurl; ?>">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="<? echo $sitename ?>">
-	<meta property="og:description" content="<? echo $sitename ?>">
-	<meta property=og:image content="<? echo $siteurl ?>og-img.jpg">
+	<meta property="og:title" content="<?php echo $sitename ?>">
+	<meta property="og:description" content="<?php echo $sitename ?>">
+	<meta property=og:image content="<?php echo $siteurl ?>og-img.jpg">
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta property="twitter:domain" content="<? echo $siteurl ?>">
-	<meta property="twitter:url" content="<? echo $siteurl; ?>">
-	<meta name="twitter:title" content="<? echo $sitename ?>">
-	<meta name="twitter:image" content="<? echo $siteurl ?>og-img.jpg">
-	<meta name="twitter:description" content="<? echo $sitename ?>">
+	<meta property="twitter:domain" content="<?php echo $siteurl ?>">
+	<meta property="twitter:url" content="<?php echo $siteurl; ?>">
+	<meta name="twitter:title" content="<?php echo $sitename ?>">
+	<meta name="twitter:image" content="<?php echo $siteurl ?>og-img.jpg">
+	<meta name="twitter:description" content="<?php echo $sitename ?>">
 
 </head>
 <html lang="en">
@@ -283,7 +283,7 @@ include("settings.php");
 
 
 
-			border: 1px solid #<? echo $TopButtonActiveOutlineColor ?>;
+			border: 1px solid #<?php echo $TopButtonActiveOutlineColor ?>;
 
 
 
@@ -507,9 +507,9 @@ include("settings.php");
 
 
 
-			/*  background-color: #<? echo $topBarColor1 ?>; */
+			/*  background-color: #<?php echo $topBarColor1 ?>; */
 
-			background-image: linear-gradient(#<?php echo $topBarColor1 ?>, #<? echo $topBarColor2 ?>) !important;
+			background-image: linear-gradient(#<?php echo $topBarColor1 ?>, #<?php echo $topBarColor2 ?>) !important;
 
 			float: left;
 
@@ -580,7 +580,7 @@ include("settings.php");
 
 
 
-			background: #<? echo $topBarColor2 ?>;
+			background: #<?php echo $topBarColor2 ?>;
 
 
 			display: none;
@@ -606,7 +606,7 @@ include("settings.php");
 
 
 
-			color: #<? echo $scrollTextColor ?>;
+			color: #<?php echo $scrollTextColor ?>;
 
 
 
@@ -1200,7 +1200,7 @@ include("settings.php");
 
 
 
-						<!--<div class="phone-header col-md-4 col-sm-12"> <? echo $headerLabel ?> <marquee scrolldelay="<? echo $scrollingSpeed ?>"> <? echo $scrollText ?> </marquee></div>-->
+						<!--<div class="phone-header col-md-4 col-sm-12"> <?php echo $headerLabel ?> <marquee scrolldelay="<?php echo $scrollingSpeed ?>"> <?php echo $scrollText ?> </marquee></div>-->
 
 
 
@@ -1436,7 +1436,7 @@ include("settings.php");
 
 
 
-			<div class="top-mob-header" style="background-color:#<? echo $topBarColor1 ?> !important;">
+			<div class="top-mob-header" style="background-color:#<?php echo $topBarColor1 ?> !important;">
 
 
 
@@ -1633,7 +1633,7 @@ include("settings.php");
 
 
 
-			<a href="<? echo $siteurl ?>/new/matcss.php#">
+			<a href="<?php echo $siteurl ?>/new/matcss.php#">
 
 
 

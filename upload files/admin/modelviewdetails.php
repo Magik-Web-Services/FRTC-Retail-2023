@@ -213,7 +213,7 @@ include("_header-admin.php")
   <br>
   
     <tr>
-      <td><div align="center"><h1><? echo $tempUser; ?></h1></div></td>
+      <td><div align="center"><h1><?php echo $tempUser; ?></h1></div></td>
     </tr>
   </table>
 </div>
@@ -222,13 +222,13 @@ include("_header-admin.php")
 	<tr><td><?php echo $msg; ?></td></tr>
 	<?php } ?>
   <tr>
-    <td width="250" height="96" align="center" valign="top"><p><img height="200" width="250" src="../models/<? echo $tempUser."/thumbnail.jpg" ?>"></p>
+    <td width="250" height="96" align="center" valign="top"><p><img height="200" width="250" src="../models/<?php echo $tempUser."/thumbnail.jpg" ?>"></p>
     </td>
-    <td width="234" valign="top"><p style="font-size:20px;"><strong><? echo $tempUser; ?><br>
+    <td width="234" valign="top"><p style="font-size:20px;"><strong><?php echo $tempUser; ?><br>
           <span class="a_small_title">
 		  
 
-<? if($status!='blocked'){ 
+<?php if($status!='blocked'){ 
 	echo ' <div style="color:#fff;font-size:20px;font-weight:300;background-color:#789600;border-color:#ddd;border:solid;border-width:0.5px;border-radius:4px;padding:5px;width:245px;margin-left:-296px;z-index:999 !important;position:absolute;margin-top:120px !important;">Account Active &#127916; </div>';
 } else {
 	echo ' <div style="color:#fff;font-size:20px;font-weight:300;background-color:#ff2121;border-color:#ddd;border:solid;border-width:0.5px;border-radius:4px;padding:5px;width:245px;margin-left:-296px;z-index:999 !important;position:absolute;margin-top:100px !important;">Account Suspended <br> Pending Review &#128721; </div>';
@@ -271,15 +271,15 @@ include("_header-admin.php")
             <td width="292" height="30">
               <div align="center">
                 <input type="submit" name="Submit2" value="Delete Account" style="cursor:pointer;background-color:#ddd;color:#555;">
-                <input name="id" type="hidden" id="id5" value="<? echo $_GET['id']; ?>">
+                <input name="id" type="hidden" id="id5" value="<?php echo $_GET['id']; ?>">
                 <input name="type" type="hidden" id="type4" value="model">
-                <input name="username" type="hidden" id="type5" value="<? echo $tempUser; ?>">
-                <input name="date" type="hidden" id="username" value="<? echo $date; ?>">
+                <input name="username" type="hidden" id="type5" value="<?php echo $tempUser; ?>">
+                <input name="date" type="hidden" id="username" value="<?php echo $date; ?>">
               </div></td>
           </form>
         </tr>
         <tr>
-<? if($status!='blocked'){ 
+<?php if($status!='blocked'){ 
 	echo ' <form name="form2" method="post" action="blockaccount.php">';
 } else {
 	echo ' <form name="form2" method="post" action="activateaccount.php">';
@@ -288,11 +288,11 @@ include("_header-admin.php")
 		<br>	 
                 <td height="30">
                   <div align="center">
-                    <input type="submit" name="Submit22" value="<? if($status!='blocked'){echo ' Suspend Account ';} else {echo 'Activate Account';}?> " style="cursor:pointer;background-color:#ddd;color:#555;">
-                    <input name="id" type="hidden" id="id35" value="<? echo $_GET['id']; ?>">
+                    <input type="submit" name="Submit22" value="<?php if($status!='blocked'){echo ' Suspend Account ';} else {echo 'Activate Account';}?> " style="cursor:pointer;background-color:#ddd;color:#555;">
+                    <input name="id" type="hidden" id="id35" value="<?php echo $_GET['id']; ?>">
                     <input name="type" type="hidden" id="type" value="model">
-                    <input name="username" type="hidden" id="username" value="<? echo $tempUser; ?>">
-                    <input name="date" type="hidden" id="date23" value="<? echo $date; ?>">
+                    <input name="username" type="hidden" id="username" value="<?php echo $tempUser; ?>">
+                    <input name="date" type="hidden" id="date23" value="<?php echo $date; ?>">
             </div></td>
           </form>
         </tr>
@@ -304,10 +304,10 @@ include("_header-admin.php")
             <td height="33">
               <div align="center">
                 <input type="submit" name="Submit222" value="Send Email" style="cursor:pointer;background-color:#ddd;color:#555;">
-                <input name="id" type="hidden" id="id45" value="<? echo $_GET['id']; ?>">
+                <input name="id" type="hidden" id="id45" value="<?php echo $_GET['id']; ?>">
                 <input name="type" type="hidden" id="type2" value="model">
-                <input name="username" type="hidden" id="username4" value="<? echo $tempUser; ?>">
-                <input name="email" type="hidden" id="date4" value="<? echo $tempEmail; ?>">
+                <input name="username" type="hidden" id="username4" value="<?php echo $tempUser; ?>">
+                <input name="email" type="hidden" id="date4" value="<?php echo $tempEmail; ?>">
               </div></td>
           </form>
           </tr>
@@ -319,10 +319,10 @@ include("_header-admin.php")
 				<td height="33">
 				  <div align="center">
 					<input type="submit" name="Submit3232" value="Forced Logout" style="cursor:pointer;background-color:#ddd;color:#555;">
-					<input name="id" type="hidden" id="id45" value="<? echo $_GET['id']; ?>">
+					<input name="id" type="hidden" id="id45" value="<?php echo $_GET['id']; ?>">
 					<input name="type" type="hidden" id="type2" value="model">
-					<input name="username" type="hidden" id="username4" value="<? echo $tempUser; ?>">
-					<input name="email" type="hidden" id="date4" value="<? echo $tempEmail; ?>">
+					<input name="username" type="hidden" id="username4" value="<?php echo $tempUser; ?>">
+					<input name="email" type="hidden" id="date4" value="<?php echo $tempEmail; ?>">
 				  </div></td>
 			  </form>
           </tr>
@@ -343,11 +343,11 @@ include("_header-admin.php")
     <td width="471" valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="5px" cellspacing="2">
       <tr>
         <td width="133" height="19" align="left" valign="top"><strong>User Name</strong></td>
-        <td width="501" align="left" valign="top" class=""><strong><? echo $tempUser; ?></strong></td>
+        <td width="501" align="left" valign="top" class=""><strong><?php echo $tempUser; ?></strong></td>
       </tr>
       <tr>
         <td align="left" valign="top" class="" bgcolor="#f0f0f0">Email</td>
-        <td align="left" valign="top" class="" bgcolor="#f0f0f0"><? echo $tempEmail; ?></td>
+        <td align="left" valign="top" class="" bgcolor="#f0f0f0"><?php echo $tempEmail; ?></td>
       </tr>
 
       <tr>
@@ -364,42 +364,42 @@ include("_header-admin.php")
       <table width="100%"  border="0" cellpadding="5" cellspacing="2">
         <tr>
           <td width="179" align="left" valign="top" class="" bgcolor="#fff">Full Name:</td>
-          <td width="311" align="left" valign="top" class="" bgcolor="#fff"><? echo $tempName; ?></td>
+          <td width="311" align="left" valign="top" class="" bgcolor="#fff"><?php echo $tempName; ?></td>
         </tr>
         <tr>
           <td width="179" align="left" valign="top" class="">Country:</td>
-          <td align="left" valign="top" class=""><? echo $tempCountry; ?></td>
+          <td align="left" valign="top" class=""><?php echo $tempCountry; ?></td>
         </tr>
         <tr>
           <td width="179" align="left" valign="top" class="" bgcolor="#fff">State:</td>
-          <td align="left" valign="top" class="" bgcolor="#fff"><? echo $tempState; ?></td>
+          <td align="left" valign="top" class="" bgcolor="#fff"><?php echo $tempState; ?></td>
         </tr>
         <tr>
           <td width="179" height="21" align="left" valign="top" class="">City:</td>
-          <td align="left" valign="top" class=""><? echo $tempCity; ?></td>
+          <td align="left" valign="top" class=""><?php echo $tempCity; ?></td>
         </tr>
         <tr>
           <td width="179" align="left" valign="top" class="" bgcolor="#fff">Adress:</td>
-          <td align="left" valign="top" class="" bgcolor="#fff"><? echo $tempAdress; ?></td>
+          <td align="left" valign="top" class="" bgcolor="#fff"><?php echo $tempAdress; ?></td>
         </tr>
         <tr>
           <td width="179" align="left" valign="top" class="">Zip Code:</td>
-          <td align="left" valign="top" class=""><? echo $tempZip; ?></td>
+          <td align="left" valign="top" class=""><?php echo $tempZip; ?></td>
         </tr>
         <tr class="">
           <td width="179" align="left" bgcolor="#fff">Phone#:</td>
-          <td bgcolor="#fff"><? echo $tempPhone; ?></td>
+          <td bgcolor="#fff"><?php echo $tempPhone; ?></td>
         </tr>
         <tr>
           <td align="left" class="">Age:</td>
-          <td align="left" class=""><? echo $tBirthD; ?></td>
+          <td align="left" class=""><?php echo $tBirthD; ?></td>
         </tr>
 	<tr>
 	  <td align="left" class="" bgcolor="#fff">Birth Date:</td>
 	  <td align="left" class="" bgcolor="#fff"><?=$birthDateString?></td>
         <tr>
           <td width="179" align="left" class="">Date Registered: </td>
-          <td align="left" class=""><? echo $date;?> </td>
+          <td align="left" class=""><?php echo $date;?> </td>
         </tr>
       </table>
     </div>
@@ -410,24 +410,24 @@ include("_header-admin.php")
   <table width="1010"  border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#F2F2F2" class="form_definitions">
     <tr>
       <td bgcolor="#F2F2F2"><p> Earning percentage. <br>
-              <input name="epc" type="text" id="epc" value="<? echo $epc;?>" size="2" maxlength="2" style="width:25%;">
+              <input name="epc" type="text" id="epc" value="<?php echo $epc;?>" size="2" maxlength="2" style="width:25%;">
           <br>
           <br />
           Cost Per minute<br>
-          <input name="cpm" type="text" id="cpm4" value="<? echo $cpm;?>" size="4" maxlength="4" style="width:25%;">
-           Now Charging (<? echo $cpm ?>  Tokens per minute)  <br>
+          <input name="cpm" type="text" id="cpm4" value="<?php echo $cpm;?>" size="4" maxlength="4" style="width:25%;">
+           Now Charging (<?php echo $cpm ?>  Tokens per minute)  <br>
            <br />
            <br />
           Spectator Cost Per minute<br>
-          <input name="scpm" type="text" id="cpm4" value="<? echo $scpm;?>" size="4" maxlength="4" style="width:25%;">
-           Now Charging (<? echo $scpm ?>  Tokens per minute) <br>
+          <input name="scpm" type="text" id="cpm4" value="<?php echo $scpm;?>" size="4" maxlength="4" style="width:25%;">
+           Now Charging (<?php echo $scpm ?>  Tokens per minute) <br>
            <br />
 
 			<div style="position:absolute;margin-left:0px;margin-top:-8px;"><input type="checkbox" name="phone_chat" id="phone_chat" <?php if($phonechat=="yes"){ echo "checked='checked'"; } ?>> Display Featured Broadcaster Icon </div>
 			</br>
 			  <br />  
           <input type="submit" name="Submit" value="   Save   " class="form_definitions" style="width:350px;background-color:#FFF;color:#555;cursor:pointer;">
-          <input name="id" type="hidden" id="id4" value="<? echo $_GET['id']; ?>">
+          <input name="id" type="hidden" id="id4" value="<?php echo $_GET['id']; ?>">
       </p></td>
     </tr>
   </table>
@@ -526,27 +526,27 @@ mysql_free_result($result);
 </p>
 <table width="1200" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="#ffffff">
   <tr>
-    <td bgcolor="#ffffff" class="small_title"><p class="message"><span class="message">Funds earned total: $<? echo $tempMoneyEarned;?></span><br>
-    Site funds earned from Performer total: $<? echo $sitemoney; ?><br>
-    Funds not yet paid: $<? echo $tempMoneyEarned-$tempMoneySent ?><br>
-    Funds earned by Performer in last 7 days: $<? echo $tempMoneyEarned30; ?></p>      </td>
+    <td bgcolor="#ffffff" class="small_title"><p class="message"><span class="message">Funds earned total: $<?php echo $tempMoneyEarned;?></span><br>
+    Site funds earned from Performer total: $<?php echo $sitemoney; ?><br>
+    Funds not yet paid: $<?php echo $tempMoneyEarned-$tempMoneySent ?><br>
+    Funds earned by Performer in last 7 days: $<?php echo $tempMoneyEarned30; ?></p>      </td>
   </tr>
 </table>
 <table width="1200" align="center" bgcolor="#ffffff" class="form_definitions" style="background-color:#eee !important;">
   <tr>
-    <td><strong class="a_small_title">Copy of <? echo $tempName; ?>'s photo ID </strong></td>
+    <td><strong class="a_small_title">Copy of <?php echo $tempName; ?>'s photo ID </strong></td>
   </tr>
   <tr>
-    <td><img src="../models/<? echo $tempUser."/".$_GET[id].".jpg";  ?>" width="50%"></td>
+    <td><img src="../models/<?php echo $tempUser."/".$_GET[id].".jpg";  ?>" width="50%"></td>
   </tr>
 </table>
 <br />
 <table width="1200" align="center" bgcolor="#ffffff" class="form_definitions" style="background-color:#eee !important;">
   <tr>
-    <td><strong class="a_small_title">Recorded photo of <? echo $tempName; ?> </strong></td>
+    <td><strong class="a_small_title">Recorded photo of <?php echo $tempName; ?> </strong></td>
   </tr>
   <tr>
-    <td><img src="../models/<? echo $tempUser."/representative.jpg";  ?>" width="50%"></td>
+    <td><img src="../models/<?php echo $tempUser."/representative.jpg";  ?>" width="50%"></td>
   </tr>
 </table>
 

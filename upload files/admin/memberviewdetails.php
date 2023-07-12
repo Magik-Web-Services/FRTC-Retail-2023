@@ -160,7 +160,7 @@ body{
   <table width="1010" height="70">
     <tr>
 	
-      <td><div align="left"><h1><? echo $tempName ?></h1></div></td>
+      <td><div align="left"><h1><?php echo $tempName ?></h1></div></td>
     </tr>
   </table>
 </div></div></td>
@@ -178,49 +178,49 @@ body{
 	<tr><td><?php echo $msg; ?></td></tr>
 	<?php } ?>
       <tr>
-        <td width="342" valign="bottom"><p><strong class="big_title">Account Holder:&nbsp; <? echo $tempName ?></strong><br />
-        <strong>Account Status: &nbsp;<? echo $status;?></strong><br />
+        <td width="342" valign="bottom"><p><strong class="big_title">Account Holder:&nbsp; <?php echo $tempName ?></strong><br />
+        <strong>Account Status: &nbsp;<?php echo $status;?></strong><br />
         </p>
           <table width="496" align="center" cellpadding="1" class="form_def">
             <tr>
               <td width="107" align="left">User Name:</td>
-              <td width="93"><? echo $tempUser; ?></td>
+              <td width="93"><?php echo $tempUser; ?></td>
               <td width="10">&nbsp;</td>
             </tr>
             <tr>
               <td align="left">Email:</td>
-              <td><? echo $tempEmail; ?></td>
+              <td><?php echo $tempEmail; ?></td>
               <td >&nbsp;</td>
             </tr>
 
             <tr>
               <td align="left">Full Name: </td>
-              <td><? echo $tempName; ?></td>
+              <td><?php echo $tempName; ?></td>
               <td>&nbsp;</td>
             </tr>
             <tr>
               <td align="left">Country:</td>
-              <td><? echo $tempCountry; ?></td>
+              <td><?php echo $tempCountry; ?></td>
               <td>&nbsp;</td>
             </tr>
             <tr>
               <td align="left">State:</td>
-              <td><? echo $tempState; ?></td>
+              <td><?php echo $tempState; ?></td>
               <td>&nbsp;</td>
             </tr>
             <tr>
               <td align="left">City:</td>
-              <td><? echo $tempCity; ?></td>
+              <td><?php echo $tempCity; ?></td>
               <td>&nbsp;</td>
             </tr>
             <tr>
               <td align="left">Zip Code:</td>
-              <td><? echo $tempZip; ?></td>
+              <td><?php echo $tempZip; ?></td>
               <td>&nbsp;</td>
             </tr>
             <tr>
               <td align="left">Date Registered: </td>
-              <td><? echo date("d F Y",$tempDReg); ?></td>
+              <td><?php echo date("d F Y",$tempDReg); ?></td>
               <td>&nbsp;</td>
             </tr>
           </table>
@@ -231,10 +231,10 @@ body{
               <form name="form1" method="post" action="deleteaccount.php">
                 <td height="30">
                   <input type="submit" name="Submit22" value="Close Account" style="background-color:#ddd !important;cursor:pointer;margin-bottom:-6px;">
-                  <input name="id" type="hidden" id="id5" value="<? echo $_GET['id']; ?>">
+                  <input name="id" type="hidden" id="id5" value="<?php echo $_GET['id']; ?>">
                   <input name="type" type="hidden" id="type4" value="member">
-                  <input name="username" type="hidden" id="type5" value="<? echo $tempUser; ?>">
-                  <input name="date" type="hidden" id="datds" value="<? echo $date; ?>"></td>
+                  <input name="username" type="hidden" id="type5" value="<?php echo $tempUser; ?>">
+                  <input name="date" type="hidden" id="datds" value="<?php echo $date; ?>"></td>
               </form>
 			  
 			  
@@ -244,7 +244,7 @@ body{
 			
 			
             <tr>
-<? if($status!='blocked'){ 
+<?php if($status!='blocked'){ 
 	echo ' <form name="form2" method="post" action="blockaccount.php">';
 } else {
 	echo ' <form name="form2" method="post" action="activateaccount.php">';
@@ -252,21 +252,21 @@ body{
 ?> 
 			 
                 <td height="30" align="center">
-                  <input type="submit" name="Submit22" value="<? if($status!='blocked'){echo 'Block Account ';} else {echo 'Activate Account';}?> " style="background-color:#ddd !important;cursor:pointer;margin-bottom:-6px;">
-                  <input name="id" type="hidden" id="id35" value="<? echo $_GET['id']; ?>">
+                  <input type="submit" name="Submit22" value="<?php if($status!='blocked'){echo 'Block Account ';} else {echo 'Activate Account';}?> " style="background-color:#ddd !important;cursor:pointer;margin-bottom:-6px;">
+                  <input name="id" type="hidden" id="id35" value="<?php echo $_GET['id']; ?>">
                   <input name="type" type="hidden" id="type" value="member">
-                  <input name="username" type="hidden" id="username" value="<? echo $tempUser; ?>">
-                  <input name="date" type="hidden" id="daste" value="<? echo urlencode($date); ?>"></td>
+                  <input name="username" type="hidden" id="username" value="<?php echo $tempUser; ?>">
+                  <input name="date" type="hidden" id="daste" value="<?php echo urlencode($date); ?>"></td>
               </form>
             </tr>
             <tr align="center">
               <form name="form3" method="post" action="sendemail.php">
                 <td height="33" valign="middle">
                   <input type="submit" name="Submit222" value="Email Account Holder" style="background-color:#ddd !important;cursor:pointer;margin-bottom:-6px;">
-                  <input name="id" type="hidden" id="id45" value="<? echo $_GET['id']; ?>">
+                  <input name="id" type="hidden" id="id45" value="<?php echo $_GET['id']; ?>">
                   <input name="type" type="hidden" id="type" value="member">
-                  <input name="username" type="hidden" id="username4" value="<? echo $tempUser; ?>">
-                  <input name="email" type="hidden" id="date4" value="<? echo $tempEmail; ?>"></td>
+                  <input name="username" type="hidden" id="username4" value="<?php echo $tempUser; ?>">
+                  <input name="email" type="hidden" id="date4" value="<?php echo $tempEmail; ?>"></td>
               </form>
             </tr>
 			
@@ -277,10 +277,10 @@ body{
 				<form name="form3" method="post" action="">
 					<td height="33" valign="middle">
 						<input type="submit" name="Submit3232" value="Forced Logout" style="background-color:#ddd !important;cursor:pointer;margin-bottom:-6px;">
-						<input name="id" type="hidden" id="id45" value="<? echo $_GET['id']; ?>">
+						<input name="id" type="hidden" id="id45" value="<?php echo $_GET['id']; ?>">
 						<input name="type" type="hidden" id="type" value="member">
-						<input name="username" type="hidden" id="username4" value="<? echo $tempUser; ?>">
-						<input name="email" type="hidden" id="date4" value="<? echo $tempEmail; ?>">
+						<input name="username" type="hidden" id="username4" value="<?php echo $tempUser; ?>">
+						<input name="email" type="hidden" id="date4" value="<?php echo $tempEmail; ?>">
 					</td>
 				</form>
             </tr>
@@ -291,7 +291,7 @@ body{
 	<table width="1010" align="center" cellpadding="10" bgcolor="#F5F5F5" class="form_def">
       <tr>
         <td width="25%" align="left"><strong>Available Tokens : </strong></td>
-        <td width="75%" align="left"><p><strong><div style="font-size:20px;color:#669900;"><? echo $tempMoney; ?></div></strong></p>
+        <td width="75%" align="left"><p><strong><div style="font-size:20px;color:#669900;"><?php echo $tempMoney; ?></div></strong></p>
           </td>
       </tr>
 	  <form name="form1" method="post" action="">
@@ -306,9 +306,9 @@ body{
           <td width="50%">
             &nbsp;
             <input type="submit" name="Submit" value="Add Tokens To Account" style="margin-left:10px;margin-top:-19px;background-color:#ECEAEA;cursor:pointer;">
-            <input name="username" type="hidden" id="username" value="<? echo $tempUser;?>">
-            <input name="email" type="hidden" id="email" value="<? echo $tempEmail;?>">
-            <input name="id" type="hidden" id="email3" value="<? echo $tempId;?>"></td>
+            <input name="username" type="hidden" id="username" value="<?php echo $tempUser;?>">
+            <input name="email" type="hidden" id="email" value="<?php echo $tempEmail;?>">
+            <input name="id" type="hidden" id="email3" value="<?php echo $tempId;?>"></td>
           </tr>
       </table>
 	  </form>	
@@ -322,9 +322,9 @@ body{
             <td width="50%">
                &nbsp;
                <input type="submit" name="Submit2" value="Remove Tokens From Account" style="margin-left:10px;background-color:#ECEAEA;cursor:pointer;">
-              <input name="username" type="hidden" id="username" value="<? echo $tempUser;?>">
-              <input name="email" type="hidden" id="email" value="<? echo $tempEmail;?>">
-            <input name="id" type="hidden" id="id" value="<? echo $tempId;?>"></td>
+              <input name="username" type="hidden" id="username" value="<?php echo $tempUser;?>">
+              <input name="email" type="hidden" id="email" value="<?php echo $tempEmail;?>">
+            <input name="id" type="hidden" id="id" value="<?php echo $tempId;?>"></td>
           </tr>
         </table>
         <p>&nbsp;</p>

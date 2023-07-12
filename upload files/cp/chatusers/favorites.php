@@ -114,7 +114,7 @@ $("img.lazy").lazyload({effect : "fadeIn",
 
 
 .backgorund_urll {
-    background-color: #<? echo $thumbBorderColor ?>;
+    background-color: #<?php echo $thumbBorderColor ?>;
     margin-bottom: 30px;
     float: left;
     width: 100%;
@@ -162,8 +162,8 @@ p.usrnmm {
 .viewss {
     float: left;
     width: 100%;
-    background-color: #<? echo $thumbBarColor2 ?>;
-    color: #<? echo $thumbTextColor ?>;
+    background-color: #<?php echo $thumbBarColor2 ?>;
+    color: #<?php echo $thumbTextColor ?>;
 	text-align: center;
 }
 

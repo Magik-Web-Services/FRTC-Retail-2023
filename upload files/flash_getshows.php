@@ -1,4 +1,4 @@
-<? 
+<?php 
 //connection to the database
 include("dbase.php");
 //echo $displayId;

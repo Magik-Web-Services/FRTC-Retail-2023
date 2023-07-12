@@ -51,7 +51,7 @@ geoip_close($gi);
 <style type="text/css">
 body {
 	
-	background-image: linear-gradient(#<? echo $homepageBackgroundColor1; ?>, #<? echo $homepageBackgroundColor2; ?>) !important;
+	background-image: linear-gradient(#<?php echo $homepageBackgroundColor1; ?>, #<?php echo $homepageBackgroundColor2; ?>) !important;
 	background-repeat:no-repeat !important;
 	scrollbar-color: #87ceeb #ff5621 !important;
 
@@ -83,8 +83,8 @@ body {
 
 
 .sidebar_filters a:active {
-    background: #<? echo $sidebarHoverColor;  ?> !important;
-    color: #<? echo $sidebarTextHoverColor;  ?> !important;
+    background: #<?php echo $sidebarHoverColor;  ?> !important;
+    color: #<?php echo $sidebarTextHoverColor;  ?> !important;
     font-weight: 700;
     padding: 0px 0px 0px 20px;
 }
@@ -96,8 +96,8 @@ body {
 
 
 .backgorund_urll {
-    background-color: #<? echo $thumbBorderColor ?>;
-    box-shadow: 0px 0px 0px 2px #<? echo $thumbBarColor1 ?>;
+    background-color: #<?php echo $thumbBorderColor ?>;
+    box-shadow: 0px 0px 0px 2px #<?php echo $thumbBarColor1 ?>;
     margin-bottom: 30px;
     float: left;
     width: 100%;
@@ -119,7 +119,7 @@ body {
     font-size: 17px;
     background-color: #222;
     padding: 6px 0;
-    color: #<? echo $thumbTextColor ?>;
+    color: #<?php echo $thumbTextColor ?>;
 }
 
 
@@ -136,8 +136,8 @@ body {
 .viewss {
     float: left;
     width: 100%;
-    background-color: #<? echo $thumbBarColor2 ?>;
-    color: #<? echo $thumbTextColor ?>;
+    background-color: #<?php echo $thumbBarColor2 ?>;
+    color: #<?php echo $thumbTextColor ?>;
 	text-align: center;
 }
 
@@ -161,7 +161,7 @@ body {
     background-color: red;
     padding: 2px 2px;
     text-transform: uppercase;
-    color: #<? echo $thumbTextColor ?>;
+    color: #<?php echo $thumbTextColor ?>;
     font-size: 9px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
@@ -169,8 +169,8 @@ body {
 .viewss {
     float: left;
     width: 100%;
-    background-color: #<? echo $thumbBarColor2 ?>;
-    color: #<? echo $thumbTextColor ?>;
+    background-color: #<?php echo $thumbBarColor2 ?>;
+    color: #<?php echo $thumbTextColor ?>;
 	
 	
 }
@@ -206,8 +206,8 @@ body {
 
 
 .backgorund_urll {
-    background-color: #<? echo $thumbBorderColor ?>;
-    box-shadow: 0px 0px 0px 2px #<? echo $thumbBarColor1 ?>;
+    background-color: #<?php echo $thumbBorderColor ?>;
+    box-shadow: 0px 0px 0px 2px #<?php echo $thumbBarColor1 ?>;
     margin-bottom: 30px;
     float: left;
     width: 100%;
@@ -223,13 +223,13 @@ body {
 
 .category_heading {
 
-    background: #<? echo $sidebarTopColor; ?>;
+    background: #<?php echo $sidebarTopColor; ?>;
 
-    border-bottom: 1px solid #<? echo $sidebarBorderColor; ?>;
+    border-bottom: 1px solid #<?php echo $sidebarBorderColor; ?>;
 
     box-sizing: border-box;
 
-    color: #<? echo $sidebarTextColor; ?>;
+    color: #<?php echo $sidebarTextColor; ?>;
 
     cursor: pointer;
 
@@ -270,13 +270,13 @@ body {
 
 .sidebar_filters a {
 
-    background: #<? echo $sidebarMainColor;  ?>;
+    background: #<?php echo $sidebarMainColor;  ?>;
 
-    border-bottom: 1px solid #<? echo $sidebarBorderColor;  ?>;
+    border-bottom: 1px solid #<?php echo $sidebarBorderColor;  ?>;
 
     box-sizing: border-box;
 
-    color: #<? echo $sidebarTextColor;  ?>;
+    color: #<?php echo $sidebarTextColor;  ?>;
 
     display: block;
 
@@ -296,9 +296,9 @@ body {
 
 .sidebar_filters a:hover  {
 
-    background: #<? echo $sidebarHoverColor;  ?>;
+    background: #<?php echo $sidebarHoverColor;  ?>;
 
-    color: #<? echo $sidebarTextHoverColor;  ?> !important;
+    color: #<?php echo $sidebarTextHoverColor;  ?> !important;
 
     font-weight: 700;
 
@@ -562,12 +562,12 @@ foreach($cat_array as $cat)
 							
 							<?php if($getcatt=="Spy Shows"){ echo "<div class='in-private'>"; } ?>
 							
-							<img class="img-responsive lazy" src="models/<?php echo $username; ?>/thumbnail.jpg" data-original="<? echo $siteurl ?>/models/<?php echo $username; ?>/thumbnail.jpg" width="100%" height="auto" border="0" />
+							<img class="img-responsive lazy" src="models/<?php echo $username; ?>/thumbnail.jpg" data-original="<?php echo $siteurl ?>/models/<?php echo $username; ?>/thumbnail.jpg" width="100%" height="auto" border="0" />
 							
                            
 						   
 						   
-				<div class="simple"><img src="images/add-model.png" style="width:0px;height:0px;float:left;padding:3px 0px 0px 0px;cursor:pointer;" class=""><h3 style="background-color:#161616ab;margin-left:20px;padding-left:15px;padding-right:3px;padding-top:5px;padding-bottom:2px;width:100%;margin-bottom:0px;">&nbsp; <i style="color:#fff !important;margin-left:-10px;margin-bottom:2px;margin-right:3px;" class="fas fa-video"></i>&nbsp;<? echo $username; ?> <span style="margin-right:8px;" class="card-age"><? echo $tBirthD; ?>/<? echo $gender; ?></span></h3><img src="images/blank.png" style="display:none;width:34px;height:14px;position:absolute;top:5px;left:5px;opacity:0.8;"></div>
+				<div class="simple"><img src="images/add-model.png" style="width:0px;height:0px;float:left;padding:3px 0px 0px 0px;cursor:pointer;" class=""><h3 style="background-color:#161616ab;margin-left:20px;padding-left:15px;padding-right:3px;padding-top:5px;padding-bottom:2px;width:100%;margin-bottom:0px;">&nbsp; <i style="color:#fff !important;margin-left:-10px;margin-bottom:2px;margin-right:3px;" class="fas fa-video"></i>&nbsp;<?php echo $username; ?> <span style="margin-right:8px;" class="card-age"><?php echo $tBirthD; ?>/<?php echo $gender; ?></span></h3><img src="images/blank.png" style="display:none;width:34px;height:14px;position:absolute;top:5px;left:5px;opacity:0.8;"></div>
 						   
 						
                          <div class="Female">Female</div>
@@ -578,9 +578,9 @@ foreach($cat_array as $cat)
 										echo "<p class='in-privte'><span>in private</span></p></div>";
 									}
 								?>
-								<!--<span class='card-title <?php echo $femacls; ?>' style="background-color:#<? echo $thumbBarColor1 ?>;">
-									<span class='card-name'><div style="color:#<? echo $thumbTextColor ?>;"><?php echo $username; ?></div></span>
-									<span class='card-age'><div style="color:#<? echo $thumbTextColor ?>;"><?php echo $tBirthD; ?>/<?php echo substr($row['gender'],0,1); ?></div></span>								</span>-->
+								<!--<span class='card-title <?php echo $femacls; ?>' style="background-color:#<?php echo $thumbBarColor1 ?>;">
+									<span class='card-name'><div style="color:#<?php echo $thumbTextColor ?>;"><?php echo $username; ?></div></span>
+									<span class='card-age'><div style="color:#<?php echo $thumbTextColor ?>;"><?php echo $tBirthD; ?>/<?php echo substr($row['gender'],0,1); ?></div></span>								</span>-->
 							<!--<span class="viewer">Views (<?php echo $total_viewss; ?>)</span>--><!--<span class="maincam"><img class="camicon" src="images/camicon.png"></span>-->
 								
 				<?php

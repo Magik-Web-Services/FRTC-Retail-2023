@@ -106,7 +106,7 @@ include("_main.header.php");
 
 <style>
     .login {
-        border: 1px solid #<? echo $loginOutlineColor ?> !important;
+        border: 1px solid #<?php echo $loginOutlineColor ?> !important;
         border-radius: 6px;
         display: table;
         margin: 68px auto;
@@ -114,13 +114,13 @@ include("_main.header.php");
         padding: 34px;
         width: 100%;
         margin-bottom: 10%;
-        background-color: #<? echo $loginBackgroundColor ?> !important;
+        background-color: #<?php echo $loginBackgroundColor ?> !important;
 
     }
 
     /* Header Login Box Text */
     .login .titulo {
-        color: #<? echo $loginHeaderTextColor ?> !important;
+        color: #<?php echo $loginHeaderTextColor ?> !important;
         font-family: Arial;
         font-size: 14px;
         font-weight: bold;
@@ -141,7 +141,7 @@ include("_main.header.php");
     .login form input[type="text"],
     .login form input[type="password"] {
         background: transparent none repeat scroll 0 0;
-        border: 1px solid #<? echo $loginOutlineColor ?> !important;
+        border: 1px solid #<?php echo $loginOutlineColor ?> !important;
         border-radius: 0;
 
         font-size: 14px;
@@ -154,12 +154,12 @@ include("_main.header.php");
 
     .login form input[type="text"] {
         border-radius: 4px;
-        background-color: #<? echo $loginInputBackgroundColor ?> !important;
+        background-color: #<?php echo $loginInputBackgroundColor ?> !important;
     }
 
     .login form input[type=password] {
         border-radius: 4px;
-        background-color: #<? echo $loginInputBackgroundColor ?> !important;
+        background-color: #<?php echo $loginInputBackgroundColor ?> !important;
     }
 
 
@@ -187,12 +187,12 @@ include("_main.header.php");
 
 
     .login-button {
-        background: #<? echo $loginButtonColor1 ?> !important;
-        background: linear-gradient(180deg, #<? echo $loginButtonColor1 ?>, #<? echo $loginButtonColor2 ?>) !important;
+        background: #<?php echo $loginButtonColor1 ?> !important;
+        background: linear-gradient(180deg, #<?php echo $loginButtonColor1 ?>, #<?php echo $loginButtonColor2 ?>) !important;
         border: 0;
         border-radius: 2px;
         box-shadow: 0 1px 0 rgba(0, 0, 0, .3);
-        color: #<? echo $loginButtonTextColor ?> !important;
+        color: #<?php echo $loginButtonTextColor ?> !important;
         cursor: pointer;
         display: inline-block;
         font: 700 14px/34px arial, sans-serif;
@@ -209,12 +209,12 @@ include("_main.header.php");
 
 
     .login-button:hover {
-        background: #<? echo $loginButtonColor1Hover ?> !important;
-        background: linear-gradient(180deg, #<? echo $loginButtonColor1Hover ?>, #<? echo $loginButtonColor2Hover ?>) !important;
+        background: #<?php echo $loginButtonColor1Hover ?> !important;
+        background: linear-gradient(180deg, #<?php echo $loginButtonColor1Hover ?>, #<?php echo $loginButtonColor2Hover ?>) !important;
         border: 0;
         border-radius: 2px;
         box-shadow: 0 1px 0 rgba(0, 0, 0, .3);
-        color: #<? echo $loginButtonTextColor ?> !important;
+        color: #<?php echo $loginButtonTextColor ?> !important;
         cursor: pointer;
         display: inline-block;
         font: 700 14px/34px arial, sans-serif;
@@ -261,31 +261,31 @@ include("_main.header.php");
     }
 
     .login .olvido .col a {
-        color: #<? echo $loginLinksColor ?> !important;
+        color: #<?php echo $loginLinksColor ?> !important;
         text-decoration: none;
         font: 12px Arial;
     }
 
     ::-webkit-input-placeholder {
         /* WebKit browsers */
-        color: #<? echo $loginInputTextColor ?> !important;
+        color: #<?php echo $loginInputTextColor ?> !important;
     }
 
     :-moz-placeholder {
         /* Mozilla Firefox 4 to 18 */
-        color: #<? echo $loginInputTextColor ?> !important;
+        color: #<?php echo $loginInputTextColor ?> !important;
         opacity: 1;
     }
 
     ::-moz-placeholder {
         /* Mozilla Firefox 19+ */
-        color: #<? echo $loginInputTextColor ?> !important;
+        color: #<?php echo $loginInputTextColor ?> !important;
         opacity: 1;
     }
 
     :-ms-input-placeholder {
         /* Internet Explorer 10+ */
-        color: #<? echo $loginInputTextColor ?> !important;
+        color: #<?php echo $loginInputTextColor ?> !important;
     }
 
     @media screen and (max-width: 450px) and (min-width: 320px) {
@@ -301,7 +301,7 @@ include("_main.header.php");
 <div class="login_sec_cloud">
     <section class="login login-member">
         <div class="error-mmmssgg">
-            <p align="center"><b style="color:#<? echo $errorMessage ?>;"><?php if (isset($errorMsg) && $errorMsg != "") {
+            <p align="center"><b style="color:#<?php echo $errorMessage ?>;"><?php if (isset($errorMsg) && $errorMsg != "") {
                                                                                 echo $errorMsg;
                                                                             } ?></b></p>
             <div class="titulo">Member Login</div>
@@ -312,7 +312,7 @@ include("_main.header.php");
                     <div class="col"><a href="registration/user.php" title="Register">Register</a></div>
                     <div class="col"><a href="lostpassword.php" title="Lost Password">Forgot Password?</a></div>
                 </div>
-                <center><a id="btn" class="login-button" style="background:#<? echo $loginBtnColor ?>;">Login</a></center>
+                <center><a id="btn" class="login-button" style="background:#<?php echo $loginBtnColor ?>;">Login</a></center>
             </form>
     </section>
 </div>

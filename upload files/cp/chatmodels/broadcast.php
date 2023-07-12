@@ -46,7 +46,7 @@ mysql_free_result($result);
 
 body {
 
-background-color: #<? echo $broadcasterBackgroundColor; ?> !important;
+background-color: #<?php echo $broadcasterBackgroundColor; ?> !important;
 
 }
 
@@ -73,7 +73,7 @@ background-color: #<? echo $broadcasterBackgroundColor; ?> !important;
 }
 
 .vdchat-overlay{
-	background-color:#<? echo $broadcasterBackgroundColor; ?> !important;
+	background-color:#<?php echo $broadcasterBackgroundColor; ?> !important;
 }
 .vdchat-overlay .videoContainer {
     background-color: #fff !important;
@@ -412,11 +412,11 @@ if(($gender12=="Female") or ($gender12=="TMTOF")){ ?>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 
 
-<script type="text/javascript" src="<? $siteurl ?>/cp/chatmodels/RTCMultiConnection.min.js"></script>   
+<script type="text/javascript" src="<?php $siteurl ?>/cp/chatmodels/RTCMultiConnection.min.js"></script>   
 
 
 
-<script type="text/javascript" src="<? $siteurl ?>/cp/chatmodels/socket.io.js"></script>   
+<script type="text/javascript" src="<?php $siteurl ?>/cp/chatmodels/socket.io.js"></script>   
 
 
 
@@ -431,7 +431,7 @@ if(($gender12=="Female") or ($gender12=="TMTOF")){ ?>
 
 
 <!--
-<script src="<? $siteurl ?>/cp/chatmodels/easyrtcX.js"></script>
+<script src="<?php $siteurl ?>/cp/chatmodels/easyrtcX.js"></script>
 -->
 
 $_COOKIE
@@ -699,14 +699,14 @@ function CheckIdleTime() {
 		};
 		$.ajax({
 			type: "POST",
-			url: "<? $siteurl ?>/token_message.php",
+			url: "<?php $siteurl ?>/token_message.php",
 			data: post_data,
 			success: function (data) {
 			}
 		});
         alert("Time expired!");
 		
-        document.location.href = "<? $siteurl ?>/logout.php";
+        document.location.href = "<?php $siteurl ?>/logout.php";
     }
 }
 </script>
@@ -814,9 +814,9 @@ $mediaUrl=mysql_fetch_array(mysql_query($sql))['value'];
       <p>
         <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="1100" height="600">
           <param name="movie" value="BroadcastInterface.swf" />
-          <param name=FlashVars value="&tepercentage=<? echo $epercentage;?>&fuser=<? echo $sUser; ?>&fcpm=<? echo $nCpm; ?>&fid=<? echo $sId; ?>&fmoney=<? echo $nMoney; ?>&connection=<? echo $connection_string;?>" />
+          <param name=FlashVars value="&tepercentage=<?php echo $epercentage;?>&fuser=<?php echo $sUser; ?>&fcpm=<?php echo $nCpm; ?>&fid=<?php echo $sId; ?>&fmoney=<?php echo $nMoney; ?>&connection=<?php echo $connection_string;?>" />
           <param name="quality" value="high" />
-          <embed flashvars="&tepercentage=<? echo $epercentage;?>&fuser=<? echo $sUser; ?>&fcpm=<? echo $nCpm; ?>&fid=<? echo $sId; ?>&fmoney=<? echo $nMoney; ?>&connection=<? echo $connection_string;?>" src="BroadcastInterface.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1100" height="600"></embed>
+          <embed flashvars="&tepercentage=<?php echo $epercentage;?>&fuser=<?php echo $sUser; ?>&fcpm=<?php echo $nCpm; ?>&fid=<?php echo $sId; ?>&fmoney=<?php echo $nMoney; ?>&connection=<?php echo $connection_string;?>" src="BroadcastInterface.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1100" height="600"></embed>
         </object>
       </p>
     </div></td>
@@ -991,7 +991,7 @@ $mediaUrl=mysql_fetch_array(mysql_query($sql))['value'];
 								 
 						<!---		 <textarea id="messageText" placeholder="Enter your message here" onKeyUp="return VideoChat.SendMessageOnEnter(event);"></textarea> -->
 								 
-					<span class="showall"><img src="<? $siteurl ?>/cp/chatmodels/images/annoyed.png"  /> </span>
+					<span class="showall"><img src="<?php $siteurl ?>/cp/chatmodels/images/annoyed.png"  /> </span>
 						</div>		 
                                     <a id="toggleUsers" class="toggleUsers" href="#" onClick="VideoChat.ToggleUsers(); return false;"><i class="fa fa-users"></i></a>
                                     <a id="sendMessage" class="sendMessage" href="#" onClick="VideoChat.SendMessage(); return false;">Send</a>
@@ -1001,45 +1001,45 @@ $mediaUrl=mysql_fetch_array(mysql_query($sql))['value'];
                         <table id="subtableshow">
 						
                               <tr class="new_icon">
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/star-eyes.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/star-eyes.png"  /></td>
 
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/3hearts.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/3hearts.png"  /></td>
 
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/silly1.png" /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/silly1.png" /></td>
 
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/cool.png" /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/cool.png" /></td>
                                 
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/eye-glass.png" /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/eye-glass.png" /></td>
                                
                             </tr>
 							
                             <tr class="new_icon">
 							
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/dazed.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/dazed.png"  /></td>
                                                        
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/drooling.png" /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/drooling.png" /></td>
 								
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/heart-eyes.png"  /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/heart-eyes.png"  /></td>
                               
                                
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/regular-smile.png"  /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/regular-smile.png"  /></td>
                                
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/sad.png"  /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/sad.png"  /></td>
 	 
                             </tr>
 							
 							
 							
                             <tr class="new_icon">
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/unhappy2.png"  /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/unhappy2.png"  /></td>
                                
-							   <td><img src="<? $siteurl ?>/cp/chatmodels/images/pissed.png"  /></td>
+							   <td><img src="<?php $siteurl ?>/cp/chatmodels/images/pissed.png"  /></td>
                                 
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/turd.png"  /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/turd.png"  /></td>
                                 
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/party.png"  /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/party.png"  /></td>
                                 
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/party2.png"  /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/party2.png"  /></td>
                             </tr>
                             
 							
@@ -1047,85 +1047,85 @@ $mediaUrl=mysql_fetch_array(mysql_query($sql))['value'];
 							
 							
 							<tr class="new_icon">
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/hot-head.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/hot-head.png"  /></td>
                               
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/blow-kiss.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/blow-kiss.png"  /></td>
                               
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/blush.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/blush.png"  /></td>
                              
                           
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/confused.png"   /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/confused.png"   /></td>
                                
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/nerd.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/nerd.png"  /></td>
                               
 							</tr>
 							<tr class="new_icon">
 							
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/red-heart.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/red-heart.png"  /></td>
 								
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/purple-heart.png"  /></td>                            
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/purple-heart.png"  /></td>                            
                         
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/green-heart.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/green-heart.png"  /></td>
                                
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/orange-heart.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/orange-heart.png"  /></td>
                                
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/blue-heart.png" /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/blue-heart.png" /></td>
                                
                             </tr>
                             <tr class="new_icon">
 							
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/yellow-heart.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/yellow-heart.png"  /></td>
                                
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/gift-heart.png" /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/gift-heart.png" /></td>
                               
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/fire.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/fire.png"  /></td>
                                
                            
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/fingers-crossed.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/fingers-crossed.png"  /></td>
                                
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/high-five.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/high-five.png"  /></td>
                                
                             </tr>
 							
 							
                             <tr class="new_icon">   
 							
-							   <td><img src="<? $siteurl ?>/cp/chatmodels/images/thumbs-up.png" /></td>
+							   <td><img src="<?php $siteurl ?>/cp/chatmodels/images/thumbs-up.png" /></td>
                               
                            
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/pray.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/pray.png"  /></td>
                                
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/up.png"  /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/up.png"  /></td>
                               
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/nails.png" /></td>
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/video-camera.png" /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/nails.png" /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/video-camera.png" /></td>
                            
                             </tr>
 							
 							<tr class="new_icon">
 							
-                                <td><img src="<? $siteurl ?>/cp/chatmodels/images/egg.png" /></td>
+                                <td><img src="<?php $siteurl ?>/cp/chatmodels/images/egg.png" /></td>
                                 
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/pizza.png" /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/pizza.png" /></td>
 								
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/birthday-cake.png" /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/birthday-cake.png" /></td>
 								
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/hat.png" /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/hat.png" /></td>
 								
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/girl-dancing.png" /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/girl-dancing.png" /></td>
 								
                             </tr>
 							<tr class="new_icon">
 							
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/i-dont-know.png" /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/i-dont-know.png" /></td>
 								
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/man-dancing.png" /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/man-dancing.png" /></td>
 								
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/this.png" /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/this.png" /></td>
 								
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/baby.png" /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/baby.png" /></td>
 								
-								<td><img src="<? $siteurl ?>/cp/chatmodels/images/oh-no.png" /></td>
+								<td><img src="<?php $siteurl ?>/cp/chatmodels/images/oh-no.png" /></td>
 																
                             </tr>
                             <tr>
@@ -1146,7 +1146,7 @@ $mediaUrl=mysql_fetch_array(mysql_query($sql))['value'];
 </div>
 
 
-<script type="text/javascript" src="<? $siteurl ?>/cp/chatmodels/socket.io.js"></script>
+<script type="text/javascript" src="<?php $siteurl ?>/cp/chatmodels/socket.io.js"></script>
     <script type="text/javascript">
   /**
    * This is sloppy way of doing this but fuck it...
@@ -1176,11 +1176,11 @@ $(document).ready(function(){
     <script type="text/javascript">
     /* Database Logic */
 var Users = [
-    { Username: "<? echo $sUser; ?>", Password: "<? echo $sUser; ?>", IsStreamer: true, ImageUrl: "/models/<? echo $sUser; ?>/thumbnail.jpg", IsAdmin: false }
+    { Username: "<?php echo $sUser; ?>", Password: "<?php echo $sUser; ?>", IsStreamer: true, ImageUrl: "/models/<?php echo $sUser; ?>/thumbnail.jpg", IsAdmin: false }
 ];
 var udata = '<?=$sUser?>';
 var mediaUrl = '<?=$mediaUrl?>';
-var lovense_token= "<? echo $lovense; ?>";
+var lovense_token= "<?php echo $lovense; ?>";
     </script>
      <?php
     if($lovense!==null)
@@ -1196,8 +1196,8 @@ var lovense_token= "<? echo $lovense; ?>";
 	</style>
 	
 	<div class="liveLogo">LIVE</div>
-	<div class="broadcastingAs">Broadcasting live as: <? echo $username; ?></div>
-	<div class="profilePic"><img src="../../models/<? echo $username; ?>/thumbnail.jpg" width="45px" height="45px" style="border-radius:100px !important;"></div>
+	<div class="broadcastingAs">Broadcasting live as: <?php echo $username; ?></div>
+	<div class="profilePic"><img src="../../models/<?php echo $username; ?>/thumbnail.jpg" width="45px" height="45px" style="border-radius:100px !important;"></div>
 	
 
    

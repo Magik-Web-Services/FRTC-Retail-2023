@@ -1,4 +1,4 @@
-<? ob_start();
+<?php ob_start();
 session_start();
 include('../../dbase.php');
 if ($_POST['radiobutton'] =="")
@@ -69,7 +69,7 @@ document.frmPayment.submit();
 	<h1>LOADING.......</h1>
 	</center>
 	
-	<? //session_start();
+	<?php //session_start();
 //
 // $_SESSION['test']="Ravi Raghav";.
 $amt=$_REQUEST['amount'];

@@ -195,9 +195,9 @@ input,
 button,
 select,
 textarea {
-  background-color: #<? echo $regInputBackgroundColor ?> !important;
-  color:#<? echo $regInputTextColor ?> !important;
-  border-color: #<? echo $regInputBorderColor ?> !important;
+  background-color: #<?php echo $regInputBackgroundColor ?> !important;
+  color:#<?php echo $regInputTextColor ?> !important;
+  border-color: #<?php echo $regInputBorderColor ?> !important;
   outline: none !important;
   border-radius: 2px !important;
   padding: 5px !important;
@@ -261,7 +261,7 @@ text-shadow: 0 1px hsla(0,0%,100%,.4);
     display: table;
 }
 form.user_update_profile {
-    background-color: #<? echo $regTableBackgroundColor ?> !important;
+    background-color: #<?php echo $regTableBackgroundColor ?> !important;
   /*  box-shadow: 1px 1px 3px #999; */
     margin: 29px 0px;
     padding: 20px 52px;
@@ -415,7 +415,7 @@ form.user_update_profile .informatin_user p {
 					</div>
 					<div class="col-md-10">
 						<div class="first_seciton_right_side">
-							<input name="Email" type="text" id="Email" value="<? echo $tempEmail;?>" size="24" maxlength="50">
+							<input name="Email" type="text" id="Email" value="<?php echo $tempEmail;?>" size="24" maxlength="50">
 						</div>
 					</div>
 					<div class="col-md-2">	
@@ -433,7 +433,7 @@ form.user_update_profile .informatin_user p {
 					</div>
 					<div class="col-md-10">
 						<div class="first_seciton_right_side">
-							<input name="Name" type="text" id="Name" value="<? echo $tempName;?>" size="24" maxlength="24">
+							<input name="Name" type="text" id="Name" value="<?php echo $tempName;?>" size="24" maxlength="24">
 						</div>
 					</div>	
 					<div class="col-md-2 register_content">
@@ -463,18 +463,18 @@ form.user_update_profile .informatin_user p {
 							?>
 						</select>
 						<select name="month" id="month">
-							<option value="Jan" <? if ($tMonth=="Jan"){ echo "selected";}?>>January</option>
-							<option value="Feb" <? if ($tMonth=="Feb"){ echo "selected";}?>>February</option>
-							<option value="Mar" <? if ($tMonth=="Mar"){ echo "selected";}?>>March</option>
-							<option value="Apr" <? if ($tMonth=="Apr"){ echo "selected";}?>>April</option>
-							<option value="May" <? if ($tMonth=="May"){ echo "selected";}?>>May</option>
-							<option value="Jun" <? if ($tMonth=="Jun"){ echo "selected";}?>>June</option>
-							<option value="Jul" <? if ($tMonth=="Jul"){ echo "selected";}?>>July</option>
-							<option value="Aug" <? if ($tMonth=="Aug"){ echo "selected";}?>>August</option>
-							<option value="Sep" <? if ($tMonth=="Sep"){ echo "selected";}?>>September</option>
-							<option value="Oct" <? if ($tMonth=="Oct"){ echo "selected";}?>>October</option>
-							<option value="Nov" <? if ($tMonth=="Nov"){ echo "selected";}?>>November</option>
-							<option value="Dec" <? if ($tMonth=="Dec"){ echo "selected";}?>>December</option>
+							<option value="Jan" <?php if ($tMonth=="Jan"){ echo "selected";}?>>January</option>
+							<option value="Feb" <?php if ($tMonth=="Feb"){ echo "selected";}?>>February</option>
+							<option value="Mar" <?php if ($tMonth=="Mar"){ echo "selected";}?>>March</option>
+							<option value="Apr" <?php if ($tMonth=="Apr"){ echo "selected";}?>>April</option>
+							<option value="May" <?php if ($tMonth=="May"){ echo "selected";}?>>May</option>
+							<option value="Jun" <?php if ($tMonth=="Jun"){ echo "selected";}?>>June</option>
+							<option value="Jul" <?php if ($tMonth=="Jul"){ echo "selected";}?>>July</option>
+							<option value="Aug" <?php if ($tMonth=="Aug"){ echo "selected";}?>>August</option>
+							<option value="Sep" <?php if ($tMonth=="Sep"){ echo "selected";}?>>September</option>
+							<option value="Oct" <?php if ($tMonth=="Oct"){ echo "selected";}?>>October</option>
+							<option value="Nov" <?php if ($tMonth=="Nov"){ echo "selected";}?>>November</option>
+							<option value="Dec" <?php if ($tMonth=="Dec"){ echo "selected";}?>>December</option>
 						</select>
 						<select name="year" id="year">
 							<?php
@@ -561,7 +561,7 @@ form.user_update_profile .informatin_user p {
 					</div>
 					<div class="col-md-10">
 						<div class="first_seciton_right_side">
-							<input name="City" type="text" id="City" value="<? echo $tempCity;?>" size="24" maxlength="24">
+							<input name="City" type="text" id="City" value="<?php echo $tempCity;?>" size="24" maxlength="24">
 						</div>
 					</div>					
 					<div class="col-md-2">	

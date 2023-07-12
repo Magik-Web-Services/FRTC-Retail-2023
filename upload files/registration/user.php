@@ -103,11 +103,11 @@ if (!empty($_POST['Submit'])) {
 			//$registrationemail = "$registrationemail";
 			include_once("../settings.php");
 			$header = "From: " . $registrationemail;
-			mail($_POST['Email'], $subject, $message, $header);
-			$birthDate = $_POST['day'] . "/" . $_POST['month'] . "/" . $_POST['year'];
-			$gender = $_POST['gender'];
-			mysqli_query($conn, "INSERT INTO chatusers ( id , user , password , email , name , birthDate, gender, country , state , city, phone, zip , adress , dateRegistered,lastLogIn, emailnotify ,smsnotify,status,emailtype ) VALUES ('$userId','$username', '{$db_pass}', '{$_POST['Email']}', '{$_POST['Name']}', '{$birthDate}', '{$gender}', '{$_POST['Country']}', '{$_POST['State']}','{$_POST['City']}','{$_POST['phone']}', '{$_POST['ZipCode']}', '{$_POST['Adress']}', '$dateRegistered', '$currentTime','0','0','pending','{$_POST['emailtype']}')");
-			header("Location: userregistered.php");
+			// mail($_POST['Email'], $subject, $message, $header);
+			// $birthDate = $_POST['day'] . "/" . $_POST['month'] . "/" . $_POST['year'];
+			// $gender = $_POST['gender'];
+			// mysqli_query($conn, "INSERT INTO chatusers ( id , user , password , email , name , birthDate, gender, country , state , city, phone, zip , adress , dateRegistered,lastLogIn, emailnotify ,smsnotify,status,emailtype ) VALUES ('$userId','$username', '{$db_pass}', '{$_POST['Email']}', '{$_POST['Name']}', '{$birthDate}', '{$gender}', '{$_POST['Country']}', '{$_POST['State']}','{$_POST['City']}','{$_POST['phone']}', '{$_POST['ZipCode']}', '{$_POST['Adress']}', '$dateRegistered', '$currentTime','0','0','pending','{$_POST['emailtype']}')");
+			// header("Location: userregistered.php");
 		}
 	}
 }
@@ -117,7 +117,7 @@ include("_reg.header.php");
 ?>
 <style type="text/css">
 	.body {
-		color: #<? echo $regTextColor ?> !important;
+		color: #<?php echo $regTextColor ?> !important;
 	}
 
 
@@ -125,9 +125,9 @@ include("_reg.header.php");
 	button,
 	select,
 	textarea {
-		background-color: #<? echo $regInputBackgroundColor ?> !important;
-		color: #<? echo $regInputTextColor ?> !important;
-		border-color: #<? echo $regInputBorderColor ?> !important;
+		background-color: #<?php echo $regInputBackgroundColor ?> !important;
+		color: #<?php echo $regInputTextColor ?> !important;
+		border-color: #<?php echo $regInputBorderColor ?> !important;
 		outline: none !important;
 		border-radius: 2px !important;
 		padding: 5px !important;
@@ -223,7 +223,7 @@ include("_reg.header.php");
 
 
 	.dgdkj {
-		background-color: #<? echo $regTableBackgroundColor ?> !important;
+		background-color: #<?php echo $regTableBackgroundColor ?> !important;
 
 
 	}
@@ -244,7 +244,7 @@ include("_reg.header.php");
 	form.modal_register_form .dfngbodjb input#ActImage,
 	form.modal_register_form .dfngbodjb input#RImage {
 
-		border: 0.5px solid #<? echo $regInputBorderColor ?> !important;
+		border: 0.5px solid #<?php echo $regInputBorderColor ?> !important;
 		border-radius: 6px !important;
 	}
 
@@ -252,7 +252,7 @@ include("_reg.header.php");
 
 
 	.member_sec_top {
-		background-color: #<? echo $regTopBarColor ?> !important;
+		background-color: #<?php echo $regTopBarColor ?> !important;
 		/* box-shadow: 1px 0 3px #999; */
 
 
@@ -325,7 +325,7 @@ include("_reg.header.php");
 						echo "<font color=#ffdd54>You must agree with the terms:</font><br>";
 					}
 					?>
-					<input name="checkbox" type="checkbox" value="checkbox" checked="checked" <? if (isset($_POST['checkbox']) && $_POST['checkbox'] == "checkbox") {
+					<input name="checkbox" type="checkbox" value="checkbox" checked="checked" <?php if (isset($_POST['checkbox']) && $_POST['checkbox'] == "checkbox") {
 																									echo "checked";
 																								} ?>>
 
@@ -474,42 +474,42 @@ include("_reg.header.php");
 						?>
 					</select>
 					<select name="month" id="month">
-						<option value="Jan" <? if ($_POST['month'] == "January") {
+						<option value="Jan" <?php if ($_POST['month'] == "January") {
 												echo "selected";
 											} else if (!isset($_POST['month'])) {
 												echo "selected";
 											} ?>>January</option>
-						<option value="Feb" <? if ($_POST['month'] == "February") {
+						<option value="Feb" <?php if ($_POST['month'] == "February") {
 												echo "selected";
 											} ?>>February</option>
-						<option value="Mar" <? if ($_POST['month'] == "March") {
+						<option value="Mar" <?php if ($_POST['month'] == "March") {
 												echo "selected";
 											} ?>>March</option>
-						<option value="Apr" <? if ($_POST['month'] == "April") {
+						<option value="Apr" <?php if ($_POST['month'] == "April") {
 												echo "selected";
 											} ?>>April</option>
-						<option value="May" <? if ($_POST['month'] == "May") {
+						<option value="May" <?php if ($_POST['month'] == "May") {
 												echo "selected";
 											} ?>>May</option>
-						<option value="Jun" <? if ($_POST['month'] == "June") {
+						<option value="Jun" <?php if ($_POST['month'] == "June") {
 												echo "selected";
 											} ?>>June</option>
-						<option value="Jul" <? if ($_POST['month'] == "July") {
+						<option value="Jul" <?php if ($_POST['month'] == "July") {
 												echo "selected";
 											} ?>>July</option>
-						<option value="Aug" <? if ($_POST['month'] == "August") {
+						<option value="Aug" <?php if ($_POST['month'] == "August") {
 												echo "selected";
 											} ?>>August</option>
-						<option value="Sep" <? if ($_POST['month'] == "September") {
+						<option value="Sep" <?php if ($_POST['month'] == "September") {
 												echo "selected";
 											} ?>>September</option>
-						<option value="Oct" <? if ($_POST['month'] == "October") {
+						<option value="Oct" <?php if ($_POST['month'] == "October") {
 												echo "selected";
 											} ?>>October</option>
-						<option value="Nov" <? if ($_POST['month'] == "November") {
+						<option value="Nov" <?php if ($_POST['month'] == "November") {
 												echo "selected";
 											} ?>>November</option>
-						<option value="Dec" <? if ($_POST['month'] == "December") {
+						<option value="Dec" <?php if ($_POST['month'] == "December") {
 												echo "selected";
 											} ?>>December</option>
 					</select>

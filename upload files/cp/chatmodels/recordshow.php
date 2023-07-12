@@ -1,4 +1,4 @@
-<? if (!isset($_COOKIE["id"]) || $_COOKIE['usertype']!="chatmodels" )
+<?php if (!isset($_COOKIE["id"]) || $_COOKIE['usertype']!="chatmodels" )
 
 {
 
@@ -72,9 +72,9 @@ body {
   
 <center><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="720" height="700">
     <param name="movie" value="RecordInterface.swf" />
-    <param name=FlashVars value="&fuser=<? echo $sUser; ?>&fcpm=<? echo $nCpm; ?>&fid=<? echo $sId; ?>&fmoney=<? echo $nMoney; ?>&connection=<? echo $connection_string;?>" />
+    <param name=FlashVars value="&fuser=<?php echo $sUser; ?>&fcpm=<?php echo $nCpm; ?>&fid=<?php echo $sId; ?>&fmoney=<?php echo $nMoney; ?>&connection=<?php echo $connection_string;?>" />
     <param name="quality" value="high" />
-    <embed flashvars="&fuser=<? echo $sUser; ?>&fcpm=<? echo $nCpm; ?>&fid=<? echo $sId; ?>&fmoney=<? echo $nMoney; ?>&connection=<? echo $connection_string;?>" src="RecordInterface.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="720" height="700"></embed>
+    <embed flashvars="&fuser=<?php echo $sUser; ?>&fcpm=<?php echo $nCpm; ?>&fid=<?php echo $sId; ?>&fmoney=<?php echo $nMoney; ?>&connection=<?php echo $connection_string;?>" src="RecordInterface.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="720" height="700"></embed>
       </object>
  </center>
  <?

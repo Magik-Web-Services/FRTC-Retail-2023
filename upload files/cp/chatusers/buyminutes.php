@@ -32,14 +32,14 @@ include("_members.header.php");
     margin: 30px auto;
     display: table;
     padding: 20px;
-	color: #<? echo $packagePageText; ?>;
+	color: #<?php echo $packagePageText; ?>;
 }
 
 
 .token_price_sec .token_box_seciton{
 
-    background-color:#<? echo $packageBoxBackground;  ?>;
-    background-image: url("<? echo $packageBackgroundImage;  ?>") !important;
+    background-color:#<?php echo $packageBoxBackground;  ?>;
+    background-image: url("<?php echo $packageBackgroundImage;  ?>") !important;
 
 
 }
@@ -67,26 +67,26 @@ if(($row2222["gender"]=="Female") OR ($row2222["gender"]=="TMTOF")){ ?>
 <style>
 .token_box_seciton .btn.dddeeff a, .buyminutes-left-side.leftttttt_tt a {
     border-radius: 4px;
-    color: #<? echo $buyNowButton1Text; ?> !important;
+    color: #<?php echo $buyNowButton1Text; ?> !important;
     font-size: 14px !important;
     padding: 5px 14px;
     text-align: center;
     text-decoration: none;
     text-transform: capitalize;
-    background: #<? echo $buyNowButton1; ?> !important;
+    background: #<?php echo $buyNowButton1; ?> !important;
 }
 </style>
 <?php } else if(($row2222["gender"]=="Male") OR ($row2222["gender"]=="TFTOM")){  ?>	
 <style>
 .token_box_seciton .btn.dddeeff a, .buyminutes-left-side.leftttttt_tt a {
     border-radius: 4px;
-    color: #<? echo $buyNowButton1Text; ?> !important;
+    color: #<?php echo $buyNowButton1Text; ?> !important;
     font-size: 14px !important;
     padding: 5px 14px;
     text-align: center;
     text-decoration: none;
     text-transform: capitalize;
-    background: #<? echo $buyNowButton1; ?> !important;
+    background: #<?php echo $buyNowButton1; ?> !important;
 }
 
 </style>

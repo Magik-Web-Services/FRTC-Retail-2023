@@ -1,7 +1,7 @@
 
 
 
-<? 
+<?php 
 
 if (!isset($_COOKIE["id"]) || $_COOKIE['usertype']!="chatmodels" )
 

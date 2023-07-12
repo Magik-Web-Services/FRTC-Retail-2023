@@ -1,4 +1,4 @@
-<? ob_start();
+<?php ob_start();
 session_start();
 //var_dump($_SESSION);
 mysql_connect("localhost","lakeview","payperview");

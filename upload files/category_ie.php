@@ -141,7 +141,7 @@ a {
 			{
 		?>
           <span class="style3">&nbsp; <a href="index_ie.php?page=<?=$i?>" target="_self">
-          <? if ($i==$page) {echo "<font color='white'><b>";} echo $i; if ($i==$page) {echo "</b></font>";} ?>
+          <?php if ($i==$page) {echo "<font color='white'><b>";} echo $i; if ($i==$page) {echo "</b></font>";} ?>
           </a> </span>
           <?
 			}
@@ -565,7 +565,7 @@ include("settings.php");
 			{
 		?>
       <span class="style3">&nbsp; <a href="index_ie.php?page=<?=$i?>" target="_self">
-        <? if ($i==$page) {echo "<font color='white'><b>";} echo $i; if ($i==$page) {echo "</b></font>";} ?>
+        <?php if ($i==$page) {echo "<font color='white'><b>";} echo $i; if ($i==$page) {echo "</b></font>";} ?>
         </a> </span>
       <?
 			}

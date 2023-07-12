@@ -191,7 +191,7 @@ include("_main.header.php");
 
 
 .login {
-  border: 1px solid #<? echo $loginOutlineColor ?> !important;
+  border: 1px solid #<?php echo $loginOutlineColor ?> !important;
   border-radius: 6px;
   display: table;
   margin: 68px auto;
@@ -199,14 +199,14 @@ include("_main.header.php");
   padding: 34px;
   width: 100%;
   margin-bottom:10%;
-  background-color: #<? echo $loginBackgroundColor ?> !important;
+  background-color: #<?php echo $loginBackgroundColor ?> !important;
   
 }
 
 
 
 #select {
-  border: 1px solid #<? echo $loginOutlineColor ?> !important;
+  border: 1px solid #<?php echo $loginOutlineColor ?> !important;
   border-radius: 6px;
   display: table;
   margin: 10px auto;
@@ -214,7 +214,7 @@ include("_main.header.php");
   padding: 10px;
   width: 100%;
   margin-bottom:10%;
-  background-color: #<? echo $loginBackgroundColor ?> !important;
+  background-color: #<?php echo $loginBackgroundColor ?> !important;
   
 }
 
@@ -226,7 +226,7 @@ include("_main.header.php");
 
 /* Header Login Box Text */
 .login .titulo {
-  color: #<? echo $loginHeaderTextColor ?> !important;
+  color: #<?php echo $loginHeaderTextColor ?> !important;
   font-family: Arial;
   font-size: 14px;
   font-weight: bold;
@@ -246,7 +246,7 @@ include("_main.header.php");
 
 .login form input[type="text"], .login form input[type="password"] {
   background: transparent none repeat scroll 0 0;
-  border: 1px solid #<? echo $loginOutlineColor ?> !important;
+  border: 1px solid #<?php echo $loginOutlineColor ?> !important;
   border-radius: 0;
   
   font-size: 14px;
@@ -258,11 +258,11 @@ include("_main.header.php");
 }
 .login form input[type="text"] {
   border-radius: 4px;
-  background-color:#<? echo $loginInputBackgroundColor ?> !important;
+  background-color:#<?php echo $loginInputBackgroundColor ?> !important;
 }
 .login form input[type=password] {
   border-radius: 4px;
-  background-color:#<? echo $loginInputBackgroundColor ?> !important;
+  background-color:#<?php echo $loginInputBackgroundColor ?> !important;
 }
 
 
@@ -290,12 +290,12 @@ include("_main.header.php");
 
 
 .login-button{
-background: #<? echo $loginButtonColor1 ?> !important;
-background: linear-gradient(180deg,#<? echo $loginButtonColor1 ?>,#<? echo $loginButtonColor2 ?>) !important;
+background: #<?php echo $loginButtonColor1 ?> !important;
+background: linear-gradient(180deg,#<?php echo $loginButtonColor1 ?>,#<?php echo $loginButtonColor2 ?>) !important;
 border: 0;
 border-radius: 2px;
 box-shadow: 0 1px 0 rgba(0,0,0,.3);
-color: #<? echo $loginButtonTextColor ?> !important;
+color: #<?php echo $loginButtonTextColor ?> !important;
 cursor: pointer;
 display: inline-block;
 font: 700 14px/34px arial,sans-serif;
@@ -312,12 +312,12 @@ width:150px;
 
 
 .login-button:hover{
-background: #<? echo $loginButtonColor1Hover ?> !important;
-background: linear-gradient(180deg,#<? echo $loginButtonColor1Hover ?>,#<? echo $loginButtonColor2Hover ?>) !important;
+background: #<?php echo $loginButtonColor1Hover ?> !important;
+background: linear-gradient(180deg,#<?php echo $loginButtonColor1Hover ?>,#<?php echo $loginButtonColor2Hover ?>) !important;
 border: 0;
 border-radius: 2px;
 box-shadow: 0 1px 0 rgba(0,0,0,.3);
-color: #<? echo $loginButtonTextColor ?> !important;
+color: #<?php echo $loginButtonTextColor ?> !important;
 cursor: pointer;
 display: inline-block;
 font: 700 14px/34px arial,sans-serif;
@@ -340,7 +340,7 @@ width:150px;
     padding-bottom: 25px;
     font-size: 13px;
     text-align: center;
-	color: #<? echo $loginHeaderTextColor ?> !important;
+	color: #<?php echo $loginHeaderTextColor ?> !important;
 }
 
 .login .olvido .col {

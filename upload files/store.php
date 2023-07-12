@@ -91,8 +91,8 @@ body,td,th {
 
 	<div class="image-setion">
     <img border='0' width='auto' height='auto' alt='' src='/images/storeimage1.png' />
-    <a href='https://www.lovense.com/r/<? echo $lovenseSellerID1 ?>' target='_blank'>
-	<div class="btns"><img src="<? echo $siteurl ?>/images/buyToysBtn.png" class="btnn-image-product"/></div>
+    <a href='https://www.lovense.com/r/<?php echo $lovenseSellerID1 ?>' target='_blank'>
+	<div class="btns"><img src="<?php echo $siteurl ?>/images/buyToysBtn.png" class="btnn-image-product"/></div>
     </a>
     </div>
 	
@@ -100,16 +100,16 @@ body,td,th {
 	
 	<div class="image-setion">
     <img border='0' width='auto' height='auto' alt='' src='/images/storeimage2.png' />
-  <a href='https://www.lovense.com/r/<? echo $lovenseSellerID2 ?>' target='_blank'>
-	<div class="btns"><img src="<? echo $siteurl ?>/images/buyToysBtn.png" class="btnn-image-product"/></div>
+  <a href='https://www.lovense.com/r/<?php echo $lovenseSellerID2 ?>' target='_blank'>
+	<div class="btns"><img src="<?php echo $siteurl ?>/images/buyToysBtn.png" class="btnn-image-product"/></div>
     </a>
     </div>
 	
 	<!-- Toy number 3 or UASB dongle. -->
     <div class="image-setion">
     <img border='0' width='auto' height='auto' alt='' src='/images/storeimage3.png' />
-    <a href='https://www.lovense.com/r/<? echo $lovenseSellerID3 ?>' target='_blank'>
-	<div class="btns"><img src="<? echo $siteurl ?>/images/buyToysBtn.png" class="btnn-image-product"/></div>
+    <a href='https://www.lovense.com/r/<?php echo $lovenseSellerID3 ?>' target='_blank'>
+	<div class="btns"><img src="<?php echo $siteurl ?>/images/buyToysBtn.png" class="btnn-image-product"/></div>
     </a>
     </div>
   </div>

@@ -48,7 +48,7 @@ if(input_data1==236){
 					<div align="center">
 						<table width="1010" height="70">
 							<tr>
-								<td><div align="center"><h1><? echo $row['name']; ?></h1></div></td>
+								<td><div align="center"><h1><?php echo $row['name']; ?></h1></div></td>
 							</tr>
 						</table>
 					</div>

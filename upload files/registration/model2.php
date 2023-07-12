@@ -299,23 +299,23 @@ include("_reg.header.php");
 
       <td width="250" align="left" class="form_definitions"><select name="L1" id="L1">
 
-	      <option value="English"  <? if (isset($_POST[L1]) && $_POST[L1]=="English"){echo "selected";}  else if (!isset($_POST[L1])){ echo "selected"; }?>>English</option>
+	      <option value="English"  <?php if (isset($_POST[L1]) && $_POST[L1]=="English"){echo "selected";}  else if (!isset($_POST[L1])){ echo "selected"; }?>>English</option>
 
-          <option value="Dutch" <? if (isset($_POST[L1]) && $_POST[L1]=="Dutch"){echo "selected";}?>>Dutch</option>
+          <option value="Dutch" <?php if (isset($_POST[L1]) && $_POST[L1]=="Dutch"){echo "selected";}?>>Dutch</option>
 
-          <option value="French" <? if (isset($_POST[L1]) && $_POST[L1]=="French"){echo "selected";}?>>French</option>
+          <option value="French" <?php if (isset($_POST[L1]) && $_POST[L1]=="French"){echo "selected";}?>>French</option>
 
-          <option value="German" <? if (isset($_POST[L1]) && $_POST[L1]=="German"){echo "selected";}?>>German</option>
+          <option value="German" <?php if (isset($_POST[L1]) && $_POST[L1]=="German"){echo "selected";}?>>German</option>
 
-		  <option value="Italian" <? if (isset($_POST[L1]) && $_POST[L1]=="Italian"){echo "selected";}?>>Italian</option>
+		  <option value="Italian" <?php if (isset($_POST[L1]) && $_POST[L1]=="Italian"){echo "selected";}?>>Italian</option>
 
-		  <option value="Japanese" <? if (isset($_POST[L1]) && $_POST[L1]=="Japanese"){echo "selected";}?>>Japanese</option>
+		  <option value="Japanese" <?php if (isset($_POST[L1]) && $_POST[L1]=="Japanese"){echo "selected";}?>>Japanese</option>
 
-		  <option value="Korean" <? if (isset($_POST[L1]) && $_POST[L1]=="Korean"){echo "selected";}?>>Korean</option>
+		  <option value="Korean" <?php if (isset($_POST[L1]) && $_POST[L1]=="Korean"){echo "selected";}?>>Korean</option>
 
-		  <option value="Portuguese" <? if (isset($_POST[L1]) && $_POST[L1]=="Portuguese"){echo "selected";}?>>Portuguese</option>
+		  <option value="Portuguese" <?php if (isset($_POST[L1]) && $_POST[L1]=="Portuguese"){echo "selected";}?>>Portuguese</option>
 
-	      <option value="Spanish" <? if (isset($_POST[L1]) && $_POST[L1]=="Spanish"){echo "selected";}?>>Spanish</option>	       
+	      <option value="Spanish" <?php if (isset($_POST[L1]) && $_POST[L1]=="Spanish"){echo "selected";}?>>Spanish</option>	       
 
 	    </select></td>
 
@@ -328,25 +328,25 @@ include("_reg.header.php");
 
       <td align="left"><select name="L2" id="select">
 
-          <option value="None"  <? if (isset($_POST[L2]) && $_POST[L2]=="None"){echo "selected";}  else if (!isset($_POST[L2])){ echo "selected"; }?>>None</option>
+          <option value="None"  <?php if (isset($_POST[L2]) && $_POST[L2]=="None"){echo "selected";}  else if (!isset($_POST[L2])){ echo "selected"; }?>>None</option>
 
-          <option value="Dutch"  <? if (isset($_POST[L2]) && $_POST[L2]=="Dutch"){echo "selected";}?>>Dutch</option>
+          <option value="Dutch"  <?php if (isset($_POST[L2]) && $_POST[L2]=="Dutch"){echo "selected";}?>>Dutch</option>
 
-          <option value="English" <? if (isset($_POST[L2]) && $_POST[L2]=="English"){echo "selected";}?>>English</option>
+          <option value="English" <?php if (isset($_POST[L2]) && $_POST[L2]=="English"){echo "selected";}?>>English</option>
 
-          <option value="French" <? if (isset($_POST[L2]) && $_POST[L2]=="French"){echo "selected";}?>>French</option>
+          <option value="French" <?php if (isset($_POST[L2]) && $_POST[L2]=="French"){echo "selected";}?>>French</option>
 
-          <option value="German" <? if (isset($_POST[L2]) && $_POST[L2]=="German"){echo "selected";}?>>German</option>
+          <option value="German" <?php if (isset($_POST[L2]) && $_POST[L2]=="German"){echo "selected";}?>>German</option>
 
-          <option value="Italian" <? if (isset($_POST[L2]) && $_POST[L2]=="Italian"){echo "selected";}?>>Italian</option>
+          <option value="Italian" <?php if (isset($_POST[L2]) && $_POST[L2]=="Italian"){echo "selected";}?>>Italian</option>
 
-          <option value="Japanese" <? if (isset($_POST[L2]) && $_POST[L2]=="Japanese"){echo "selected";}?>>Japanese</option>
+          <option value="Japanese" <?php if (isset($_POST[L2]) && $_POST[L2]=="Japanese"){echo "selected";}?>>Japanese</option>
 
-          <option value="Korean" <? if (isset($_POST[L2]) && $_POST[L2]=="Korean"){echo "selected";}?>>Korean</option>
+          <option value="Korean" <?php if (isset($_POST[L2]) && $_POST[L2]=="Korean"){echo "selected";}?>>Korean</option>
 
-          <option value="Portuguese" <? if (isset($_POST[L2]) && $_POST[L2]=="Portuguese"){echo "selected";}?>>Portuguese</option>
+          <option value="Portuguese" <?php if (isset($_POST[L2]) && $_POST[L2]=="Portuguese"){echo "selected";}?>>Portuguese</option>
 
-          <option value="Spanish" <? if (isset($_POST[L2]) && $_POST[L2]=="Spanish"){echo "selected";}?>>Spanish</option>
+          <option value="Spanish" <?php if (isset($_POST[L2]) && $_POST[L2]=="Spanish"){echo "selected";}?>>Spanish</option>
 
       </select></td>
 
@@ -384,29 +384,29 @@ include("_reg.header.php");
 
         <select name="month" id="month">
 
-          <option value="Jan" <? if ($_POST[month]=="January"){ echo "selected";} else if (!isset($_POST[month])){ echo "selected";}?>>January</option>
+          <option value="Jan" <?php if ($_POST[month]=="January"){ echo "selected";} else if (!isset($_POST[month])){ echo "selected";}?>>January</option>
 
-          <option value="Feb" <? if ($_POST[month]=="February"){ echo "selected";}?>>February</option>
+          <option value="Feb" <?php if ($_POST[month]=="February"){ echo "selected";}?>>February</option>
 
-          <option value="Mar" <? if ($_POST[month]=="March"){ echo "selected";}?>>March</option>
+          <option value="Mar" <?php if ($_POST[month]=="March"){ echo "selected";}?>>March</option>
 
-		  <option value="Apr" <? if ($_POST[month]=="April"){ echo "selected";}?>>April</option>
+		  <option value="Apr" <?php if ($_POST[month]=="April"){ echo "selected";}?>>April</option>
 
-          <option value="May" <? if ($_POST[month]=="May"){ echo "selected";}?>>May</option>  
+          <option value="May" <?php if ($_POST[month]=="May"){ echo "selected";}?>>May</option>  
 
-          <option value="Jun" <? if ($_POST[month]=="June"){ echo "selected";}?>>June</option>
+          <option value="Jun" <?php if ($_POST[month]=="June"){ echo "selected";}?>>June</option>
 
-          <option value="Jul" <? if ($_POST[month]=="July"){ echo "selected";}?>>July</option>
+          <option value="Jul" <?php if ($_POST[month]=="July"){ echo "selected";}?>>July</option>
 
-          <option value="Aug" <? if ($_POST[month]=="August"){ echo "selected";}?>>August</option>
+          <option value="Aug" <?php if ($_POST[month]=="August"){ echo "selected";}?>>August</option>
 
-          <option value="Sep" <? if ($_POST[month]=="September"){ echo "selected";}?>>September</option>
+          <option value="Sep" <?php if ($_POST[month]=="September"){ echo "selected";}?>>September</option>
 
-          <option value="Oct" <? if ($_POST[month]=="October"){ echo "selected";}?>>October</option>
+          <option value="Oct" <?php if ($_POST[month]=="October"){ echo "selected";}?>>October</option>
 
-          <option value="Nov" <? if ($_POST[month]=="November"){ echo "selected";}?>>November</option>
+          <option value="Nov" <?php if ($_POST[month]=="November"){ echo "selected";}?>>November</option>
 
-          <option value="Dec" <? if ($_POST[month]=="December"){ echo "selected";}?>>December</option>
+          <option value="Dec" <?php if ($_POST[month]=="December"){ echo "selected";}?>>December</option>
         </select>
 
         <select name="year" id="year">
@@ -437,13 +437,13 @@ include("_reg.header.php");
 
       <td align="right" class="form_definitions">Weight</td>
 
-      <td align="left"><input name="Weight" type="text" id="Weight" size="4" value="<? if (isset($_POST[Weight])){ echo $_POST[Weight]; }  ?>" maxlength="4">
+      <td align="left"><input name="Weight" type="text" id="Weight" size="4" value="<?php if (isset($_POST[Weight])){ echo $_POST[Weight]; }  ?>" maxlength="4">
 
         <select name="weightMeasure" id="select2">
 
-          <option value="pd" <? if (isset($_POST[weightMeasure]) && $_POST[weightMeasure]=="pd"){echo "selected";} else if (!isset($_POST[weightMeasure])){ echo "selected"; }?>>Pounds</option>
+          <option value="pd" <?php if (isset($_POST[weightMeasure]) && $_POST[weightMeasure]=="pd"){echo "selected";} else if (!isset($_POST[weightMeasure])){ echo "selected"; }?>>Pounds</option>
 
-          <option value="kg" <? if (isset($_POST[weightMeasure]) && $_POST[weightMeasure]=="kg"){echo "selected";}?>>Kg</option>
+          <option value="kg" <?php if (isset($_POST[weightMeasure]) && $_POST[weightMeasure]=="kg"){echo "selected";}?>>Kg</option>
         </select>      </td>
 
       <td align="left">&nbsp;</td>
@@ -453,7 +453,7 @@ include("_reg.header.php");
 
       <td align="right" class="form_definitions">Height</td>
 
-      <td align="left"><input name="Height" type="text" id="Height" value="<? if (isset($_POST[Height])){ echo $_POST[Height]; }  ?>" size="4" maxlength="4">        </td>
+      <td align="left"><input name="Height" type="text" id="Height" value="<?php if (isset($_POST[Height])){ echo $_POST[Height]; }  ?>" size="4" maxlength="4">        </td>
 
       <td align="left">&nbsp;</td>
     </tr>
@@ -462,7 +462,7 @@ include("_reg.header.php");
 
       <td align="right" class="form_definitions">Eye Color </td>
 
-      <td align="left"><input name="eyeColor" type="text" id="eyeColor" size="24" value="<? if (isset($_POST[eyeColor])){ echo $_POST[eyeColor]; }  ?>" maxlength="24"></td>
+      <td align="left"><input name="eyeColor" type="text" id="eyeColor" size="24" value="<?php if (isset($_POST[eyeColor])){ echo $_POST[eyeColor]; }  ?>" maxlength="24"></td>
 
       <td align="left">&nbsp;</td>
     </tr>
@@ -471,7 +471,7 @@ include("_reg.header.php");
 
       <td align="right" class="form_definitions">Race</td>
 
-      <td align="left"><input name="Ethnic" type="text" id="Ethnic" size="24" value="<? if (isset($_POST[Ethnic])){ echo $_POST[Ethnic]; }  ?>" maxlength="24"></td>
+      <td align="left"><input name="Ethnic" type="text" id="Ethnic" size="24" value="<?php if (isset($_POST[Ethnic])){ echo $_POST[Ethnic]; }  ?>" maxlength="24"></td>
 
       <td align="left">&nbsp;</td>
     </tr>
@@ -480,7 +480,7 @@ include("_reg.header.php");
 
       <td align="right" class="form_definitions">Hair Color </td>
 
-      <td align="left"><input name="hairColor" type="text" id="hairColor" size="24" value="<? if (isset($_POST[hairColor])){ echo $_POST[hairColor]; }  ?>" maxlength="24"></td>
+      <td align="left"><input name="hairColor" type="text" id="hairColor" size="24" value="<?php if (isset($_POST[hairColor])){ echo $_POST[hairColor]; }  ?>" maxlength="24"></td>
 
       <td align="left">&nbsp;</td>
     </tr>
@@ -489,7 +489,7 @@ include("_reg.header.php");
 
       <td align="right" class="form_definitions">Hair Length </td>
 
-      <td align="left"><input name="hairLength" type="text" id="hairLength" size="24" value="<? if (isset($_POST[hairLength])){ echo $_POST[hairLength]; }  ?>" maxlength="24"></td>
+      <td align="left"><input name="hairLength" type="text" id="hairLength" size="24" value="<?php if (isset($_POST[hairLength])){ echo $_POST[hairLength]; }  ?>" maxlength="24"></td>
 
       <td align="left">&nbsp;</td>
     </tr>
@@ -498,7 +498,7 @@ include("_reg.header.php");
 
       <td align="right" class="form_definitions">Location  </td>
 
-      <td align="left"><input name="location" type="text" id="location" size="24" value="<? if (isset($_POST[location])){ echo $_POST[location]; } else { echo 'My Bedroom';}  ?>" maxlength="24"></td>
+      <td align="left"><input name="location" type="text" id="location" size="24" value="<?php if (isset($_POST[location])){ echo $_POST[location]; } else { echo 'My Bedroom';}  ?>" maxlength="24"></td>
 
       <td align="left">&nbsp;</td>
     </tr>
@@ -516,7 +516,7 @@ include("_reg.header.php");
 
       <td align="right" class="form_definitions">Favorite Position</td>
 
-      <td align="left"><textarea name="Position" cols="24" rows="5" id="Position"><? if (isset($_POST[Position])){ echo $_POST[Position]; }  ?></textarea></td>
+      <td align="left"><textarea name="Position" cols="24" rows="5" id="Position"><?php if (isset($_POST[Position])){ echo $_POST[Position]; }  ?></textarea></td>
 
       <td align="left">&nbsp;</td>
     </tr>
@@ -534,7 +534,7 @@ include("_reg.header.php");
 
       <td align="right" class="form_definitions">Secret Fantasies</td>
 
-      <td align="left"><textarea name="Fantasies" cols="24" rows="5" id="Fantasies"><? if (isset($_POST[Fantasies])){ echo $_POST[Fantasies]; }?></textarea></td>
+      <td align="left"><textarea name="Fantasies" cols="24" rows="5" id="Fantasies"><?php if (isset($_POST[Fantasies])){ echo $_POST[Fantasies]; }?></textarea></td>
 
       <td align="left">&nbsp;</td>
     </tr>
@@ -554,29 +554,29 @@ include("_reg.header.php");
 
       <td width="250" align="left" class="form_definitions"><select name="Category" id="Category">
 
-	      <option value="<? $cat1 ?>"  <? if (isset($_POST[Category]) && $_POST[Category]==$cat1){echo "selected";}  else if (!isset($_POST[Category])){ echo "selected"; }?>><? $cat1 ?></option>
+	      <option value="<?php $cat1 ?>"  <?php if (isset($_POST[Category]) && $_POST[Category]==$cat1){echo "selected";}  else if (!isset($_POST[Category])){ echo "selected"; }?>><?php $cat1 ?></option>
 
-          <option value="<? $cat2 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat2){echo "selected";}?>><? $cat2 ?></option>
+          <option value="<?php $cat2 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat2){echo "selected";}?>><?php $cat2 ?></option>
 
-          <option value="<? $cat3 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat3){echo "selected";}?>><? $cat3 ?></option>
+          <option value="<?php $cat3 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat3){echo "selected";}?>><?php $cat3 ?></option>
 
-          <option value="<? $cat4 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat4){echo "selected";}?>><? $cat4 ?></option>
+          <option value="<?php $cat4 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat4){echo "selected";}?>><?php $cat4 ?></option>
 
-		  <option value="<? $cat5 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat5){echo "selected";}?>><? $cat5 ?></option>
+		  <option value="<?php $cat5 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat5){echo "selected";}?>><?php $cat5 ?></option>
 
-		  <option value="<? $cat6 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat6){echo "selected";}?>><? $cat6 ?></option>
+		  <option value="<?php $cat6 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat6){echo "selected";}?>><?php $cat6 ?></option>
 
-		  <option value="<? $cat7 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat7){echo "selected";}?>><? $cat7 ?></option>
+		  <option value="<?php $cat7 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat7){echo "selected";}?>><?php $cat7 ?></option>
 
-		  <option value="<? $cat8 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat8){echo "selected";}?>><? $cat8 ?></option>
+		  <option value="<?php $cat8 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat8){echo "selected";}?>><?php $cat8 ?></option>
 
-	      <option value="<? $cat9 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat9){echo "selected";}?>><? $cat9 ?></option>	       
+	      <option value="<?php $cat9 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat9){echo "selected";}?>><?php $cat9 ?></option>	       
 		  
-		  <option value="<? $cat10 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat10){echo "selected";}?>><? $cat10 ?></option>	       
+		  <option value="<?php $cat10 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat10){echo "selected";}?>><?php $cat10 ?></option>	       
 		  
-		  <option value="<? $cat11 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat11){echo "selected";}?>><? $cat11 ?></option>	       
+		  <option value="<?php $cat11 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat11){echo "selected";}?>><?php $cat11 ?></option>	       
 		  
-		  <option value="<? $cat12 ?>" <? if (isset($_POST[Category]) && $_POST[Category]==$cat12){echo "selected";}?>><? $cat12 ?></option>	       
+		  <option value="<?php $cat12 ?>" <?php if (isset($_POST[Category]) && $_POST[Category]==$cat12){echo "selected";}?>><?php $cat12 ?></option>	       
 
 	    </select></td>
 
@@ -588,12 +588,12 @@ include("_reg.header.php");
       <td align="right" class="form_definitions">Hobbies</td>
 
       <td align="left"><br />
-      <textarea name="Hobbies" cols="24" rows="5" id="Hobbies"><? if (isset($_POST[Hobbies])){ echo $_POST[Hobbies]; }?></textarea></td><td align="left">&nbsp;</td>
+      <textarea name="Hobbies" cols="24" rows="5" id="Hobbies"><?php if (isset($_POST[Hobbies])){ echo $_POST[Hobbies]; }?></textarea></td><td align="left">&nbsp;</td>
     </tr>
 
     <tr>
 
-      <td align="right" class="form_definitions"><? if(isset($_FILES['ImageFile']['name'])){
+      <td align="right" class="form_definitions"><?php if(isset($_FILES['ImageFile']['name'])){
 
 		  echo "<font color=#ffdd54>Your Profile Picture*</font>";
 
@@ -624,17 +624,17 @@ include("_reg.header.php");
         <p><br />
           <select name="PMini" id="PMini">
             
-            <option value="100"  <? if (isset($_POST[PMini]) && $_POST[PMini]=="100"){echo "selected";}?>>100</option>
+            <option value="100"  <?php if (isset($_POST[PMini]) && $_POST[PMini]=="100"){echo "selected";}?>>100</option>
             
-            <option value="250"  <? if (isset($_POST[PMini]) && $_POST[PMini]=="250"){echo "selected";}?>>250</option>
+            <option value="250"  <?php if (isset($_POST[PMini]) && $_POST[PMini]=="250"){echo "selected";}?>>250</option>
             
-            <option value="500"  <? if (isset($_POST[PMini]) && $_POST[PMini]=="500"){echo "selected";} else if (!isset($_POST[PMini])){ echo "selected"; }?>>500</option>
+            <option value="500"  <?php if (isset($_POST[PMini]) && $_POST[PMini]=="500"){echo "selected";} else if (!isset($_POST[PMini])){ echo "selected"; }?>>500</option>
             
-            <option value="1000"  <? if (isset($_POST[PMini]) && $_POST[PMini]=="1000"){echo "selected";}?>>1000</option>
+            <option value="1000"  <?php if (isset($_POST[PMini]) && $_POST[PMini]=="1000"){echo "selected";}?>>1000</option>
             
-            <option value="2500"  <? if (isset($_POST[PMini]) && $_POST[PMini]=="2500"){echo "selected";}?>>2500</option>
+            <option value="2500"  <?php if (isset($_POST[PMini]) && $_POST[PMini]=="2500"){echo "selected";}?>>2500</option>
             
-            <option value="5000"  <? if (isset($_POST[PMini]) && $_POST[PMini]=="5000"){echo "selected";}?>>5000</option>
+            <option value="5000"  <?php if (isset($_POST[PMini]) && $_POST[PMini]=="5000"){echo "selected";}?>>5000</option>
           </select>
           </p></td>
 
@@ -650,13 +650,13 @@ include("_reg.header.php");
 
       <td align="left"><select name="PMethod" id="PMethod">
 
-          <option value="pp"  <? if (isset($_POST[PMethod]) && $_POST[PMethod]=="pp"){echo "selected";} else if (!isset($_POST[PMethod])){ echo "selected"; }?>>Paypal</option>
+          <option value="pp"  <?php if (isset($_POST[PMethod]) && $_POST[PMethod]=="pp"){echo "selected";} else if (!isset($_POST[PMethod])){ echo "selected"; }?>>Paypal</option>
 
-          <option value="wu"  <? if (isset($_POST[PMethod]) && $_POST[PMethod]=="wu"){echo "selected";}?>>Western Union</option>
+          <option value="wu"  <?php if (isset($_POST[PMethod]) && $_POST[PMethod]=="wu"){echo "selected";}?>>Western Union</option>
 
-          <option value="ck"  <? if (isset($_POST[PMethod]) && $_POST[PMethod]=="ck"){echo "selected";}?>>Check</option>
+          <option value="ck"  <?php if (isset($_POST[PMethod]) && $_POST[PMethod]=="ck"){echo "selected";}?>>Check</option>
 
-          <option value="gc"  <? if ($tempPMethod=="gc"){echo "selected";}?> >Google Checkout</option>
+          <option value="gc"  <?php if ($tempPMethod=="gc"){echo "selected";}?> >Google Checkout</option>
 
       </select></td>
 
@@ -668,7 +668,7 @@ include("_reg.header.php");
 
       <td align="right" class="form_definitions">Payment Information</td>
 
-      <td align="left"><textarea name="PInfo" cols="24" rows="5" id="PInfo"><? if (isset($_POST[PInfo])){ echo $_POST[PInfo]; } ?></textarea></td>
+      <td align="left"><textarea name="PInfo" cols="24" rows="5" id="PInfo"><?php if (isset($_POST[PInfo])){ echo $_POST[PInfo]; } ?></textarea></td>
 
       <td>&nbsp;</td>
 

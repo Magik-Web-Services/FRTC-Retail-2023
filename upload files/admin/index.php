@@ -194,8 +194,8 @@ $start=($page-1)*$perpage;
           <td width="241" class="big_title"><div align="left" style="margin-top:-50px;margin-bottom:100px;font-size:18px;font-family:Arial, Helvetica, sans-serif;font-weight:300;">
 		  
 
-          <div align="center" style="position:absolute;left:0px;top:80px;right:0px;width:100%;align-text:center;">  Online Broadcasters : <? echo $onlinemodels;?> | <a href="models.php">Registered Broadcasters: <? echo $nTotal; ?></a> |
-              <a href="newsubscriptions.php">Pending Broadcasters: <? echo $nPending; ?></a> </div>
+          <div align="center" style="position:absolute;left:0px;top:80px;right:0px;width:100%;align-text:center;">  Online Broadcasters : <?php echo $onlinemodels;?> | <a href="models.php">Registered Broadcasters: <?php echo $nTotal; ?></a> |
+              <a href="newsubscriptions.php">Pending Broadcasters: <?php echo $nPending; ?></a> </div>
 			  
 			  <br>
 			  
@@ -216,14 +216,14 @@ $start=($page-1)*$perpage;
 		  
 		  
 		  
-		             <form method="post" action="<? echo $PHP_SELF ?>">
+		             <form method="post" action="<?php echo $PHP_SELF ?>">
 					   
 					   <input type="submit" name="offline" value=" Disconnect All "  style="margin:3px;cursor:pointer;background-color:#ff0707;color:#fff;border-radius:40px;width:200px;padding:8px;"/>
 					   
   <input type="submit" name="online" value=" Set All As Live " style="cursor:pointer;background-color:#d3ff02;color:#353535;border-radius:40px;width:200px;padding:8px;margin:3px;"/>
 </form>	  
 
-       <form method="post" action="<? echo $PHP_SELF ?>">
+       <form method="post" action="<?php echo $PHP_SELF ?>">
               <input type="text" name="search" value="<?=$_POST['search'];?>" style="width:200px;border-radius:40px;padding:8px;color:#939393;margin:3px;" placeholder="Enter a username... &#128269;"/>
   <input type="submit" name="submit" value="Search" style="margin:3px;background-color:#fff;width:215px;cursor:pointer;color:#717171;border-radius:40px;padding:8px;"/>
   </form>

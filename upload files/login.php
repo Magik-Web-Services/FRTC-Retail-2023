@@ -170,7 +170,7 @@ include("_main.header.php");
 .btntype{
 	font-size: 15px;
     padding: 8px;
-    background-color: #<? echo $topBarColor1; ?>;
+    background-color: #<?php echo $topBarColor1; ?>;
     text-align: center;
     border-radius: 6px;
     margin: 25px;

@@ -6,7 +6,7 @@ if (isset($_COOKIE["usertype"])){
 }
 ?>
 
-<? include("settings.php"); ?>
+<?php include("settings.php"); ?>
 
 <style type="text/css">
 .help-faq {
@@ -22,19 +22,19 @@ if (isset($_COOKIE["usertype"])){
 			<span>A. You must be at least 18 years of age to view or become a member or broadcaster on our site.</span>
 		</li>
 		<li>
-			<b>Q. Can I be both a member and broadcaster on <? echo $sitename  ?> website?</b>
+			<b>Q. Can I be both a member and broadcaster on <?php echo $sitename  ?> website?</b>
 			<span>A. Yes, the only restriction is one model and/or one member account per person.</span>
 		</li>
 		<li>
-			<b>Q. Does <? echo $sitename ?> charge monthly membership fees? And if so how much?</b>
+			<b>Q. Does <?php echo $sitename ?> charge monthly membership fees? And if so how much?</b>
 			<span>A. No, currently there are no monthly membership fees, members purchase tokens to use as needed.</span>
 		</li>
 		<li>
 			<b>Q. Do you pay your broadcasters?</b>
-			<span>A. Yes, broadcasters earn between <? echo $percentagePayout ?>% of their earnings on our site.</span>
+			<span>A. Yes, broadcasters earn between <?php echo $percentagePayout ?>% of their earnings on our site.</span>
 		</li>
         <li>
-			<b>Q. How often does <? echo $sitename  ?> pay broadcasters?</b>
+			<b>Q. How often does <?php echo $sitename  ?> pay broadcasters?</b>
 			<span>A. Broadcasters are paid twice a month, on the 15th and the last day of the month.</span>
 		</li>
         <li>
@@ -43,7 +43,7 @@ if (isset($_COOKIE["usertype"])){
 		</li>
 
       <li>
-			<b>Q. How can I make the most cash on <? echo $sitename  ?>?</b>
+			<b>Q. How can I make the most cash on <?php echo $sitename  ?>?</b>
 			<span>A. Although we strategically market our site, we encourage broadcasters to use social media, twitter, facebook, Instagram etc.  by creating or using your existing page to direct your followers here.</span>
 		</li>
         <li>
@@ -56,7 +56,7 @@ if (isset($_COOKIE["usertype"])){
 		</li>
         <li>
 			<b>Q. Where do broadcasters/members write with any issue’s concerning their account?</b>
-			<span>A. Broadcasters or members can write to <? echo $registrationemail ?> regarding account questions or help.</span>
+			<span>A. Broadcasters or members can write to <?php echo $registrationemail ?> regarding account questions or help.</span>
 		</li>
         <li>
 			<b>Q. What do the colored member usernames mean?</b>

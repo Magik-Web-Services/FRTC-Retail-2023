@@ -120,10 +120,10 @@ font-size: 14px !important;
 
 /* background-color: #fff !important; */
 
-background-image: linear-gradient(#<? echo $homepageBackgroundColor1; ?>, #<? echo $homepageBackgroundColor2; ?>) !important;
+background-image: linear-gradient(#<?php echo $homepageBackgroundColor1; ?>, #<?php echo $homepageBackgroundColor2; ?>) !important;
 background-repeat:no-repeat !important;
 
-background-color:#<? echo $homepageBackgroundColor1; ?>;
+background-color:#<?php echo $homepageBackgroundColor1; ?>;
 
 
 }
@@ -142,10 +142,10 @@ background-color:#<? echo $homepageBackgroundColor1; ?>;
 /* Top Nav Bar Buttons */
 
 .topnav a {
-  border: 1px solid #<? echo $TopButtonOutlineColor ?>;
+  border: 1px solid #<?php echo $TopButtonOutlineColor ?>;
   border-radius: 4px;
-  background-color: #<? echo $TopButton ?>;
-  color: #<? echo $TopButtonText ?>;
+  background-color: #<?php echo $TopButton ?>;
+  color: #<?php echo $TopButtonText ?>;
   display: block;
   float: left;
   font-size: 14px !important;
@@ -160,16 +160,16 @@ background-color:#<? echo $homepageBackgroundColor1; ?>;
 
 
 .topnav a:hover {
-  background-color: #<? echo $TopButtonHover ?>;
-  color: #<? echo $TopButtonTextHover ?>;
-  border: 1px solid #<? echo $TopButtonHoverOutlineColor ?>;
+  background-color: #<?php echo $TopButtonHover ?>;
+  color: #<?php echo $TopButtonTextHover ?>;
+  border: 1px solid #<?php echo $TopButtonHoverOutlineColor ?>;
   border-radius: 4px;
 }
 
 /* .active {
-  background-color: #<? echo $TopButtonActive ?>;
-  color: #<? echo $TopButtonTextActive ?>;
-  border: 1px solid #<? echo $TopButtonActiveOutlineColor ?>;
+  background-color: #<?php echo $TopButtonActive ?>;
+  color: #<?php echo $TopButtonTextActive ?>;
+  border: 1px solid #<?php echo $TopButtonActiveOutlineColor ?>;
   border-radius: 4px;
 }
 */
@@ -219,7 +219,7 @@ background-color:#<? echo $homepageBackgroundColor1; ?>;
 /* Top Bar Color */
 
 .pinkcs {
-    background-image: linear-gradient(#<? echo $topBarColor1 ?>, #<? echo $topBarColor2 ?>) !important;
+    background-image: linear-gradient(#<?php echo $topBarColor1 ?>, #<?php echo $topBarColor2 ?>) !important;
     float: left;
     padding: 4px 0;
     width: 100%;
@@ -236,14 +236,14 @@ background-color:#<? echo $homepageBackgroundColor1; ?>;
 
 .col-md-l2.hide-on-med-and-down {
     padding: 13px 26px 13px;
-    background: #<? echo $topBarColor2 ?>;
+    background: #<?php echo $topBarColor2 ?>;
 	display:none !important;
 
 }
 
 
 .phone-header {
-    color: #<? echo $scrollTextColor ?>;
+    color: #<?php echo $scrollTextColor ?>;
     padding: 12px 33px !important
 	
 	}
@@ -542,7 +542,7 @@ function CheckIdleTime() {
     if (_idleSecondsCounter >= IDLE_TIMEOUT) {
         window.clearInterval(_idleSecondsTimer);
         alert("Time expired!");
-        document.location.href = "<? echo $siteurl ?>logout.php";
+        document.location.href = "<?php echo $siteurl ?>logout.php";
     }
 }
 </script>
@@ -559,11 +559,11 @@ function CheckIdleTime() {
 			<tr>
 				<td class="top-right-td" valign="top"><!-- Start css3menu.com BODY section -->
 					<ul id="css3menu1" class="topmenu headermaintopleft col-md-3">
-						<li class="topmenu col-md-12 col-sm-6"><a href="<? echo $siteurl ?>"><center><img src="images/logo1.png"></center></a></li>	
+						<li class="topmenu col-md-12 col-sm-6"><a href="<?php echo $siteurl ?>"><center><img src="images/logo1.png"></center></a></li>	
 						<li class="topmenu  col-md-6 col-sm-6">	
 						</li>       
 					</ul>
-					<div class="phone-header col-md-4 col-sm-12"><? echo $headerLabel ?> <marquee scrolldelay="<? echo $scrollingSpeed ?>"> <? echo $scrollText ?></marquee></div>
+					<div class="phone-header col-md-4 col-sm-12"><?php echo $headerLabel ?> <marquee scrolldelay="<?php echo $scrollingSpeed ?>"> <?php echo $scrollText ?></marquee></div>
 				</td>	 
 				<?php
 				if($_COOKIE['usertype']=='chatmodels')
@@ -665,13 +665,13 @@ function CheckIdleTime() {
 	</div>
 	</div>
 	<div class="mobile-menu transparent-bac_colour">
-		<div class="top-mob-header" style="background-color:#<? echo $topBarColor1 ?> !important;">
+		<div class="top-mob-header" style="background-color:#<?php echo $topBarColor1 ?> !important;">
 			<div class="toggle-btn">
 				<span class="tog-bor"></span>
 				<span class="tog-bor"></span>
 				<span class="tog-bor"></span>
 			</div>
-			<div class="mob-logo"><a href="<? echo $siteurl ?>"><img src="images/logo1.png"></a></div>
+			<div class="mob-logo"><a href="<?php echo $siteurl ?>"><img src="images/logo1.png"></a></div>
 		</div>	
 		<div class="toggle-mob-menu">
 			<div class="login-btn"><a href="cp/chatusers/buyminutes.php" class="active"> Get Tokens</a></div>
@@ -711,7 +711,7 @@ function CheckIdleTime() {
 				<li><a href="registration/model.php">Broadcast Yourself</a></li>
 				<?php } ?>
 				<li class="main-drop-sec login-drop">
-					<h3 class="drop-menu-mob"><? if (isset($username)){echo $username;} ?><? if (isset($model)){echo $model;} ?> <i class="fa fa-angle-down" aria-hidden="true"></i></h3>
+					<h3 class="drop-menu-mob"><?php if (isset($username)){echo $username;} ?><?php if (isset($model)){echo $model;} ?> <i class="fa fa-angle-down" aria-hidden="true"></i></h3>
 					<div class="collection-mob drop-data-mob">
 					<?php 
 					if($username) {
@@ -743,7 +743,7 @@ function CheckIdleTime() {
 </div>
 <div class="col l2 hide-on-med-and-down">	
 	<div class="bar2" height="35px">
-		<a href="<? echo $siteurl ?>/new/matcss.php#">
+		<a href="<?php echo $siteurl ?>/new/matcss.php#">
 			<div class="model-button" align="right">
 				<div align="center">MODEL SIGNUP</div>		
 			</div>

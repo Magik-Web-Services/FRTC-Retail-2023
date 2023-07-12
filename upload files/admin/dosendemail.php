@@ -13,8 +13,8 @@ include("_header-admin.php")
 	<table width="1010" height="329"  border="0" align="center" bgcolor="#F8F8F8">
       <tr>
         <td class="big_title"><div align="center">
-          <p><h1>Email sent to <? echo $_POST['email'];?></h1></p>
-          <p><a href="<? if($_POST['type']=="model"){echo"modelviewdetails";} else if ($_POST['type']=="member"){echo"memberviewdetails";} else if ($_POST['type']=="sop"){echo"sopviewdetails";}?>.php?id=<? echo $_POST['id'];?>">Now ,get me back!</a><br>
+          <p><h1>Email sent to <?php echo $_POST['email'];?></h1></p>
+          <p><a href="<?php if($_POST['type']=="model"){echo"modelviewdetails";} else if ($_POST['type']=="member"){echo"memberviewdetails";} else if ($_POST['type']=="sop"){echo"sopviewdetails";}?>.php?id=<?php echo $_POST['id'];?>">Now ,get me back!</a><br>
                 <br>
                 <?
 include('../dbase.php');

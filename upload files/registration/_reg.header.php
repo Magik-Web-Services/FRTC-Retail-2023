@@ -55,8 +55,8 @@
 			background-image: inherit !important;
 			font-weight: normal !important;
 			font-size: 14px !important;
-			background-color: #<? echo $mainSiteBackgroundColor ?> !important;
-			color: #<? echo $regTextColor ?> !important;
+			background-color: #<?php echo $mainSiteBackgroundColor ?> !important;
+			color: #<?php echo $regTextColor ?> !important;
 		}
 
 
@@ -69,10 +69,10 @@
 		/* Top Nav Bar Buttons */
 
 		.topnav a {
-			border: 1px solid #<? echo $TopButtonOutlineColor ?>;
+			border: 1px solid #<?php echo $TopButtonOutlineColor ?>;
 			border-radius: 4px;
-			background-color: #<? echo $TopButton ?>;
-			color: #<? echo $TopButtonText ?>;
+			background-color: #<?php echo $TopButton ?>;
+			color: #<?php echo $TopButtonText ?>;
 			display: block;
 			float: left;
 			font-size: 14px !important;
@@ -88,16 +88,16 @@
 
 
 		.topnav a:hover {
-			background-color: #<? echo $TopButtonHover ?>;
-			color: #<? echo $TopButtonTextHover ?>;
-			border: 1px solid #<? echo $TopButtonHoverOutlineColor ?>;
+			background-color: #<?php echo $TopButtonHover ?>;
+			color: #<?php echo $TopButtonTextHover ?>;
+			border: 1px solid #<?php echo $TopButtonHoverOutlineColor ?>;
 			border-radius: 4px;
 		}
 
 		.active {
-			background-color: #<? echo $TopButtonActive ?>;
-			color: #<? echo $TopButtonTextActive ?> !important;
-			border: 1px solid #<? echo $TopButtonActiveOutlineColor ?>;
+			background-color: #<?php echo $TopButtonActive ?>;
+			color: #<?php echo $TopButtonTextActive ?> !important;
+			border: 1px solid #<?php echo $TopButtonActiveOutlineColor ?>;
 			border-radius: 4px;
 			opacity: 1.0;
 
@@ -156,7 +156,7 @@
 		/* Top Bar Color */
 
 		.pinkcs {
-			background-image: linear-gradient(#<? echo $topBarColor1 ?>, #<? echo $topBarColor2 ?>) !important;
+			background-image: linear-gradient(#<?php echo $topBarColor1 ?>, #<?php echo $topBarColor2 ?>) !important;
 
 			border-bottom: 1px;
 			border-bottom-width: 1px;
@@ -177,7 +177,7 @@
 
 		.col-md-l2.hide-on-med-and-down {
 			padding: 13px 26px 13px;
-			background: #<? echo $topBarColor2 ?>;
+			background: #<?php echo $topBarColor2 ?>;
 
 			display: none;
 
@@ -185,7 +185,7 @@
 
 
 		.phone-header {
-			color: #<? echo $scrollTextColor ?>;
+			color: #<?php echo $scrollTextColor ?>;
 			padding: 12px 33px !important
 		}
 
@@ -532,7 +532,7 @@
 
 		<div class="mobile-menu transparent-bac_colour">
 
-			<div class="top-mob-header" style="background-color:#<? echo $topBarColor1 ?> !important;">
+			<div class="top-mob-header" style="background-color:#<?php echo $topBarColor1 ?> !important;">
 				<div class="toggle-btn">
 
 					<span class="tog-bor"></span>
@@ -594,7 +594,7 @@
 	</div>
 	<div class="col l2 hide-on-med-and-down">
 		<div class="bar2" height="35px">
-			<a href="<? echo $siteurl ?>/new/matcss.php#">
+			<a href="<?php echo $siteurl ?>/new/matcss.php#">
 				<div class="model-button" align="right">
 					<div align="center">MODEL SIGNUP</div>
 				</div>

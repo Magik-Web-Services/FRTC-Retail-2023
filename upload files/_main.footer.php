@@ -103,7 +103,7 @@ body,td,th {
             </p>
             <div class="adults">LIVE BROADCASTERS 24/7 </div>
             <br />
-            <a href="registration/user.php" alt="Join live video chat and interact with webcam broadcasters today at <?  echo $sitename ?>." title="Live interactive webcam site">Join our community today and enjoy 24/7 live webcams.</a></div></td>
+            <a href="registration/user.php" alt="Join live video chat and interact with webcam broadcasters today at <?php  echo $sitename ?>." title="Live interactive webcam site">Join our community today and enjoy 24/7 live webcams.</a></div></td>
         </tr>
       </table>
       <table width="75%" border="0" cellspacing="10">
@@ -119,7 +119,7 @@ body,td,th {
 	  <table width="75%" border="0" cellspacing="10" bgcolor="#000000">
         <tr>
           <td bgcolor="#000000"><div class="links" align="center">
-            <p><a href="#">Copyright © <? echo $copyrightYear ?> <? echo $sitename?>. All Rights Reserved. </a><a href="#"></a></p>
+            <p><a href="#">Copyright © <?php echo $copyrightYear ?> <?php echo $sitename?>. All Rights Reserved. </a><a href="#"></a></p>
             </div></td>
         </tr>
       </table>

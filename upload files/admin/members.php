@@ -126,7 +126,7 @@ while($row = mysql_fetch_array($result))
 			</td>
 	  </tr>
 		<tr>
-			<form method="post" action="<? echo $PHP_SELF?>" >
+			<form method="post" action="<?php echo $PHP_SELF?>" >
 			<td align="center">
 				<input type="text" name="srn" value="" />
 			</td>
@@ -141,7 +141,7 @@ while($row = mysql_fetch_array($result))
 	</td>
 </tr>
   <tr>
-    <td bgcolor="#F8F8F8" class="small_title"><p align="left" class="message" style="margin-bottom:-100px;"><strong>Member currency total: &nbsp;<? echo $money; ?>&nbsp; Tokens</strong></p></td>
+    <td bgcolor="#F8F8F8" class="small_title"><p align="left" class="message" style="margin-bottom:-100px;"><strong>Member currency total: &nbsp;<?php echo $money; ?>&nbsp; Tokens</strong></p></td>
   </tr>
 </table>
 

@@ -12,7 +12,7 @@ include("_header-admin.php")
   <div align="center">
     <table width="1010" height="80" border="0">
       <tr>
-        <td class="a_small_title"><div align="center"><h1>Send Email To: <? echo $_POST['email']?> (<? echo $_POST['username']?>)</div></h1></td>
+        <td class="a_small_title"><div align="center"><h1>Send Email To: <?php echo $_POST['email']?> (<?php echo $_POST['username']?>)</div></h1></td>
         </tr>
       </table>
   </div>
@@ -37,10 +37,10 @@ include("_header-admin.php")
 	        <textarea name="message" cols="104" rows="20" id="message"></textarea>
 	        <br>
 	          <input type="submit" name="Submit" value="Send Email" style="width:300px;background-color:#ddd;margin-top:15px;cursor:pointer;">
-	          <input name="email" type="hidden" id="date4" value="<? echo $_POST['email']; ?>">
-	          <input name="id" type="hidden" id="id45" value="<? echo $_POST['id']; ?>">
-	          <input name="type" type="hidden" id="type" value="<? echo $_POST['type']; ?>">
-	          <input name="username" type="hidden" id="username4" value="<? echo $_POST['username']; ?>">
+	          <input name="email" type="hidden" id="date4" value="<?php echo $_POST['email']; ?>">
+	          <input name="id" type="hidden" id="id45" value="<?php echo $_POST['id']; ?>">
+	          <input name="type" type="hidden" id="type" value="<?php echo $_POST['type']; ?>">
+	          <input name="username" type="hidden" id="username4" value="<?php echo $_POST['username']; ?>">
 	        </div></td>
           </tr>
 	    </table>

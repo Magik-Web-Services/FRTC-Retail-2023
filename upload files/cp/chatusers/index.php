@@ -1,7 +1,7 @@
 <head>
 <META http-equiv="refresh" content="3;URL=buyminutes.php">
 
- <? if (isset($_COOKIE["usertype"])){
+ <?php if (isset($_COOKIE["usertype"])){
 
 	
     include("_members.header.php");	

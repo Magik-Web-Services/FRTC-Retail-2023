@@ -5,8 +5,7 @@ $labelerr1 = "";
 $labelerr2 = "";
 $flderrr1 = "";
 $flderrr2 = "";
-if (isset($_POST['UserName']) != "" && isset($_POST['Password1']) != "" && isset($_POST['Password2']) != "" && isset($_POST['Email']) != "" && isset($_POST['Name']) != "" && isset($_POST['Country']) != "" && isset($_POST['State']) != "" && isset($_POST['City']) != "" && isset($_POST['ZipCode']) != "" && isset($_POST['Adress']) != ""  &&  isset($_POST['phone']) != "" && $_FILES['ActImage']['tmp_name'] != "" && $_FILES['RImage']['tmp_name'] != "" && isset($_POST['checkbox']) != "" && isset($_POST['native_language']) != "" && isset($_POST['day']) != "" && isset($_POST['month']) != "" && isset($_POST['year']) != "" && isset($_POST['gender']) != "") {
-	echo "asdf";
+if (isset($_POST['UserName']) != "" && isset($_POST['Password1']) != "" && isset($_POST['Password2']) != "" && isset($_POST['Email']) != "") {
 	include("../dbase.php");
 	include("../settings.php");
 	$replacevalues = array('&', '/', " ", "?", "+", "%", "$", "#", "@");
@@ -106,8 +105,8 @@ if (isset($_POST['UserName']) != "" && isset($_POST['Password1']) != "" && isset
 		$_SESSION['birthDate'] = $birthDate;
 		$_SESSION['gender'] = $_POST['gender'];
 		$_SESSION['Category'] = $_POST['Category'];
-		$_SESSION['race_ethnicity'] = implode(", ", $_POST["race_ethnicity"]);
-		$_SESSION['native_language'] = implode(", ", $_POST["native_language"]);
+		// $_SESSION['race_ethnicity'] = implode(", ", $_POST["race_ethnicity"]);
+		// $_SESSION['native_language'] = implode(", ", $_POST["native_language"]);
 		session_write_close();
 		mysqli_query($conn, "insert into chatmodels (id,user,password,email,phone,name,gender,country,state,city,zip,adress,dateRegistered,status,birthDate,native_language,category,race_ethnicity,Spy_Shows)values('$userId','$username','$db_pass','$_SESSION[email]','$_SESSION[phone]','$_SESSION[name]','$_SESSION[gender]','$_SESSION[country]','$_SESSION[state]','$_SESSION[city]','$_SESSION[zipcode]','$_SESSION[adress]','$dateRegistered','pending', '$_SESSION[birthDate]', '$_SESSION[native_language]','$_POST[Category]','$_SESSION[race_ethnicity]','no')");
 
@@ -142,7 +141,7 @@ include("_reg.header.php");
 
 <style type="text/css">
 	.body {
-		color: #<? echo $regTextColor ?> !important;
+		color: #<?php echo $regTextColor ?> !important;
 
 
 	}
@@ -152,9 +151,9 @@ include("_reg.header.php");
 	button,
 	select,
 	textarea {
-		background-color: #<? echo $regInputBackgroundColor ?> !important;
-		color: #<? echo $regInputTextColor ?> !important;
-		border-color: #<? echo $regInputBorderColor ?> !important;
+		background-color: #<?php echo $regInputBackgroundColor ?> !important;
+		color: #<?php echo $regInputTextColor ?> !important;
+		border-color: #<?php echo $regInputBorderColor ?> !important;
 		outline: none !important;
 	}
 
@@ -247,7 +246,7 @@ include("_reg.header.php");
 
 
 	.dgdkj {
-		background-color: #<? echo $regTableBackgroundColor ?> !important;
+		background-color: #<?php echo $regTableBackgroundColor ?> !important;
 
 
 	}
@@ -268,7 +267,7 @@ include("_reg.header.php");
 	form.modal_register_form .dfngbodjb input#ActImage,
 	form.modal_register_form .dfngbodjb input#RImage {
 
-		border: 0.5px solid #<? echo $regInputBorderColor ?> !important;
+		border: 0.5px solid #<?php echo $regInputBorderColor ?> !important;
 		/* border-radius: 6px !important; */
 		padding: 5px !important;
 	}
@@ -277,7 +276,7 @@ include("_reg.header.php");
 
 
 	.member_sec_top {
-		background-color: #<? echo $regTopBarColor ?> !important;
+		background-color: #<?php echo $regTopBarColor ?> !important;
 		/* box-shadow: 1px 0 3px #999; */
 	}
 
@@ -316,7 +315,7 @@ include("_reg.header.php");
 		}
 	}
 </script>
-<form action="model.php" class="modal_register_form" method="post" enctype="multipart/form-data" name="form1" target="_self">
+<form class="modal_register_form" method="post" enctype="multipart/form-data" name="form1" target="_self">
 	<div id="Layer1">
 		<tr>
 			<td colspan="3" class="form_definitions">
@@ -326,7 +325,7 @@ include("_reg.header.php");
 						echo "<font color=#ffdd54>You must agree with the terms of service to register:</font><br>";
 					}
 					?>
-					<input name="checkbox" type="checkbox" value="checkbox" checked="checked" <? if (isset($_POST['checkbox']) && $_POST['checkbox'] == "checkbox") {
+					<input name="checkbox" type="checkbox" value="checkbox" checked="checked" <?php if (isset($_POST['checkbox']) && $_POST['checkbox'] == "checkbox") {
 																									echo "checked";
 																								} ?> />
 					I Agree with the <a href="modelterms.php" target="_blank" class="left">Terms of Service </a>.<br />
@@ -451,42 +450,42 @@ include("_reg.header.php");
 						?>
 					</select>
 					<select name="month" id="month">
-						<option value="Jan" <? if ($_POST['month'] == "January") {
+						<option value="Jan" <?php if ($_POST['month'] == "January") {
 												echo "selected";
 											} else if (!isset($_POST['month'])) {
 												echo "selected";
 											} ?>>January</option>
-						<option value="Feb" <? if ($_POST['month'] == "February") {
+						<option value="Feb" <?php if ($_POST['month'] == "February") {
 												echo "selected";
 											} ?>>February</option>
-						<option value="Mar" <? if ($_POST['month'] == "March") {
+						<option value="Mar" <?php if ($_POST['month'] == "March") {
 												echo "selected";
 											} ?>>March</option>
-						<option value="Apr" <? if ($_POST['month'] == "April") {
+						<option value="Apr" <?php if ($_POST['month'] == "April") {
 												echo "selected";
 											} ?>>April</option>
-						<option value="May" <? if ($_POST['month'] == "May") {
+						<option value="May" <?php if ($_POST['month'] == "May") {
 												echo "selected";
 											} ?>>May</option>
-						<option value="Jun" <? if ($_POST['month'] == "June") {
+						<option value="Jun" <?php if ($_POST['month'] == "June") {
 												echo "selected";
 											} ?>>June</option>
-						<option value="Jul" <? if ($_POST['month'] == "July") {
+						<option value="Jul" <?php if ($_POST['month'] == "July") {
 												echo "selected";
 											} ?>>July</option>
-						<option value="Aug" <? if ($_POST['month'] == "August") {
+						<option value="Aug" <?php if ($_POST['month'] == "August") {
 												echo "selected";
 											} ?>>August</option>
-						<option value="Sep" <? if ($_POST['month'] == "September") {
+						<option value="Sep" <?php if ($_POST['month'] == "September") {
 												echo "selected";
 											} ?>>September</option>
-						<option value="Oct" <? if ($_POST['month'] == "October") {
+						<option value="Oct" <?php if ($_POST['month'] == "October") {
 												echo "selected";
 											} ?>>October</option>
-						<option value="Nov" <? if ($_POST['month'] == "November") {
+						<option value="Nov" <?php if ($_POST['month'] == "November") {
 												echo "selected";
 											} ?>>November</option>
-						<option value="Dec" <? if ($_POST['month'] == "December") {
+						<option value="Dec" <?php if ($_POST['month'] == "December") {
 												echo "selected";
 											} ?>>December</option>
 					</select>
@@ -553,41 +552,41 @@ include("_reg.header.php");
 
 
 					<!--select name="L1" id="L1">
-						<option value="English"  <? if (isset($_POST['L1']) && $_POST['L1'] == "English") {
+						<option value="English"  <?php if (isset($_POST['L1']) && $_POST['L1'] == "English") {
 														echo "selected";
 													} else if (!isset($_POST['L1'])) {
 														echo "selected";
 													} ?>>English</option>
 
-						<option value="Dutch" <? if (isset($_POST['L1']) && $_POST['L1'] == "Dutch") {
+						<option value="Dutch" <?php if (isset($_POST['L1']) && $_POST['L1'] == "Dutch") {
 													echo "selected";
 												} ?>>Dutch</option>
 
-						<option value="French" <? if (isset($_POST['L1']) && $_POST['L1'] == "French") {
+						<option value="French" <?php if (isset($_POST['L1']) && $_POST['L1'] == "French") {
 													echo "selected";
 												} ?>>French</option>
 
-						<option value="German" <? if (isset($_POST['L1']) && $_POST['L1'] == "German") {
+						<option value="German" <?php if (isset($_POST['L1']) && $_POST['L1'] == "German") {
 													echo "selected";
 												} ?>>German</option>
 
-						<option value="Italian" <? if (isset($_POST['L1']) && $_POST['L1'] == "Italian") {
+						<option value="Italian" <?php if (isset($_POST['L1']) && $_POST['L1'] == "Italian") {
 													echo "selected";
 												} ?>>Italian</option>
 
-						<option value="Japanese" <? if (isset($_POST['L1']) && $_POST['L1'] == "Japanese") {
+						<option value="Japanese" <?php if (isset($_POST['L1']) && $_POST['L1'] == "Japanese") {
 														echo "selected";
 													} ?>>Japanese</option>
 
-						<option value="Korean" <? if (isset($_POST['L1']) && $_POST['L1'] == "Korean") {
+						<option value="Korean" <?php if (isset($_POST['L1']) && $_POST['L1'] == "Korean") {
 													echo "selected";
 												} ?>>Korean</option>
 
-						<option value="Portuguese" <? if (isset($_POST['L1']) && $_POST['L1'] == "Portuguese") {
+						<option value="Portuguese" <?php if (isset($_POST['L1']) && $_POST['L1'] == "Portuguese") {
 														echo "selected";
 													} ?>>Portuguese</option>
 
-						<option value="Spanish" <? if (isset($_POST['L1']) && $_POST['L1'] == "Spanish") {
+						<option value="Spanish" <?php if (isset($_POST['L1']) && $_POST['L1'] == "Spanish") {
 													echo "selected";
 												} ?>>Spanish</option>	       
 

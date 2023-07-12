@@ -173,13 +173,13 @@ include("settings.php");
 
 	.category_heading {
 
-		background: #<? echo $sidebarTopColor; ?>;
+		background: #<?php echo $sidebarTopColor; ?>;
 
-		border-bottom: 1px solid #<? echo $sidebarBorderColor; ?>;
+		border-bottom: 1px solid #<?php echo $sidebarBorderColor; ?>;
 
 		box-sizing: border-box;
 
-		color: #<? echo $sidebarTextColor; ?>;
+		color: #<?php echo $sidebarTextColor; ?>;
 
 		cursor: pointer;
 
@@ -217,13 +217,13 @@ include("settings.php");
 
 	.sidebar_filters a {
 
-		background: #<? echo $sidebarMainColor;  ?>;
+		background: #<?php echo $sidebarMainColor;  ?>;
 
-		border-bottom: 1px solid #<? echo $sidebarBorderColor;  ?>;
+		border-bottom: 1px solid #<?php echo $sidebarBorderColor;  ?>;
 
 		box-sizing: border-box;
 
-		color: #<? echo $sidebarTextColor;  ?>;
+		color: #<?php echo $sidebarTextColor;  ?>;
 
 		display: block;
 
@@ -243,9 +243,9 @@ include("settings.php");
 
 	.sidebar_filters a:hover {
 
-		background: #<? echo $sidebarHoverColor;  ?>;
+		background: #<?php echo $sidebarHoverColor;  ?>;
 
-		color: #<? echo $sidebarTextHoverColor;  ?> !important;
+		color: #<?php echo $sidebarTextHoverColor;  ?> !important;
 
 		/* font-weight: 700; */
 
@@ -427,7 +427,7 @@ include("settings.php");
 
 			//url : "https://api.lovense.com/api/lan/getToys", //
 
-			url: "<? echo $lovenseApi ?>",
+			url: "<?php echo $lovenseApi ?>",
 
 			dataType: "jsonp",
 
@@ -473,7 +473,7 @@ include("settings.php");
 
 				type: "POST",
 
-				url: "<? echo $siteurl ?>/cache.php",
+				url: "<?php echo $siteurl ?>/cache.php",
 
 				data: post_data,
 

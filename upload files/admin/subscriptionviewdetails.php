@@ -134,22 +134,22 @@ function GetAge($Birthdate)
 
             <table width="1017" align="center" style="margin-top:100px !important;">
       <tr>
-        <td width="96" height="96" align="center" valign="middle"><div align="left"><img style="border:solid;border-width:5px;border-color:#e1e1e1;" height="200" width="250" src="../models/<? echo $tempUser."/thumbnail.jpg" ?>"></div></td>
+        <td width="96" height="96" align="center" valign="middle"><div align="left"><img style="border:solid;border-width:5px;border-color:#e1e1e1;" height="200" width="250" src="../models/<?php echo $tempUser."/thumbnail.jpg" ?>"></div></td>
         
       </tr>
     </table>
 	
-	<div style="position:absolute;margin-top:-140px;margin-left:300px;color:#5e5e5e;border:solid;border-width:0.5px;border-color:#ddd;padding:5px;border-radius:4px;background-color:#fff;width:40%;border-radius:5px;box-shadow: 0px 2px 6px #d2d2d2;letter-spacing:0.5px;word-spacing:0.5px;"><h3 align="center"><b><? echo $tempUser ?></b> has registered to become a broadcaster. </h3></div>
+	<div style="position:absolute;margin-top:-140px;margin-left:300px;color:#5e5e5e;border:solid;border-width:0.5px;border-color:#ddd;padding:5px;border-radius:4px;background-color:#fff;width:40%;border-radius:5px;box-shadow: 0px 2px 6px #d2d2d2;letter-spacing:0.5px;word-spacing:0.5px;"><h3 align="center"><b><?php echo $tempUser ?></b> has registered to become a broadcaster. </h3></div>
 	
 	
 	<br>
 	<table width="1010" align="center" cellpadding="10" class="form_definitions">
 	<tr>
-	  <td width="367"><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Screen Name:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><? echo $tempUser; ?></b></td>
+	  <td width="367"><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Screen Name:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><?php echo $tempUser; ?></b></td>
 
 	</tr>
 	<tr>
-	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Email:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#4b9aff;"margin-bottom:50px;><a href="mailto:<? echo $tempEmail; ?>" style="color:#fff;"><? echo $tempEmail; ?></b></td> 
+	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Email:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#4b9aff;"margin-bottom:50px;><a href="mailto:<?php echo $tempEmail; ?>" style="color:#fff;"><?php echo $tempEmail; ?></b></td> 
 	<td >&nbsp;</td>
 	</tr>
 	<tr>
@@ -164,41 +164,41 @@ function GetAge($Birthdate)
 	  </tr> 
    
 	<tr>
-	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Full Name:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><? echo $tempName; ?><b></td>
+	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Full Name:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><?php echo $tempName; ?><b></td>
 
 	<td>&nbsp;</td>
 	</tr>
 	<tr>
-	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Country:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><? echo $tempCountry; ?></b></td>
+	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Country:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><?php echo $tempCountry; ?></b></td>
 	<td></td>
 	<td>&nbsp;</td>
 	</tr>  
 	<tr>
-	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">State:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><? echo $tempState; ?></b></td>
+	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">State:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><?php echo $tempState; ?></b></td>
 	<td></td>
 	<td>&nbsp;</td>
 	</tr>  
 	<tr>
-	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">City:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><? echo $tempCity; ?></b></td>
+	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">City:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><?php echo $tempCity; ?></b></td>
 	<td></td>
 	<td>&nbsp;</td>
 	</tr>  
 	<tr>
-	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Address:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><? echo $tempAdress; ?></b></td>
+	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Address:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><?php echo $tempAdress; ?></b></td>
 	<td></td>
 	<td>&nbsp;</td>
 	</tr>
-	<tr><td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Zip Code:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><? echo $tempZip; ?></b></td>
+	<tr><td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Zip Code:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><?php echo $tempZip; ?></b></td>
 	<td></td>
 	<td>&nbsp;</td>
 	</tr>
 	<tr>
-	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Phone:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><? echo $tempPhone; ?></b></td>
+	  <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Phone:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><?php echo $tempPhone; ?></b></td>
 	  <td></td>
 	  <td>&nbsp;</td>
 	  </tr>
 	<tr>
-      <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Birth Date:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><? echo $tBirthFull; ?></b> </td>
+      <td><b style="color:#ddd;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#333;">Birth Date:</b> <b style="color:#333;border:solid;border-width:0.5px;border-color:#999;padding:5px;border-radius:4px;background-color:#fff;"><?php echo $tBirthFull; ?></b> </td>
       <td>       
 	  
 	  
@@ -228,10 +228,10 @@ function GetAge($Birthdate)
                   <br>
                 <br>
                 <input type="submit" name="Submit" value="Approve Broadcaster" style="cursor:pointer;">
-                <input name="id" type="hidden" id="id4" value="<? echo $_GET[id]; ?>">
-                <input name="username" type="hidden" id="username3" value="<? echo $tempUser; ?>">
-                <input name="email" type="hidden" id="username" value="<? echo $tempEmail; ?>">
-                <input name="studio" type="hidden" id="email2" value="<? echo  $tOwner; ?>">
+                <input name="id" type="hidden" id="id4" value="<?php echo $_GET[id]; ?>">
+                <input name="username" type="hidden" id="username3" value="<?php echo $tempUser; ?>">
+                <input name="email" type="hidden" id="username" value="<?php echo $tempEmail; ?>">
+                <input name="studio" type="hidden" id="email2" value="<?php echo  $tOwner; ?>">
               </p>
           </form></td>
 		  
@@ -240,10 +240,10 @@ function GetAge($Birthdate)
             <textarea name="Reason" cols="32" rows="4" id="textarea" style="margin-left:50px;margin-bottom:28px;"></textarea>
             <br>
             <input type="submit" name="Submit2" value="Reject Broadcaster" style="margin-left:50px;margin-bottom:0px;width:280px;cursor:pointer;">
-            <input name="id" type="hidden" id="id22" value="<? echo $_GET[id]; ?>">
-            <input name="username" type="hidden" id="username22" value="<? echo $tempUser; ?>">
-            <input name="email" type="hidden" id="email" value="<? echo $tempEmail; ?>">
-            <input name="studio" type="hidden" id="studio" value="<? echo  $tOwner; ?>">
+            <input name="id" type="hidden" id="id22" value="<?php echo $_GET[id]; ?>">
+            <input name="username" type="hidden" id="username22" value="<?php echo $tempUser; ?>">
+            <input name="email" type="hidden" id="email" value="<?php echo $tempEmail; ?>">
+            <input name="studio" type="hidden" id="studio" value="<?php echo  $tOwner; ?>">
         </form></td>
       </tr>
     </table>
@@ -252,7 +252,7 @@ function GetAge($Birthdate)
         <td><strong>Copy of photo ID</strong></td>
         </tr>
       <tr>
-        <td><img src="../models/<? echo $tempUser."/".$_GET['id'].".jpg";  ?>" height="200" width="250"></td>
+        <td><img src="../models/<?php echo $tempUser."/".$_GET['id'].".jpg";  ?>" height="200" width="250"></td>
       </tr>
     </table>	
     <table width="1010" align="center" class="form_definitions">
@@ -260,7 +260,7 @@ function GetAge($Birthdate)
         <td><strong>Recorded photo of Broadcaster  </strong></td>
       </tr>
       <tr>
-        <td><img src="../models/<? echo $tempUser."/representative.jpg";  ?>" height="200" width="250"></td>
+        <td><img src="../models/<?php echo $tempUser."/representative.jpg";  ?>" height="200" width="250"></td>
       </tr>
     </table>    <br>	</td>
   </tr>

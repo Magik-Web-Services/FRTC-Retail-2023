@@ -115,14 +115,14 @@ input.resettoken {
 					</strong>
 				</div>
 				<div class="form_definitions">
-					<strong>You are currently receiving <? echo $tempEPercentage;?>% of your earnings.<br>
-					You are currently charging  <? echo $tempCPM;?> Tokens
+					<strong>You are currently receiving <?php echo $tempEPercentage;?>% of your earnings.<br>
+					You are currently charging  <?php echo $tempCPM;?> Tokens
 					per minute.</strong>
 				</div>
 				<div class="earnings-mmssgg">
-					Your earnings: $<? echo $tempMoneyEarned; ?><br>
-					Payouts so far: $<? echo $tempMoneySent; ?><br>
-					<b> Current account balance: $<? echo ($tempMoneyEarned-$tempMoneySent) ;?></b>
+					Your earnings: $<?php echo $tempMoneyEarned; ?><br>
+					Payouts so far: $<?php echo $tempMoneySent; ?><br>
+					<b> Current account balance: $<?php echo ($tempMoneyEarned-$tempMoneySent) ;?></b>
 				</div>
 				<div class="earnings-form-seciton">
 					<form name="form1" method="post" action="paymentop.php">
@@ -130,12 +130,12 @@ input.resettoken {
 							<div class="col-md-1 no-padding">$</div>
 							<div class="col-md-11 no-padding">
 								<select name="paymentSum" id="paymentSum">
-								<option value="100"  <? if ($tempMinimum=="100"){echo "selected";}?>>100</option>
-								<option value="250"  <? if ($tempMinimum=="250"){echo "selected";}?>>250</option>
-								<option value="500"  <? if ($tempMinimum=="500"){echo "selected";}?>>500</option>
-								<option value="1000"  <? if ($tempMinimum=="1000"){echo "selected";}?>>1000</option>
-								<option value="2500"  <? if ($tempMinimum=="2500"){echo "selected";}?>>2500</option>
-								<option value="5000"  <? if ($tempMinimum=="5000"){echo "selected";}?>>5000</option>
+								<option value="100"  <?php if ($tempMinimum=="100"){echo "selected";}?>>100</option>
+								<option value="250"  <?php if ($tempMinimum=="250"){echo "selected";}?>>250</option>
+								<option value="500"  <?php if ($tempMinimum=="500"){echo "selected";}?>>500</option>
+								<option value="1000"  <?php if ($tempMinimum=="1000"){echo "selected";}?>>1000</option>
+								<option value="2500"  <?php if ($tempMinimum=="2500"){echo "selected";}?>>2500</option>
+								<option value="5000"  <?php if ($tempMinimum=="5000"){echo "selected";}?>>5000</option>
 								</select> 
 								Minimum Payout Goal.							
 							</div>
@@ -278,9 +278,9 @@ input.resettoken {
 
             <p class="form_definitions">
 
-            <strong>You are currently receiving <? echo $tempEPercentage;?>% of your earnings.<br>
+            <strong>You are currently receiving <?php echo $tempEPercentage;?>% of your earnings.<br>
 
-            You are currently charging  <? echo $tempCPM;?> Tokens
+            You are currently charging  <?php echo $tempCPM;?> Tokens
 
   per minute.</strong></p>
             <p class="form_definitions"><strong><br />
@@ -289,11 +289,11 @@ input.resettoken {
 
         <tr>
 
-          <td width="50%" height="120" align="left" valign="top">Your earnings: $<? echo $tempMoneyEarned; ?><br>
+          <td width="50%" height="120" align="left" valign="top">Your earnings: $<?php echo $tempMoneyEarned; ?><br>
 
-Payouts so far: $<? echo $tempMoneySent; ?><br>
+Payouts so far: $<?php echo $tempMoneySent; ?><br>
 
-<b> Current account balance: $<? echo ($tempMoneyEarned-$tempMoneySent) ;?></b></td>
+<b> Current account balance: $<?php echo ($tempMoneyEarned-$tempMoneySent) ;?></b></td>
 
           <td width="50%" height="120" align="left" valign="bottom">          
 		  </td>
@@ -305,12 +305,12 @@ Payouts so far: $<? echo $tempMoneySent; ?><br>
 		  <form name="form1" method="post" action="paymentop.php">
 
             <p align="left">$ <select name="paymentSum" id="paymentSum">
-                <option value="100"  <? if ($tempMinimum=="100"){echo "selected";}?>>100</option>
-                <option value="250"  <? if ($tempMinimum=="250"){echo "selected";}?>>250</option>
-                <option value="500"  <? if ($tempMinimum=="500"){echo "selected";}?>>500</option>
-                <option value="1000"  <? if ($tempMinimum=="1000"){echo "selected";}?>>1000</option>
-                <option value="2500"  <? if ($tempMinimum=="2500"){echo "selected";}?>>2500</option>
-                <option value="5000"  <? if ($tempMinimum=="5000"){echo "selected";}?>>5000</option>
+                <option value="100"  <?php if ($tempMinimum=="100"){echo "selected";}?>>100</option>
+                <option value="250"  <?php if ($tempMinimum=="250"){echo "selected";}?>>250</option>
+                <option value="500"  <?php if ($tempMinimum=="500"){echo "selected";}?>>500</option>
+                <option value="1000"  <?php if ($tempMinimum=="1000"){echo "selected";}?>>1000</option>
+                <option value="2500"  <?php if ($tempMinimum=="2500"){echo "selected";}?>>2500</option>
+                <option value="5000"  <?php if ($tempMinimum=="5000"){echo "selected";}?>>5000</option>
               </select> 
               &nbsp;Minimum Payout Goal.</p>
 <p align="left">

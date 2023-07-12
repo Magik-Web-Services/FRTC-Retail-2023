@@ -72,7 +72,7 @@ body,td,th {
   
   <tr>
   	<td valign="bottom">
-	<? 
+	<?php 
 	
 	
 			echo $msG; 

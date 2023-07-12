@@ -55,7 +55,7 @@ include("_header-admin.php")
 	?></b>
           <br>
           <br>
-          <a href="memberviewdetails.php?id=<? echo $_POST[id];?>" class="a_left"><b>Back to <? echo $_POST[username] ?>'s account</b></a> </td>
+          <a href="memberviewdetails.php?id=<?php echo $_POST[id];?>" class="a_left"><b>Back to <?php echo $_POST[username] ?>'s account</b></a> </td>
         </tr>
     </table>		</td>
   </tr>

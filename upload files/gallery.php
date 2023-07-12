@@ -127,7 +127,7 @@ body,td,th {
   <tr>
 
     <td align="center" valign="middle"><p>&nbsp;</p>
-      <p><strong><? echo $tempUser; ?></strong><strong>'s Picture Gallery</strong><br />
+      <p><strong><?php echo $tempUser; ?></strong><strong>'s Picture Gallery</strong><br />
           <span class="style3">(click on the thumbnail to open the full size image)</span> </p>
       <table width="520" border="0" cellspacing="0" cellpadding="0">
         <tr>

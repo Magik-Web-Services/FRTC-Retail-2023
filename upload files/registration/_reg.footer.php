@@ -103,7 +103,7 @@ body,td,th {
             </p>
             <div class="adults">LIVE BROADCASTERS 24/7 </div>
             <br />
-            <a href="user.php" alt="Join live sex video chat and interact with sexy adult webcam models today at <?  echo $sitename ?>." title="Live interactive adult webcam site models">Join our community today and enjoy 24/7 live webcams.</a></div></td>
+            <a href="user.php" alt="Join live sex video chat and interact with sexy adult webcam models today at <?php  echo $sitename ?>." title="Live interactive adult webcam site models">Join our community today and enjoy 24/7 live webcams.</a></div></td>
         </tr>
       </table>
       <table width="75%" border="0" cellspacing="10">
@@ -120,7 +120,7 @@ body,td,th {
 	  <table width="75%" border="0" cellspacing="10" bgcolor="#000000">
         <tr>
           <td bgcolor="#000000"><div class="links" align="center">
-            <p><a href="#">Copyright © <? echo $copyrightYear ?> <? echo $sitename?>. All Rights Reserved.</a></p>
+            <p><a href="#">Copyright © <?php echo $copyrightYear ?> <?php echo $sitename?>. All Rights Reserved.</a></p>
             </div></td>
         </tr>
       </table>

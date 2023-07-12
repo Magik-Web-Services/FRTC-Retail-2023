@@ -25,7 +25,7 @@ include("_header-admin.php")
         <tr>
           <td width="590" class="big_title"><div align="left">
             <h2 align="center"> Account Blocked</h2>
-            <p align="center"><a href="<? if($_GET['type']=="model"){echo"modelviewdetails";} else if ($_GET['type']=="member"){echo"memberviewdetails";} else if ($_GET['type']=="sop"){echo"sopviewdetails";}?>.php?id=<? echo $_GET['id'];?>">Return to account information </a><br>
+            <p align="center"><a href="<?php if($_GET['type']=="model"){echo"modelviewdetails";} else if ($_GET['type']=="member"){echo"memberviewdetails";} else if ($_GET['type']=="sop"){echo"sopviewdetails";}?>.php?id=<?php echo $_GET['id'];?>">Return to account information </a><br>
               </p>
           </div></td>
         </tr>

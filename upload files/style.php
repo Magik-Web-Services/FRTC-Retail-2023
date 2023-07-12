@@ -55,7 +55,7 @@ input[type=search]
     background-color:#05B0FA !important;
 }
 .pinkcs {
-    background-color: <? echo topBarColor1 ?>;
+    background-color: <?php echo topBarColor1 ?>;
     float: left;
     padding: 4px 0;
     width: 100%;

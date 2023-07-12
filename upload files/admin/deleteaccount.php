@@ -77,13 +77,13 @@ include("_header-admin.php")
             <p align="center">&nbsp;</p>
             <p align="center">&nbsp;</p>
             <p align="center"><b>Are you sure you want to delete the account for</b></p>
-            <p align="center"><span class="a_small_title"><b><h2 align="center"><? echo $_POST['username'];?><br>
+            <p align="center"><span class="a_small_title"><b><h2 align="center"><?php echo $_POST['username'];?><br>
               </p>
           </h2></b></span></div></td>
         </tr>
         <tr align="center">
-          <td width="300" align="right" class="big_title"><div align="center"><a href="dodeleteaccount.php?id=<? echo $_POST['id'];?>&type=<? echo $_POST['type']; ?>&username=<?echo $_POST['username'];?>">Yes Delete This Account </a> </div></td>
-          <td width="290" class="big_title"><a href="<? if($_POST['type']=="model"){echo"modelviewdetails";} else if ($_POST['type']=="member"){echo"memberviewdetails";} else if ($_POST['type']=="sop"){echo"sopviewdetails";}?>.php?id=<? echo $_POST['id'];?>">Return To Account Information</a> </td>
+          <td width="300" align="right" class="big_title"><div align="center"><a href="dodeleteaccount.php?id=<?php echo $_POST['id'];?>&type=<?php echo $_POST['type']; ?>&username=<?echo $_POST['username'];?>">Yes Delete This Account </a> </div></td>
+          <td width="290" class="big_title"><a href="<?php if($_POST['type']=="model"){echo"modelviewdetails";} else if ($_POST['type']=="member"){echo"memberviewdetails";} else if ($_POST['type']=="sop"){echo"sopviewdetails";}?>.php?id=<?php echo $_POST['id'];?>">Return To Account Information</a> </td>
         </tr>
       </table>
       <p><br>	
