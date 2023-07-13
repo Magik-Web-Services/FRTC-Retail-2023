@@ -1,0 +1,5 @@
+	 $valueWM = mysqli_result($resultModel,0,'models');
+
+     change to
+    
+    $valueW = $result->fetch_assoc()['blah'] ?? false;  

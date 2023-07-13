@@ -1,5 +1,7 @@
 <?php
-include("_header-admin.php")
+include("_header-admin.php");
+$color = "";
+$PHP_SELF = "";
 ?>
 
 <?php
@@ -117,14 +119,14 @@ if ($chkN > 0) {
 						$result = mysqli_query($conn, "SELECT * FROM chatusers");
 						$total = mysqli_num_rows($result);
 						$perpage = 35;
-						if ($_GET['page']) {
+						if (isset($_GET['page'])) {
 							$page = $_GET['page'];
 						} else {
 							$page = 1;
 						}
 						$start = ($page - 1) * $perpage;
 						$result = mysqli_query($conn, "SELECT * FROM chatusers LIMIT $start,$perpage");
-						if ($_POST['srn']) {
+						if (isset($_POST['srn'])) {
 							$result = mysqli_query($conn, "SELECT * FROM chatusers WHERE user like '%$_POST[srn]%' OR email='$_POST[srn]' ");
 						}
 						while ($row = mysqli_fetch_array($result)) {
@@ -142,7 +144,7 @@ if ($chkN > 0) {
 							echo '<div class="rows" bgcolor="000000"><tr bgcolor="' . $color . '" class="form_definitions"><td align="left"><b>' . $row['user'] . '</b></td><td>' . $tempCountry . '</td><td>' . $row['email'] . '</td><td align="right"><a href="memberviewdetails.php?id=' . $row['id'] . '">View Details</a></td></tr></div>';
 						}
 
-						if (!$_POST['srn']) {
+						if (isset($_POST['srn'])) {
 							if ($total) {
 								$pages = range(1, ceil($total / $perpage));
 								echo "<tr><td>";
