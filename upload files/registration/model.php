@@ -73,10 +73,10 @@ if (isset($_POST['UserName']) != "" && isset($_POST['Password1']) != "" && isset
 			$errorMsg = "File not Copied";
 		}
 	}
-	if (!copy($_FILES['ActImage']['tmp_name'], $urlIdentityImage)) {
+	if (!isset($_FILES['ActImage']['tmp_name']) && !copy($_FILES['ActImage']['tmp_name'], $urlIdentityImage)) {
 		$errorMsg .= "<br>Could not load ID image to database";
 	}
-	if (!copy($_FILES['RImage']['tmp_name'], $urlRImage)) {
+	if (!isset($_FILES['ActImage']['tmp_name']) && !copy($_FILES['RImage']['tmp_name'], $urlRImage)) {
 
 		$errorMsg .= "<br>Could not load representative image to database";
 	}
@@ -450,42 +450,42 @@ include("_reg.header.php");
 						?>
 					</select>
 					<select name="month" id="month">
-						<option value="Jan" <?php if ($_POST['month'] == "January") {
+						<option value="Jan" <?php if (isset($_POST['month']) == "January") {
 												echo "selected";
 											} else if (!isset($_POST['month'])) {
 												echo "selected";
 											} ?>>January</option>
-						<option value="Feb" <?php if ($_POST['month'] == "February") {
+						<option value="Feb" <?php if (isset($_POST['month']) == "February") {
 												echo "selected";
 											} ?>>February</option>
-						<option value="Mar" <?php if ($_POST['month'] == "March") {
+						<option value="Mar" <?php if (isset($_POST['month']) == "March") {
 												echo "selected";
 											} ?>>March</option>
-						<option value="Apr" <?php if ($_POST['month'] == "April") {
+						<option value="Apr" <?php if (isset($_POST['month']) == "April") {
 												echo "selected";
 											} ?>>April</option>
-						<option value="May" <?php if ($_POST['month'] == "May") {
+						<option value="May" <?php if (isset($_POST['month']) == "May") {
 												echo "selected";
 											} ?>>May</option>
-						<option value="Jun" <?php if ($_POST['month'] == "June") {
+						<option value="Jun" <?php if (isset($_POST['month']) == "June") {
 												echo "selected";
 											} ?>>June</option>
-						<option value="Jul" <?php if ($_POST['month'] == "July") {
+						<option value="Jul" <?php if (isset($_POST['month']) == "July") {
 												echo "selected";
 											} ?>>July</option>
-						<option value="Aug" <?php if ($_POST['month'] == "August") {
+						<option value="Aug" <?php if (isset($_POST['month']) == "August") {
 												echo "selected";
 											} ?>>August</option>
-						<option value="Sep" <?php if ($_POST['month'] == "September") {
+						<option value="Sep" <?php if (isset($_POST['month']) == "September") {
 												echo "selected";
 											} ?>>September</option>
-						<option value="Oct" <?php if ($_POST['month'] == "October") {
+						<option value="Oct" <?php if (isset($_POST['month']) == "October") {
 												echo "selected";
 											} ?>>October</option>
-						<option value="Nov" <?php if ($_POST['month'] == "November") {
+						<option value="Nov" <?php if (isset($_POST['month']) == "November") {
 												echo "selected";
 											} ?>>November</option>
-						<option value="Dec" <?php if ($_POST['month'] == "December") {
+						<option value="Dec" <?php if (isset($_POST['month']) == "December") {
 												echo "selected";
 											} ?>>December</option>
 					</select>

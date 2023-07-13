@@ -7,9 +7,9 @@ header("location: ../../login.php");
 
 include("../../dbase.php");
 
-$result=mysql_query("SELECT user from chatusers WHERE id='$_COOKIE[id]' LIMIT 1");
+$result=mysqli_query($conn, "SELECT user from chatusers WHERE id='$_COOKIE[id]' LIMIT 1");
 
-	while($row = mysql_fetch_array($result)) 
+	while($row = mysqli_fetch_array($result)) 
 
 	{	$username=$row['user'];	}
 
@@ -27,7 +27,7 @@ $member=$username;
 
 if (isset($_POST['paymentSum'])){
 
-mysql_query("UPDATE chatmodelsstatus SET minimum='$_POST[paymentSum]' WHERE id = '$id' LIMIT 1");
+mysqli_query($conn, "UPDATE chatmodelsstatus SET minimum='$_POST[paymentSum]' WHERE id = '$id' LIMIT 1");
 
 $msgError="Value has been changed";
 
@@ -108,9 +108,9 @@ include("_members.header.php");
 <?php
 
 
-$result = mysql_query("SELECT * FROM videosessions WHERE member='$member' ORDER BY date DESC");
-//$result22 = mysql_query("SELECT * FROM videosessions ORDER BY date DESC");
-$num_rows1 = mysql_num_rows($result22);
+$result = mysqli_query($conn, "SELECT * FROM videosessions WHERE member='$member' ORDER BY date DESC");
+$result22 = mysqli_query($conn, "SELECT * FROM videosessions ORDER BY date DESC");
+$num_rows1 = mysqli_num_rows($result22);
 //echo $num_rows1;
 if($num_rows1>11){
 ?>
@@ -144,11 +144,11 @@ if($num_rows1>11){
 					//$secondsAll=time();
 					include('../../dbase.php');
 					$count=0;
-					$result = mysql_query("SELECT * FROM videosessions WHERE member='$member' ORDER BY date DESC");
+					$result = mysqli_query($conn, "SELECT * FROM videosessions WHERE member='$member' ORDER BY date DESC");
 					//$result = mysql_query("SELECT * FROM videosessions ORDER BY date DESC");
-					$total=mysql_num_rows($result);
+					$total=mysqli_num_rows($result);
 					$perpage=20;
-					if($_GET['page'])
+					if(isset($_GET['page']))
 					{
 					$page=$_GET['page'];
 					}
@@ -157,9 +157,9 @@ if($num_rows1>11){
 					$page=1;
 					}
 					$start=($page-1)*$perpage;
-					$result = mysql_query("SELECT * FROM videosessions WHERE member='$member' ORDER BY date DESC LIMIT $start,$perpage");
+					$result = mysqli_query($conn, "SELECT * FROM videosessions WHERE member='$member' ORDER BY date DESC LIMIT $start,$perpage");
 					//$result = mysql_query("SELECT * FROM videosessions ORDER BY date DESC LIMIT $start,$perpage");		
-					while($row = mysql_fetch_array($result)) 
+					while($row = mysqli_fetch_array($result)) 
 					{
 						$count++;
 						

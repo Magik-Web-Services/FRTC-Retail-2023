@@ -1,4 +1,4 @@
-<?
+<?php
 error_reporting(0);
 include("_header-admin.php");
 ?>
@@ -20,15 +20,15 @@ include("_header-admin.php");
         </p>
 	    <p>&nbsp;</p>
 	    <p>
-	      <?
+	      <?php
 	include('../dbase.php');include ("../settings.php");
 	$registrationemailbroad ="broadcaster@liveplayhouse.com";
 	//mysql_query("UPDATE chatmodels SET status='rejected' WHERE id = '$_POST[id]' LIMIT 1");
-mysql_query('DELETE from modelpictures WHERE user="'.$_POST['username'].'"');
-mysql_query('DELETE from chatmodels WHERE user="'.$_POST['username'].'"');
-mysql_query('DELETE from favorites WHERE model="'.$_POST['username'].'"');
+mysqli_query($conn, 'DELETE from modelpictures WHERE user="'.$_POST['username'].'"');
+mysqli_query($conn, 'DELETE from chatmodels WHERE user="'.$_POST['username'].'"');
+mysqli_query($conn, 'DELETE from favorites WHERE model="'.$_POST['username'].'"');
 	
-$dir="../models/".$_POST[username]."/";
+$dir="../models/".$_POST['username']."/";
 $files=scandir($dir);
 foreach($files as $file)
 {
@@ -39,15 +39,15 @@ unlink($dir.$file);
 }
 rmdir($dir);
 
-	mail($_POST[email], "Your submission at $siteurl was rejected", "Your application for becoming a webcam broadcaster has not been approved.\r\n Reason: $_POST[Reason]",
+	mail($_POST['email'], "Your submission at $siteurl was rejected", "Your application for becoming a webcam broadcaster has not been approved.\r\n Reason: $_POST[Reason]",
      "MIME-Version: 1.0\r\n".
      "Content-type: text/plain; charset=iso-8859-1\r\n".
      "From:$registrationemailbroad\r\n".
      "Reply-To?:$registrationemailbroad\r\n".
      "X-Mailer: PHP/" . phpversion() );
 
-	if ($_POST[owner]!='none'){
-	$result3=mysql_query("SELECT email FROM chatoperators WHERE user='$_POST[owner]' LIMIT 1");
+	if (!isset($_POST['owner']) != 'none'){
+	$result3=mysqli_query($conn,"SELECT email FROM chatoperators WHERE user='$_POST[owner]' LIMIT 1");
 			//while($row3 = mysql_fetch_array($result3)) {
 			//$tOwnerEmail=$row3[email];
 			}
@@ -76,6 +76,6 @@ rmdir($dir);
     <div align="center"></div></td>
   </tr>
 </table>
-<?
+<?php
 include("_footer-admin.php")
 ?>

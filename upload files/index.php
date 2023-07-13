@@ -630,7 +630,10 @@ $count = 0;
 
 $nTime = time();
 
-$result = mysqli_query($conn, "SELECT * from chatusers WHERE id='" . $_COOKIE['id'] . "'");
+$result = mysqli_query($conn, "SELECT * from chatusers ");
+if (isset($_COOKIE['id']) && !$_COOKIE['id']) {
+	$result .= "WHERE id='" . $id . "'";
+}
 
 $rows = mysqli_fetch_array($result);
 
@@ -929,7 +932,10 @@ $columns=count($cat_array);*/
 
 		if (isset($page)) {
 
-			$result = mysqli_query($conn, "SELECT * from chatusers WHERE id='" . $_COOKIE['id'] . "'");
+			$result = mysqli_query($conn, "SELECT * from chatusers ");
+			if (isset($_COOKIE['id']) && !$_COOKIE['id']) {
+				$result .= "WHERE id='" . $id . "'";
+			}
 
 			$rows = mysqli_fetch_array($result);
 

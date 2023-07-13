@@ -29,6 +29,8 @@ if (isset($_POST['accountUser']) && isset($_POST['accountPassword'])) {
 
         $result = mysqli_query($conn, "SELECT id,user,password,status FROM $database WHERE status!='pending' AND status!='' ");
 
+        // print_r($result);
+
         while ($row = mysqli_fetch_array($result)) {
 
             $tempUser = $row["user"];

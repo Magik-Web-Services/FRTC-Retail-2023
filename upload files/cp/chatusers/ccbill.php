@@ -1,8 +1,8 @@
 <?php
 include('../../dbase.php');
 $sql2="select * from payccbill where code='1'";
-$res2=mysql_query($sql2);
-$row2=mysql_fetch_object($res2);
+$res2=mysqli_query($conn, $sql2);
+$row2=mysqli_fetch_object($res2);
 
 $amount=$_GET['amt'];
 $username=$_GET['usr'];

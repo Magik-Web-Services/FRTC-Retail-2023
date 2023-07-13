@@ -489,7 +489,8 @@ foreach($cat_array as $cat)
 				$select="SELECT * FROM chatmodels WHERE category='$getcatt' AND status='online'".$query_add;
 			}
 			$cat=htmlentities($getcatt);
-			$result=mysqli_query($conn, "SELECT * from chatusers WHERE id='".$_COOKIE['id']."'");
+            $id = (isset($_COOKIE['id']) && !empty($_COOKIE['id'])) ? $_COOKIE['id'] : 'f288961b0b8ba5171ae2377c0ddeea26';
+			$result=mysqli_query($conn, "SELECT * from chatusers WHERE id='".$id ."'");
 			$rows = mysqli_fetch_array($result);
 			$result=mysqli_query($conn, "SELECT * from countries WHERE id='".$rows['country']."'");
 			$rows_country = mysqli_fetch_array($result);

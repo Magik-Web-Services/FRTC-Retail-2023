@@ -9,9 +9,9 @@ header("location: ../../login.php");
 
 include("../../dbase.php");
 
-$result=mysql_query("SELECT user from chatusers WHERE id='".$_COOKIE['id']."' LIMIT 1");
+$result=mysqli_query($conn, "SELECT user from chatusers WHERE id='".$_COOKIE['id']."' LIMIT 1");
 
-	while($row = mysql_fetch_array($result)) 
+	while($row = mysqli_fetch_array($result)) 
 
 	{	$username=$row['user'];	}
 
@@ -61,8 +61,8 @@ a{
 
 </style>
 <?php 
-$resultjkjk = mysql_query("SELECT * from chatusers WHERE id='".$_COOKIE['id']."'");
-$row2222 = mysql_fetch_array($resultjkjk);
+$resultjkjk = mysqli_query($conn, "SELECT * from chatusers WHERE id='".$_COOKIE['id']."'");
+$row2222 = mysqli_fetch_array($resultjkjk);
 if(($row2222["gender"]=="Female") OR ($row2222["gender"]=="TMTOF")){ ?>
 <style>
 .token_box_seciton .btn.dddeeff a, .buyminutes-left-side.leftttttt_tt a {
@@ -98,8 +98,8 @@ if(($row2222["gender"]=="Female") OR ($row2222["gender"]=="TMTOF")){ ?>
 			<div class="buyminutes-left-side" style="font-size:28px;">Tokens in your account:           
 				<?php
 				include("../../dbase.php");
-				$result=mysql_query("SELECT money from chatusers where user='$username' LIMIT 1");
-				while($row = mysql_fetch_array($result)){
+				$result=mysqli_query($conn, "SELECT money from chatusers where user='$username' LIMIT 1");
+				while($row = mysqli_fetch_array($result)){
 					echo $row['money'];
 				} 
 				?>
@@ -109,7 +109,7 @@ if(($row2222["gender"]=="Female") OR ($row2222["gender"]=="TMTOF")){ ?>
 			</div>
 		</div>
 		<div class="col-md-6 cil_right_sec_img">
-			<img src="/imagesnhd/billcom.png" class="right-section">
+			<img src="../../imagesnhd/billcom.png" class="right-section">
 		</div>
 	</div>
 
@@ -121,15 +121,14 @@ if(($row2222["gender"]=="Female") OR ($row2222["gender"]=="TMTOF")){ ?>
 		</div>
 	</div>
 	<?php
-		$result12=mysql_query("SELECT user from chatusers WHERE id='".$_COOKIE['id']."' LIMIT 1");
-		$row12 = mysql_fetch_array($result12); 
-		echo $row12[''];
+		$result12=mysqli_query($conn, "SELECT user from chatusers WHERE id='".$_COOKIE['id']."' LIMIT 1");
+		$row12 = mysqli_fetch_array($result12); 
 		
 	?>
 	<div class="col-md-12">
 		<?php
-		$query=mysql_query("select * from package order by price asc");
-		while($row=mysql_fetch_object($query))
+		$query=mysqli_query($conn, "select * from package order by price asc");
+		while($row=mysqli_fetch_object($query))
 		{
 		?>
 		<div class="col-md-3 col-sm-4 col-xs-12 token_price_sec">

@@ -1,18 +1,19 @@
 <?php
+include('../../settings.php');
 error_reporting(0);
 if (!isset($_COOKIE["id"]) || $_COOKIE['usertype']!="chatmodels" )
 {
 header("location: ../../login.php");
 } else{
 	include("../../dbase.php");
-	$result=mysql_query("SELECT user from $_COOKIE[usertype] WHERE id='$_COOKIE[id]' LIMIT 1");
-	while($row = mysql_fetch_array($result)) 
+	$result=mysqli_query($conn, "SELECT user from $_COOKIE[usertype] WHERE id='$_COOKIE[id]' LIMIT 1");
+	while($row = mysqli_fetch_array($result)) 
 	{	
 		$username=$row['user'];	
 	}
 }
 
-mysql_free_result($result);
+mysqli_free_result($result);
 
 $errorMsg="";
 function LoadJpeg ($imgname,$tocreate) {
@@ -24,7 +25,7 @@ $bigimage = @ImageCreateFromstring (file_get_contents($imgname)); // Attempt to 
 
 	$result=false;
 
-	echo "<font color=#ffffff>The image could not be uploaded. Please try again.</font><br> You can resave the file by using any image editor and then try again<br><br>Thank You! $endstr ";
+	echo "<font color=#ffffff>The image could not be uploaded. Please try again.</font><br> You can resave the file by using any image editor and then try again<br><br>Thank You!";
 
 	//exit();
 
@@ -107,10 +108,9 @@ if(!isset($_COOKIE["id"]))
 
 header("Location: ../../login.php");
 
-} else if (isset($_FILES['ImageFile']['tmp_name']))
+} else if (!empty(($_FILES['ImageFile']['tmp_name'])) && isset($_FILES['ImageFile']['tmp_name']))
 
-	{	
-
+	{
 		$currentTime=time();
 
 		$pictureName=md5("$currentTime".$_SERVER['REMOTE_ADDR']);
@@ -135,7 +135,7 @@ header("Location: ../../login.php");
 
 		
 
-		mysql_query("INSERT INTO modelpictures ( user , name, dateuploaded ) VALUES ('$username', '$pictureName', '$currentTime')");
+		mysqli_query($conn, "INSERT INTO modelpictures ( user , name, dateuploaded ) VALUES ('$username', '$pictureName', '$currentTime')");
 
 		$errorMsg.='<img src="../../models/'.$username.'/'.$pictureName.'_thumbnail.jpg"> Picture was uploaded successfully';		
 
@@ -157,7 +157,9 @@ header("Location: ../../login.php");
 
 	unlink("../../models/$username/$_GET[delete].jpg");
 
-	mysql_query('DELETE from modelpictures WHERE name="'.$_GET[delete].'" LIMIT 12'); //Change to maximum upload allowed
+	mysqli_query($conn, 'DELETE from modelpictures WHERE name="'.$_GET['delete'].'" LIMIT 12'); //Change to maximum upload allowed
+
+	echo "<script>window.location.href = '".$siteurl."cp/chatmodels/uploadpicture.php'</script>";
 
 	$errorMsg+="Image Has Been Deleted";	
 
@@ -189,8 +191,8 @@ include("_models.header.php");
 					<span class="form_header_title col-md-12">My Pictures </span>
 					<?php
 					$count=0;
-					$result = mysql_query('SELECT * FROM modelpictures WHERE user="'.$username.'" ORDER BY dateuploaded DESC');
-					while($row = mysql_fetch_array($result)) 
+					$result = mysqli_query($conn, 'SELECT * FROM modelpictures WHERE user="'.$username.'" ORDER BY dateuploaded DESC');
+					while($row = mysqli_fetch_array($result)) 
 					{
 						$count++;
 						if ($count==1) {
@@ -202,7 +204,7 @@ include("_models.header.php");
 							$count=0;
 						}
 					}
-					mysql_free_result($result);
+					mysqli_free_result($result);
 					/*for($i=0; $i<5-$count; $i++)
 					{
 						echo"<div class='specigngn'>&nbsp</div>";

@@ -4,11 +4,11 @@ if (isset($_POST['resettoken'])){
 include("../../dbase.php");
 include("../../settings.php");
 $idd=$_COOKIE["id"];
-$result=mysql_query("SELECT user from $_COOKIE[usertype] WHERE id='$_COOKIE[id]' LIMIT 1");
-$row = mysql_fetch_array($result); 
+$result=mysqli_query($conn, "SELECT user from $_COOKIE[usertype] WHERE id='$_COOKIE[id]' LIMIT 1");
+$row = mysqli_fetch_array($result); 
 $username=$row['user'];	
-mysql_query("DELETE FROM videosessions_copy WHERE model='$username'");
-mysql_query("UPDATE chatmodels SET tipgoal='0' WHERE user = '$username'");	
+mysqli_query($conn, "DELETE FROM videosessions_copy WHERE model='$username'");
+mysqli_query($conn, "UPDATE chatmodels SET tipgoal='0' WHERE user = '$username'");	
 $msg = "<b style='color: green; margin-top: 20px; float: left; margin-bottom: 10px;'>Token Goal reset successfully.</b>";
 }
 if (!isset($_COOKIE["id"]) || $_COOKIE['usertype']!="chatmodels" )
@@ -17,20 +17,20 @@ header("location: ../../login.php");
 } else{
 include("../../dbase.php");
 include("../../settings.php");
-$result=mysql_query("SELECT user from $_COOKIE[usertype] WHERE id='$_COOKIE[id]' LIMIT 1");
-	while($row = mysql_fetch_array($result)) 
+$result=mysqli_query($conn, "SELECT user from $_COOKIE[usertype] WHERE id='$_COOKIE[id]' LIMIT 1");
+	while($row = mysqli_fetch_array($result)) 
 	{	
 		$username=$row['user'];	
 	}
 }
 
-mysql_free_result($result);
+mysqli_free_result($result);
 $welcomeQuery = "SELECT models FROM welcome"; 
-$resultModel = mysql_query($welcomeQuery) or die(mysql_error()); 
-$chkN = mysql_num_rows($resultModel) ; 
+$resultModel = mysqli_query($conn, $welcomeQuery); 
+$chkN = mysqli_num_rows($resultModel) ; 
 if($chkN > 0 ) 
 {
-	$valueWM = mysql_result($resultModel,0,'models'); 
+	// $valueWM = mysqli_result($resultModel,0,'models'); 
 }
 else
 {
@@ -45,7 +45,7 @@ if (isset($_POST['paymentSum'])){
 	$cpm=$_POST['cpm'];
 	$scpm=$_POST['scpm'];
 	$tipgoal=$_POST['tipgoal'];
-	mysql_query("UPDATE chatmodels SET minimum='$_POST[paymentSum]',cpm='$cpm',scpm='$scpm',tipgoal='$tipgoal' WHERE id = '$id' LIMIT 1");	
+	mysqli_query($conn, "UPDATE chatmodels SET minimum='$_POST[paymentSum]',cpm='$cpm',scpm='$scpm',tipgoal='$tipgoal' WHERE id = '$id' LIMIT 1");	
 	$msgError="<div style='color:#fb41b5;'>Change Successful</div>";
 }
 
@@ -57,8 +57,8 @@ $tempSecondsPv=0;
 $tempMoneyEarned=0;
 $tempMoneySent=0;
 $ammount=0;
-$result = mysql_query("SELECT * FROM videosessions WHERE model='$model'");
-while($row = mysql_fetch_array($result)) 
+$result = mysqli_query($conn,"SELECT * FROM videosessions WHERE model='$model'");
+while($row = mysqli_fetch_array($result)) 
 {
 	$member=$row['member'];
 	$epercentage=$row['epercentage'];
@@ -76,14 +76,14 @@ while($row = mysql_fetch_array($result))
 	$tempMoneyEarned+=$ammount;
 	if ($row['paid']=="1"){ $tempMoneySent+=$ammount;}
 }
-mysql_free_result($result);
-$result = mysql_query("SELECT lovense,user FROM chatmodels WHERE id='".$id."' LIMIT 1");
-while($row = mysql_fetch_array($result)) 
+mysqli_free_result($result);
+$result = mysqli_query($conn, "SELECT lovense,user FROM chatmodels WHERE id='".$id."' LIMIT 1");
+while($row = mysqli_fetch_array($result)) 
 { 
 	$lovense=$row["lovense"];
     $un=$row["user"];
 }
-mysql_free_result($result);
+mysqli_free_result($result);
 ?>
 <style>
 input.resettoken {
@@ -120,8 +120,8 @@ $code = curl_getinfo($curl);
 curl_close($curl);
 
 $a=json_decode($response);
-$lovense=$a->data->mToken;
-  mysql_query("UPDATE chatmodels set lovense='$lovense' WHERE user='$un'; ");
+$lovense=$a;
+  mysqli_query($conn, "UPDATE chatmodels set lovense='$lovense' WHERE user='$un'; ");
         }
         
         echo '<iframe src="https://api.lovense.com/api/cam/model/setting?mToken='.$lovense.'"
