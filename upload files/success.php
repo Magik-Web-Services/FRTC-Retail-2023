@@ -1,8 +1,7 @@
 <?php ob_start();
 session_start();
 //var_dump($_SESSION);
-mysql_connect("localhost","lakeview","payperview");
-mysql_select_db("lakeview") or die("ENDDDDDDddd");
+mysqli_connect("localhost","lakeview","payperview", 'lakeview');
 
 //if ($_REQUEST['initialPrice'] == "")
 //{
@@ -43,15 +42,15 @@ $responseDigest = md5($HTTP_GET_VARS['subscription_id'] . 1 . "nXKheJN+THbTVTCO4
 				include("dbase.php");
 
 
-$result=mysql_query("SELECT user,money from chatusers WHERE id='$_COOKIE[id]' LIMIT 1");
+$result=mysqli_query($cinn, "SELECT user,money from chatusers WHERE id='$_COOKIE[id]' LIMIT 1");
 
-	while($row = mysql_fetch_array($result)) 
+	while($row = mysqli_fetch_array($result)) 
 
 	{	$username=$row['user'];$money=$row['money'];	}
 $money=$money + $_SESSION['amt'];
 			 $sql="Update chatusers set money=$money where user='$username'";
-			 $res=mysql_query($sql);
-	mysql_query("insert into payments (ammount, details) values ('".$_SESSION['amt']."', '$username')");
+			 $res=mysqli_query($conn, $sql);
+	mysqli_query($conn, "insert into payments (ammount, details) values ('".$_SESSION['amt']."', '$username')");
 	echo '<script>window.location="http://www.fmsdesigns.com/fix/cp/chatusers/buyminutes.php"</script>';
 			}
 

@@ -1,4 +1,5 @@
 <?php
+$new_site = "";
 if (!isset($_SESSION)) {
 	session_start();
 }
@@ -140,15 +141,13 @@ if (!isset($_COOKIE["id"])) {
 	}
 	if (isset($_POST["race_ethnicity"])) {
 		$race_ethnicity = implode(", ", $_POST["race_ethnicity"]);
-	}
-	else{
-		$race_ethnicity="";
+	} else {
+		$race_ethnicity = "";
 	}
 	if (isset($_POST["native_language"])) {
 		$native_language = implode(", ", $_POST["native_language"]);
-	}
-	else {
-		$native_language ="";
+	} else {
+		$native_language = "";
 	}
 	$monday = implode('-', $_POST['monday']);
 	$tuesday = implode('-', $_POST['tuesday']);
@@ -181,21 +180,26 @@ if (!isset($_COOKIE["id"])) {
 	mysqli_query($conn, "DELETE  from blockedcountry where model='$tempUser' ");
 	//echo $tempUser;
 	//die('sdf');
-	foreach ($_POST['country'] as $cc) {
-		$re1lt1 = mysqli_query($conn, "SELECT * FROM country where country_code='$cc'");
-		$r23ow1 = mysqli_fetch_object($re1lt1);
-		$cuntry_nm = $r23ow1->country_name;
-		mysqli_query($conn, "INSERT INTO blockedcountry (model,cc,name)values('$tempUser','$cc','$cuntry_nm');");
+	if (isset($_POST['country'])) {
+		foreach ($_POST['country'] as $cc) {
+			$re1lt1 = mysqli_query($conn, "SELECT * FROM country where country_code='$cc'");
+			$r23ow1 = mysqli_fetch_object($re1lt1);
+			$cuntry_nm = $r23ow1->country_name;
+			mysqli_query($conn, "INSERT INTO blockedcountry (model,cc,name)values('$tempUser','$cc','$cuntry_nm');");
+		}
 	}
 
 
 
 	mysqli_query($conn, "DELETE from blockedstates where model='$tempUser' ");
-	foreach ($_POST['state'] as $cc) {
-		$re1lt = mysqli_query($conn, "SELECT * FROM states where states='$cc'");
-		$r23ow = mysqli_fetch_object($re1lt);
-		$states_cd = $r23ow->states_code;
-		mysqli_query($conn, "INSERT INTO blockedstates (model,cc,states_code)values('$tempUser','$cc','$states_cd');");
+
+	if (isset($_POST['state'])) {
+		foreach ($_POST['state'] as $cc) {
+			$re1lt = mysqli_query($conn, "SELECT * FROM states where states='$cc'");
+			$r23ow = mysqli_fetch_object($re1lt);
+			$states_cd = $r23ow->states_code;
+			mysqli_query($conn, "INSERT INTO blockedstates (model,cc,states_code)values('$tempUser','$cc','$states_cd');");
+		}
 	}
 
 
@@ -209,7 +213,7 @@ if (!isset($_COOKIE["id"])) {
 	$result = mysqli_query($conn, "SELECT user from chatmodels WHERE id='" . $_COOKIE['id'] . "' LIMIT 1");
 	$row = mysqli_fetch_array($result);
 	$username = $row['user'];
-	if (isset($_FILES['ImageFile']['tmp_name'])) {
+	if (!empty($_FILES['ImageFile']['tmp_name']) && isset($_FILES['ImageFile']['tmp_name'])) {
 
 		// unlink("../../models/" . $username . "/thumbnail.jpg");
 
@@ -356,7 +360,6 @@ if (!isset($_COOKIE["id"])) {
 		$makmyloc = $row['makmyloc'];
 	}
 	mysqli_free_result($result);
-	
 } else {
 
 	$id = $_COOKIE["id"];

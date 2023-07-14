@@ -4,18 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Untitled Document</title>
 <style type="text/css">
-<!--
 .style1 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
 	color: #FF6600;
 }
--->
 </style>
 </head>
 
 <body>
 <span class="style1">Our server is currently undergoing maintenance and will be back up soon!</span>
 </body>
-
 </html>

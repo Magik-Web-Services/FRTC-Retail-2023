@@ -27,6 +27,7 @@ $resultModel = mysqli_query($conn, $welcomeQuery);
 $chkN = mysqli_num_rows($resultModel);
 if ($chkN > 0) {
 	// $valueWM = mysqli_result($resultModel,0,'models'); 
+	$valueWM = $resultModel->fetch_assoc()['blah'] ?? false;  
 } else {
 	$valueWM = "Welcome text not defined";
 }

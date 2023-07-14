@@ -1,4 +1,5 @@
 <?php
+include("../dbase.php");
 include("_header-admin.php");
 $PHP_SELF = "";
 $sitemoney30 = "";
@@ -111,14 +112,11 @@ $color = "";
 include('../dbase.php');
 if (isset($_POST['submit'])) {
 	$val = $_POST['welcome'];
+	echo $val;
 	$insertQuery = "UPDATE  welcome set models ='$val' where 1";
-	$conn = mysqli_query($conn, $insertQuery);
-	if ($conn) {
-?>
-		<script type="text/javascript">
-			alert("The data was saved successfully.");
-		</script>
-<?php
+	$conn1 = mysqli_query($conn, $insertQuery);
+	if ($conn1) {
+		echo "<script>alert('The data was saved successfully .');</script>";
 	}
 }
 
@@ -126,7 +124,7 @@ $welcomeQuery = "SELECT models FROM welcome";
 $result = mysqli_query($conn, $welcomeQuery);
 $chkN = mysqli_num_rows($result);
 if ($chkN > 0) {
-	$valueW = $result->fetch_assoc()['blah'] ?? false;  
+	$valueW = $result->fetch_assoc()['blah'] ?? false;
 } else {
 	$valueW = "Please write something";
 }

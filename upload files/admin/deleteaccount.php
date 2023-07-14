@@ -33,8 +33,8 @@ include("_header-admin.php")
 	include('../dbase.php');
 	
 	
-	$result = mysql_query("SELECT * FROM chatusers WHERE id='$_GET[id]' LIMIT 1");
-		while($row = mysql_fetch_array($result)) 
+	$result = mysqli_query($conn, "SELECT * FROM chatusers WHERE id='$_GET[id]' LIMIT 1");
+		while($row = mysqli_fetch_array($result)) 
 		{
 		$tempId=$row["id"];
 		$tempUser=$row["user"];
@@ -43,9 +43,9 @@ include("_header-admin.php")
 		$tempPhone=$row["phone"];
 		$tempName = $row["name"];
 		$status=$row['status'];
-		$result3=mysql_query("SELECT name FROM countries WHERE id='$row[country]' LIMIT 1");
-			while($row3 = mysql_fetch_array($result3)) {
-			$tempCountry=$row3[name];
+		$result3=mysqli_query($conn, "SELECT name FROM countries WHERE id='$row[country]' LIMIT 1");
+			while($row3 = mysqli_fetch_array($result3)) {
+			$tempCountry=$row3['name'];
 			}
 		
 		$tempState=$row["state"];
@@ -53,7 +53,7 @@ include("_header-admin.php")
 		$tempCity=$row["city"];
 		$tempAdress = $row["adress"];
 		$tempDReg=$row["dateRegistered"];
-		$tempMoney=$row[money]/100;
+		$tempMoney=$row['money']/100;
 		
 		$rowdate=$row["dateRegistered"];
 		$date=date("d F Y, H:i",$rawdate);
@@ -82,7 +82,7 @@ include("_header-admin.php")
           </h2></b></span></div></td>
         </tr>
         <tr align="center">
-          <td width="300" align="right" class="big_title"><div align="center"><a href="dodeleteaccount.php?id=<?php echo $_POST['id'];?>&type=<?php echo $_POST['type']; ?>&username=<?echo $_POST['username'];?>">Yes Delete This Account </a> </div></td>
+          <td width="300" align="right" class="big_title"><div align="center"><a href="dodeleteaccount.php?id=<?php echo $_POST['id'];?>&type=<?php echo $_POST['type']; ?>&username=<?php echo $_POST['username'];?>">Yes Delete This Account </a> </div></td>
           <td width="290" class="big_title"><a href="<?php if($_POST['type']=="model"){echo"modelviewdetails";} else if ($_POST['type']=="member"){echo"memberviewdetails";} else if ($_POST['type']=="sop"){echo"sopviewdetails";}?>.php?id=<?php echo $_POST['id'];?>">Return To Account Information</a> </td>
         </tr>
       </table>

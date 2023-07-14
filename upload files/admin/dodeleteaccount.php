@@ -1,13 +1,13 @@
-<?
+<?php
 error_reporting(0);
 include ("../dbase.php");
 include ("../settings.php");
 if ($_GET['type']=="model"){
-mysql_query('DELETE from modelpictures WHERE user="'.$_GET['username'].'"');
-mysql_query('DELETE from chatmodels WHERE user="'.$_GET['username'].'"');
-mysql_query('DELETE from favorites WHERE model="'.$_GET['username'].'"');
+mysqli_query($conn, 'DELETE from modelpictures WHERE user="'.$_GET['username'].'"');
+mysqli_query($conn, 'DELETE from chatmodels WHERE user="'.$_GET['username'].'"');
+mysqli_query($conn, 'DELETE from favorites WHERE model="'.$_GET['username'].'"');
 //unlink("../models/".$_GET['username']."/");
-$dir="../models/".$_GET[username]."/";
+$dir="../models/".$_GET['username']."/";
 $files=scandir($dir);
 foreach($files as $file)
 {
@@ -18,15 +18,15 @@ unlink($dir.$file);
 }
 rmdir($dir);
 } else if($_GET['type']=="member"){
-mysql_query('DELETE from chatusers WHERE user="'.$_GET['username'].'" ');
-mysql_query('DELETE from favorites WHERE member="'.$_GET['username'].'"');
+mysqli_query($conn, 'DELETE from chatusers WHERE user="'.$_GET['username'].'" ');
+mysqli_query($conn, 'DELETE from favorites WHERE member="'.$_GET['username'].'"');
 }
 else if ($_GET['type']=="sop"){
-mysql_query('DELETE from chatoperators WHERE user="'.$_GET['username'].'"');
+mysqli_query($conn, 'DELETE from chatoperators WHERE user="'.$_GET['username'].'"');
 }
 
 ?>
-<?
+<?php
 include("_header-admin.php")
 ?>
 <p>&nbsp;</p>
@@ -49,6 +49,6 @@ include("_header-admin.php")
       <p>&nbsp;</p></td>
   </tr>
 </table>
-<?
+<?php
 include("_footer-admin.php")
 ?>

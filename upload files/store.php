@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?
+<?php
 
 if (isset($_COOKIE["usertype"])){
 
@@ -125,7 +125,7 @@ body,td,th {
 <p align="center">&nbsp;</p>
 <p align="center">&nbsp;</p>
 <p align="center">&nbsp;</p>
-  <?
+  <?php
  include("_main.footer.php");
  ?>       
 

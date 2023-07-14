@@ -2,9 +2,7 @@
 include("dbase.php");
 include("settings.php");
 
-
 class chatBilling{
-
 	//declares vars
 	public $type;
 	public $ammount;
@@ -16,6 +14,9 @@ class chatBilling{
 	public $epercentage;	
 	public $owner;
 	public $cpm;
+	public $sessionid;
+	public $money;
+	public $scpm;
 
 	public function __construct(){
 
@@ -34,8 +35,8 @@ class chatBilling{
 		}
 
 		//get model data from db
-		$result=mysql_query("SELECT owner,epercentage,cpm,scpm from chatmodels WHERE user='{$this->model}' LIMIT 1");
-		while($row = mysql_fetch_array($result)) 
+		$result=mysqli_query($conn, "SELECT owner,epercentage,cpm,scpm from chatmodels WHERE user='{$this->model}' LIMIT 1");
+		while($row = mysqli_fetch_array($result)) 
 		{	
 			$this->epercentage=$row['epercentage'];	
 			$this->owner=$row['owner'];
@@ -44,8 +45,8 @@ class chatBilling{
 		}
 
 		//get user data from db
-		$result=mysql_query("SELECT money from chatusers WHERE user='{$this->member}' LIMIT 1");
-		while($row = mysql_fetch_array($result)) 
+		$result=mysqli_query($conn, "SELECT money from chatusers WHERE user='{$this->member}' LIMIT 1");
+		while($row = mysqli_fetch_array($result)) 
 		{	
 			$this->money=$row['money'];
 		}
@@ -56,25 +57,25 @@ class chatBilling{
         //print_r($this);exit;
 	//create or update video session
 	if($this->type == 'show' || $this->type == 'spectator'){
-	$result=mysql_query("SELECT sessionid from videosessions WHERE sessionid='{$this->sessionid}' LIMIT 1");
-	if (mysql_num_rows($result)!=1){
-		mysql_query("INSERT INTO videosessions ( sessionid, member, model, sop, cpm, epercentage, date, duration,paid,soppaid,type ) VALUES ('{$this->sessionid}','{$this->member}', '{$this->model}', '{$this->owner}', '{$this->ammount}','{$this->epercentage}', '{$this->now}', '60','0','0','{$this->type}')");
-		mysql_query("INSERT INTO videosessions_copy ( sessionid, member, model, sop, cpm, epercentage, date, duration,paid,soppaid,type ) VALUES ('{$this->sessionid}','{$this->member}', '{$this->model}', '{$this->owner}', '{$this->ammount}','{$this->epercentage}', '{$this->now}', '60','0','0','{$this->type}')");
+	$result=mysqli_query($conn, "SELECT sessionid from videosessions WHERE sessionid='{$this->sessionid}' LIMIT 1");
+	if (mysqli_num_rows($result)!=1){
+		mysqli_query($conn, "INSERT INTO videosessions ( sessionid, member, model, sop, cpm, epercentage, date, duration,paid,soppaid,type ) VALUES ('{$this->sessionid}','{$this->member}', '{$this->model}', '{$this->owner}', '{$this->ammount}','{$this->epercentage}', '{$this->now}', '60','0','0','{$this->type}')");
+		mysqli_query($conn, "INSERT INTO videosessions_copy ( sessionid, member, model, sop, cpm, epercentage, date, duration,paid,soppaid,type ) VALUES ('{$this->sessionid}','{$this->member}', '{$this->model}', '{$this->owner}', '{$this->ammount}','{$this->epercentage}', '{$this->now}', '60','0','0','{$this->type}')");
 		}else{
-		mysql_query("UPDATE videosessions SET duration=duration+'60' WHERE sessionid='{$this->sessionid}' LIMIT 1");
-		mysql_query("UPDATE videosessions_copy SET duration=duration+'60' WHERE sessionid='{$this->sessionid}' LIMIT 1");
+		mysqli_query($conn, "UPDATE videosessions SET duration=duration+'60' WHERE sessionid='{$this->sessionid}' LIMIT 1");
+		mysqli_query($conn, "UPDATE videosessions_copy SET duration=duration+'60' WHERE sessionid='{$this->sessionid}' LIMIT 1");
 		}
 	}else{
-		mysql_query("INSERT INTO videosessions ( sessionid, member, model, sop, cpm, epercentage, date, duration,paid,soppaid,type ) VALUES ('{$this->sessionid}','{$this->member}', '{$this->model}', '{$this->owner}', '{$this->ammount}','{$this->epercentage}', '{$this->now}', '60','0','0','{$this->type}')");
-		mysql_query("INSERT INTO videosessions_copy ( sessionid, member, model, sop, cpm, epercentage, date, duration,paid,soppaid,type ) VALUES ('{$this->sessionid}','{$this->member}', '{$this->model}', '{$this->owner}', '{$this->ammount}','{$this->epercentage}', '{$this->now}', '60','0','0','{$this->type}')");
+		mysqli_query($conn, "INSERT INTO videosessions ( sessionid, member, model, sop, cpm, epercentage, date, duration,paid,soppaid,type ) VALUES ('{$this->sessionid}','{$this->member}', '{$this->model}', '{$this->owner}', '{$this->ammount}','{$this->epercentage}', '{$this->now}', '60','0','0','{$this->type}')");
+		mysqli_query($conn, "INSERT INTO videosessions_copy ( sessionid, member, model, sop, cpm, epercentage, date, duration,paid,soppaid,type ) VALUES ('{$this->sessionid}','{$this->member}', '{$this->model}', '{$this->owner}', '{$this->ammount}','{$this->epercentage}', '{$this->now}', '60','0','0','{$this->type}')");
 	}
 
 	//update user token balance in db
-	if(mysql_query("UPDATE chatusers SET money=money-'{$this->ammount}' WHERE user = '{$this->member}' LIMIT 1")){
+	if(mysqli_query($conn, "UPDATE chatusers SET money=money-'{$this->ammount}' WHERE user = '{$this->member}' LIMIT 1")){
 
-		$res=mysql_query("SELECT money, user from chatusers WHERE user='{$this->member}' LIMIT 1");
+		$res=mysqli_query($conn, "SELECT money, user from chatusers WHERE user='{$this->member}' LIMIT 1");
 		//generate response message with current balance for ajax 
-			if($row = mysql_fetch_array($res)){
+			if($row = mysqli_fetch_array($res)){
 				$bal = $row['money'];
 				$array = array('msg' => 'db token balance updated!', 'bill_status' => 'success', 'cost' => $this->ammount, 'bal' => $bal, 'session' => $this->sessionid );
 				echo json_encode($array);
@@ -104,7 +105,7 @@ if($billing->money >= $billing->ammount){
 			$billing->updateDB();
 			break;
 		CASE 'spectator':
-			$billing->ammount = $billing->scpm;
+			$billing->ammount = $billing->cpm;
 			$billing->updateDB();
 			break;
 		DEFAULT:

@@ -16,7 +16,6 @@ else
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Untitled Document</title>
 <style type="text/css">
-<!--
 body,td,th {
 	color: #FFCC00;
 }
@@ -24,7 +23,6 @@ body {
 	background-color: #8F0000;
 }
 .style2 {font-weight: bold; font-family: Arial, Helvetica, sans-serif;}
--->
 </style></head>
 
 <body>

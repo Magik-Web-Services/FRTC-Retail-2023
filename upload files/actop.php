@@ -1,87 +1,90 @@
-<?
+<?php
 include("_main.header.php");
 ?><style type="text/css">
-<!--
-body,td,th {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	color: #FFFFFF;
-}
-body {
-	background-color: #000000;
-}
-a:link {
-	color: #99CC00;
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-	color: #99CC00;
-}
-a:hover {
-	text-decoration: none;
-	color: #99FF00;
-}
-a:active {
-	text-decoration: none;
-	color: #99CC00;
-}
--->
+	body,
+	td,
+	th {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		color: #FFFFFF;
+	}
+
+	body {
+		background-color: #000000;
+	}
+
+	a:link {
+		color: #99CC00;
+		text-decoration: none;
+	}
+
+	a:visited {
+		text-decoration: none;
+		color: #99CC00;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #99FF00;
+	}
+
+	a:active {
+		text-decoration: none;
+		color: #99CC00;
+	}
 </style>
 
 <table width="720" height="200" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#333333">
 
-  <tr>
+	<tr>
 
-    <td align="center" valign="middle"><p>&nbsp;</p>
+		<td align="center" valign="middle">
+			<p>&nbsp;</p>
 
-      <p>&nbsp;</p>
+			<p>&nbsp;</p>
 
-      <table width="600" border="0" cellspacing="0" cellpadding="0">
+			<table width="600" border="0" cellspacing="0" cellpadding="0">
 
-      <tr>
+				<tr>
 
-        <td height="51"><p class="message"> 
+					<td height="51">
+						<p class="message">
 
-          <?
+							<?
 
-$result=mysql_query("SELECT email,user,password,emailtype,status from chatoperators WHERE id = '$_GET[UID]' LIMIT 1");
+							$result = mysqli_query($conn, "SELECT email,user,password,emailtype,status from chatoperators WHERE id = '$_GET[UID]' LIMIT 1");
 
-while($row = mysql_fetch_array($result)) 
+							while ($row = mysqli_fetch_array($result)) {
 
-	{
+								$email = $row['email'];
 
-	$email=$row['email'];
+								$user = $row['user'];
 
-	$user=$row['user'];
+								$pass = $row['password'];
 
-	$pass=$row['password'];
+								$my_pass = $row['password'];
 
-	$my_pass=$row['password'];
+								$db_pass = md5($pass);
 
-	$db_pass=md5($pass);
+								$emailtype = $row['emailtype'];
 
-	$emailtype=$row['emailtype'];
+								$status = $row['status'];
+							}
 
-	$status=$row['status'];
 
-	}
 
-	
+							if ($status != "pending") {
 
-if ($status!="pending"){
+								echo 'This account has already been activated';
+							} else {
 
-echo 'This account has already been activated';
+								mysqli_query($conn, "UPDATE chatoperators SET password='$db_pass', status='active' WHERE id ='$_GET[UID]' LIMIT 1");
 
-} else {
+								if ($emailtype == "text") {
 
-	mysql_query("UPDATE chatoperators SET password='$db_pass', status='active' WHERE id ='$_GET[UID]' LIMIT 1");	
+									$charset = "Content-type: text/plain; charset=iso-8859-1\r\n";
 
-	if ($emailtype=="text"){
-
-	$charset="Content-type: text/plain; charset=iso-8859-1\r\n";
-
-	$message = "Here are your login details for your studio operator account
+									$message = "Here are your login details for your studio operator account
 
 
 
@@ -100,16 +103,13 @@ $siteurl/login.php?user=$user
 The Webmaster 
 
 This is an automated response, please do not reply!";
+								} else if ($emailtype == "html") {
 
 
 
-	} else if($emailtype=="html"){
+									$charset = "Content-type: text/html; charset=iso-8859-1\r\n";
 
-
-
-	$charset="Content-type: text/html; charset=iso-8859-1\r\n";
-
-	$message = "Here are your login details for your member account
+									$message = "Here are your login details for your member account
 
 
 
@@ -130,60 +130,61 @@ You can access the login page at:
 The Webmaster 
 
 This is an automated response, please do not reply!";
+								} else {
+
+									echo "Email variable not set";
+								}
 
 
 
-	}else{
-
-	echo"Email variable not set";
-
-	}
+								$subject = "Your login information at $siteurl";
 
 
 
-$subject = "Your login information at $siteurl"; 
+								mail(
+									$email,
+									$subject,
+									$message,
+
+									"MIME-Version: 1.0\r\n" .
+
+										$charset .
+
+										"From:$registrationemail\r\n" .
+
+										"Reply-To:$registrationemail\r\n" .
+
+										"X-Mailer: PHP/" . phpversion()
+								);
 
 
 
-mail($email, $subject, $message,
+								echo 'Your operator account has just been activated.';
+							}
 
-     "MIME-Version: 1.0\r\n".
+							?>
 
-     $charset.
+						</p>
+					</td>
 
-     "From:$registrationemail\r\n".
+				</tr>
 
-     "Reply-To:$registrationemail\r\n".
+				<tr>
 
-     "X-Mailer: PHP/" . phpversion() );
+					<td>&nbsp;</td>
 
+				</tr>
 
+			</table>
 
-echo 'Your operator account has just been activated.';
+			<p>&nbsp;</p>
 
-}
+			<p>&nbsp;</p>
+		</td>
 
-?>
-
-        </p></td>
-
-      </tr>
-
-      <tr>
-
-        <td>&nbsp;</td>
-
-      </tr>
-
-    </table>
-
-    <p>&nbsp;</p>
-
-    <p>&nbsp;</p></td>
-
-  </tr>
+	</tr>
 
 </table>
-<?
+<?php
 include("_main.footer.php");
 ?>

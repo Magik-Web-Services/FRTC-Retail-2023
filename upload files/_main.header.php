@@ -1,26 +1,17 @@
 <?php
-
 include("settings.php");
-
 ?>
-
 <!DOCTYPE html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
 <head>
-
-
 	<meta property=og:image content="<?php echo $siteurl ?>og-img.jpg">
-
 	<meta name="description" content="<?php echo $sitename ?>">
-
 	<!-- Facebook Meta Tags -->
 	<meta property="og:url" content="<?php echo $siteurl; ?>">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="<?php echo $sitename ?>">
 	<meta property="og:description" content="<?php echo $sitename ?>">
 	<meta property=og:image content="<?php echo $siteurl ?>og-img.jpg">
-
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="twitter:domain" content="<?php echo $siteurl ?>">
@@ -28,158 +19,42 @@ include("settings.php");
 	<meta name="twitter:title" content="<?php echo $sitename ?>">
 	<meta name="twitter:image" content="<?php echo $siteurl ?>og-img.jpg">
 	<meta name="twitter:description" content="<?php echo $sitename ?>">
-
 </head>
 <html lang="en">
-
 <head>
-
-
-
 	<?php
-
-
-
 	include("dbase.php");
-
-
-
 	include("settings.php");
-
 	$nTime = time();
-
-
-
-	//we set the status to offline to models that have not changed theyr status for 30 seconds
-
-
-
 	mysqli_query($conn, "UPDATE chatmodels SET status='offline' WHERE $nTime-lastupdate>30 AND status!='rejected' AND status!='blocked' AND status!='pending' AND forcedOnline='0'");
-
-
-
 	?>
-
-
-
 	<meta charset="UTF-8">
-
-
-
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-
-
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
-
 	<?php
-
-
-
 	$query = mysqli_query($conn, "select * from category order by id asc");
-
-
-
 	while ($row = mysqli_fetch_object($query)) {
-
-
-
 		$cats[] = $row->name;
 	}
-
-
-
 	$cat_array = array_chunk($cats, 7);
-
-
-
 	$columns = count($cat_array);
-	?>
-
-
-
-
-
-	<!--  Top Bar Menu PHP code    -->
-
-	<?php
-
-
-
 	$query = mysqli_query($conn, "select * from category_top order by id asc");
-
-
-
 	while ($row = mysqli_fetch_object($query)) {
-
-
-
 		$cats_top[] = $row->name;
 	}
-
-
-
 	$cat_array_top = array_chunk($cats_top, 7);
-
-
-
 	$columns_top = count($cat_array_top);
-
-
-
 	?>
-
-
-
 	<!-- Top Bar Menu PHP code   -->
-
-
-
-
-
-
 	<title><?php echo $sitename; ?></title>
-
-
-
-
-
-
-
 	<!-- CSS  -->
-
-
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-
 	<link href="cssnhd/bootstrap.css" type="text/css" rel="stylesheet">
-
-
-
 	<link href="cssnhd/style.css" type="text/css" rel="stylesheet">
-
-
-
 	<link href="font-awesomenhd/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-
 	<link href="cssnhd/media.css" type="text/css" rel="stylesheet">
-
-
-
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-
-
-
 	<link rel="stylesheet" type="text/css" href="css2/grid-2.css" />
-
-
-
 	<style>
 		body {
 			margin: 0;
@@ -188,43 +63,12 @@ include("settings.php");
 			font-size: 14px !important;
 			background-color: <?php echo "#" . $mainSiteBackgroundColor ?> !important;
 		}
-
-
-
-
-
-
-
-
-
-
-
 		.topnav {
 			background-color: transparent;
-			/* width: 100%; */
 			align-items: right;
 			float: right;
 			margin-right: 1px;
 		}
-
-
-
-
-
-
-
-
-
-
-
-		/* Top Nav Bar Buttons */
-
-
-
-
-
-
-
 		.topnav a {
 			border: 1px solid <?php echo '#' . $TopButtonOutlineColor ?>;
 			border-radius: 4px;
@@ -239,540 +83,88 @@ include("settings.php");
 			text-transform: capitalize;
 			margin-left: 3px;
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		.topnav a:hover {
 			background-color: #<?php echo $TopButtonHover ?>;
 			color: #<?php echo $TopButtonTextHover ?>;
 			border: 1px solid #<?php echo $TopButtonHoverOutlineColor ?>;
 			border-radius: 4px;
 		}
-
-
-
-
-
-
-
 		.active {
-
-
-
 			background-color: #<?php echo $TopButtonActive ?>;
-
-
-
 			color: #<?php echo $TopButtonTextActive ?> !important;
-
-
-
 			border: 1px solid #<?php echo $TopButtonActiveOutlineColor ?>;
-
-
-
 			border-radius: 4px;
 			opacity: 1;
 		}
-
 		.active:hover {
-
-
-
 			opacity: 0.9;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		.topnav .icon {
-
-
-
 			display: none;
-
-
-
 		}
-
-
-
-
-
-
-
-
-
-
-
-		/* Bottom header bar opacity  */
-
-
-
-
-
-
-
 		.bgsgsgcls.fixed-headr {
-
-
-
 			width: 100%;
-
-
-
 			z-index: 999;
-
-
-
 			background-color: #000;
-
-
-
 			opacity: 1.0;
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		.after_login_section ul.jflkjdfl {
-
-
-
 			z-index: 99999999;
-
-
-
 		}
-
-
-
-
-
-
-
-		/*center header break - padding adjusts the spacing*/
-
-
-
-
-
-
-
 		.bgsgsgcls {
-
-
-
 			float: left;
-
-
-
 			width: 100%;
-
-
-
 			padding-top: 0px;
-
-
-
 			transition: all 300ms ease;
-
-
-
 		}
-
-
-
 		.myanothercss {
-
-
-
 			margin: 30px 0 0;
-
-
-
 			float: left;
-
-
-
 			width: 100%;
-
-
-
 		}
-
-
-
-
-
-
-
-
-
-
-
-		/* Newer VAR CSS */
-
-
-
-
-
-
-
-
-
-
-
-		/* Top Bar Color */
-
-
-
-
-
-
-
 		.pinkcs {
-
-
-
-			/*  background-color: #<?php echo $topBarColor1 ?>; */
-
 			background-image: linear-gradient(#<?php echo $topBarColor1 ?>, #<?php echo $topBarColor2 ?>) !important;
-
 			float: left;
-
-
-
 			padding: 4px 0;
-
-
-
 			width: 100%;
-
 			height: 55px;
 			opacity: 96% !important;
-
-
-
-
-
-			/* Top bar opacity */
-
-
-
-
-
-
-
 			opacity: 1.0;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
-
-
-
-
-		/* Top Bar 2 Color  */
-
-
-
-
-
-
-
 		.col-md-l2.hide-on-med-and-down {
-
-
-
 			padding: 10px 26px 13px;
-
-
-
 			background: #<?php echo $topBarColor2 ?>;
-
-
 			display: none;
-
-
-
-
-
-
 		}
-
-
-
-
-
-
-
-
-
-
-
 		.phone-header {
-
-
-
 			color: #<?php echo $scrollTextColor ?>;
-
-
-
-			padding: 12px 33px !important
+				padding: 12px 33px !important
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		@media screen and (max-width: 600px) {
-
-
-
 			.topnav a:not(:first-child) {
 				display: none;
 			}
-
-
-
 			.topnav a.icon {
-
-
-
 				float: right;
-
-
-
 				display: block;
-
-
-
 			}
-
-
-
-
-
 		}
-
-
-
-
-
-
-
 		@media screen and (max-width: 600px) {
-
-
-
 			.topnav.responsive {
 				position: relative;
-
-
-
-
-
-
-
 			}
-
-
-
-
-
-
-
-
-
-
-
 			.topnav.responsive .icon {
-
-
-
 				position: absolute;
-
-
-
 				right: 0;
-
-
-
 				top: 0;
-
-
-
 			}
-
-
-
-
-
-
-
 			.topnav.responsive a {
-
-
-
 				float: none;
-
-
-
 				display: block;
-
-
-
 				text-align: left;
-
-
-
 			}
-
-
-
-
-
-
-
 			.open>.dropdown-menu
 		}
-
-
-
-
-
-
-
-
-
-
-
 		/* pretty yellow button */
 
 		#join-button {

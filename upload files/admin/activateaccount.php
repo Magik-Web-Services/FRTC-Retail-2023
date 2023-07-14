@@ -27,7 +27,7 @@ include("_header-admin.php")
             </b></span></div></td>
         </tr>
         <tr align="center">
-          <td width="300" class="big_title"><a href="doactivateaccount.php?id=<?php echo $_POST['id'];?>&type=<?php echo $_POST['type']; ?>&username=<?echo $_POST['username'];?>">Yes activate this account</a> </td>
+          <td width="300" class="big_title"><a href="doactivateaccount.php?id=<?php echo $_POST['id'];?>&type=<?php echo $_POST['type']; ?>&username=<? echo $_POST['username'];?>">Yes activate this account</a> </td>
           <td width="290" class="big_title"><a href="<?php if($_POST['type']=="model"){echo"modelviewdetails";} else if ($_POST['type']=="member"){echo"memberviewdetails";} else if ($_POST['type']=="sop"){echo"sopviewdetails";}?>.php?id=<?php echo $_POST['id'];?>">Return to account information</a> </td>
         </tr>
       </table>

@@ -1,4 +1,4 @@
-<?
+<?php
 include("_main.header.php");
 ?>
 
@@ -32,7 +32,7 @@ include("_main.header.php");
 
 <br>
 
-<?
+<?php
 include("_main.footer.php");
 ?>
 

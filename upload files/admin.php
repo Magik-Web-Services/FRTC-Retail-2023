@@ -1,12 +1,10 @@
-<?
+<?php
 include("_main.header.php");
-
 ?>
 
 
 <title>Untitled Document</title>
 <style type="text/css">
-<!--
 body,td,th {
 	color: #FFFFFF;
 }
@@ -20,7 +18,6 @@ body {
 	font-size: 12px;
 }
 .style3 {color: #FFCC00}
--->
 </style></head>
 
 <body>
@@ -39,6 +36,6 @@ body {
 </div>
 </body>
 </html>
-<?
+<?php
 include("_main.footer.php");
 ?>

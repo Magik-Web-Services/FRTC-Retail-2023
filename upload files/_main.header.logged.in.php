@@ -1,44 +1,28 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
 	<?php
 	include("dbase.php");
 	include("settings.php");
 	$userid = $_COOKIE['id'];
 	$result23 = mysqli_query($conn, "SELECT * from chatusers WHERE id='$_COOKIE[id]'");
 	$row44 = mysqli_fetch_array($result23);
-	// if($row44['forced_logout']=='yes'){
-	// 	header("Location: logout.php");
-	// }
 	$result2300 = mysqli_query($conn, "SELECT * from chatmodels WHERE id='$_COOKIE[id]'");
 	$row4400 = mysqli_fetch_array($result2300);
-
-	// if(isset($row4400['forced_logout']) == 'yes'){
-	// 	header("Location: logout.php");
-	// }
 	mysqli_query($conn, "UPDATE chatmodels SET Spy_Shows='no' WHERE id='$userid'");
 	$result = mysqli_query($conn, "SELECT user,freetime,freetimeexpired,loginkey from chatusers WHERE id='$_COOKIE[id]' LIMIT 1");
 	while ($row = mysqli_fetch_array($result)) {
 		$username = $row['user'];
 		$freetime = $row['freetime'];
 		$freetimeexpired = $row['freetimeexpired'];
-
 		session_start();
-
 		if ($row['loginkey'] != $_SESSION["loginkey"]) {
-
-			//header('Location:../../logout.php');
-
-			// echo "<script>window.location='logout.php'</script>";
-			//echo "not equal";
-
+			header('Location:../../logout.php');
+			echo "<script>window.location='logout.php'</script>";
+			// echo "not equal";
 		} else {
-
-			//echo "equal";
-
+			// echo "equal";
 		}
 	}
 	if ($freetime == 0 && (time() - $freetimeexpired) > (3600 * $freehours)) {
@@ -58,10 +42,6 @@
 	$cat_array = array_chunk($cats, 7);
 	$columns = count($cat_array);
 	?>
-
-
-	<!-- Start top bar categories code  -->
-
 	<?php
 	$query = mysqli_query($conn, "select * from category_top order by id asc");
 	while ($row = mysqli_fetch_object($query)) {
@@ -70,19 +50,7 @@
 	$cat_array_top = array_chunk($cats_top, 7);
 	$columns = count($cat_array_top);
 	?>
-
-
-
-
-
-
-
-
-
-
-
 	<title><?php echo $sitename; ?></title>
-
 	<!-- CSS  -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link href="cssnhd/bootstrap.css" type="text/css" rel="stylesheet">
@@ -94,46 +62,25 @@
 	<style>
 		.col-md-5 {
 			margin-right: 1px !important;
-
 		}
-
-
-
-
-
-
 
 		body {
 			margin: 0;
-
 			/* background-image: inherit !important;   */
-
 			font-weight: normal !important;
-
 			font-size: 14px !important;
-
 			/* background-color: #fff !important; */
-
-			background-image: linear-gradient(#<?php echo $homepageBackgroundColor1; ?>, #<?php echo $homepageBackgroundColor2; ?>) !important;
+			background-image: linear-gradient(#<?php echo $homepageBackgroundColor1 ?> #<?php echo $homepageBackgroundColor2 ?>) !important;
 			background-repeat: no-repeat !important;
-
 			background-color: #<?php echo $homepageBackgroundColor1; ?>;
-
-
 		}
-
 
 		.topnav {
 			background-color: ;
-			/*  width: 100%; */
-
-			align: right;
+			align-items: right;
 			float: right;
 			margin-right: 20px;
 		}
-
-
-		/* Top Nav Bar Buttons */
 
 		.topnav a {
 			border: 1px solid #<?php echo $TopButtonOutlineColor ?>;
@@ -151,8 +98,6 @@
 			/* margin-top: 2px; */
 		}
 
-
-
 		.topnav a:hover {
 			background-color: #<?php echo $TopButtonHover ?>;
 			color: #<?php echo $TopButtonTextHover ?>;
@@ -160,40 +105,18 @@
 			border-radius: 4px;
 		}
 
-		/* .active {
-  background-color: #<?php echo $TopButtonActive ?>;
-  color: #<?php echo $TopButtonTextActive ?>;
-  border: 1px solid #<?php echo $TopButtonActiveOutlineColor ?>;
-  border-radius: 4px;
-}
-*/
-
-
 		.topnav .icon {
 			display: none;
 		}
 
-
-
-		/* Bottom header bar opacity  */
-
 		.bgsgsgcls.fixed-headr {
 			width: 100%;
 			z-index: 999;
-			/* background-color: #000; */
-
-
 		}
-
-
 
 		.after_login_section ul.jflkjdfl {
 			z-index: 99999999;
 		}
-
-
-
-		/*center header break - padding adjusts the spacing*/
 
 		.bgsgsgcls {
 			float: left;
@@ -207,27 +130,15 @@
 			width: 100%;
 		}
 
-
-		/* Newer VAR CSS */
-
-
-		/* Top Bar Color */
-
 		.pinkcs {
-			background-image: linear-gradient(#<?php echo $topBarColor1 ?>, #<?php echo $topBarColor2 ?>) !important;
+			background-image: linear-gradient(#<?php echo $topBarColor1; ?>, #<?php echo $topBarColor2; ?>) !important;
 			float: left;
 			padding: 4px 0;
 			width: 100%;
-
 			/* Top bar opacity */
-
 			height: 55px;
 			opacity: 0.9;
-
 		}
-
-
-		/* Top Bar 2 Color  */
 
 		.col-md-l2.hide-on-med-and-down {
 			padding: 13px 26px 13px;
@@ -242,192 +153,82 @@
 			padding: 12px 33px !important
 		}
 
-
-
-
-
-
-		/* pretty yellow button */
-
 		#join-button {
-
 			background: #fc0;
-
 			background: linear-gradient(180deg, #fc0, #f98706);
-
 			border: 0;
-
 			border-radius: 2px;
-
 			box-shadow: 0 1px 0 rgba(0, 0, 0, .3);
-
 			color: #441f00 !important;
-
 			cursor: pointer;
-
 			display: inline-block;
-
 			font: 700 14px/30px arial, sans-serif;
-
 			height: 30px;
-
 			margin: 0;
-
 			outline: none;
-
 			padding: 0 19px;
-
 			text-align: center;
-
 			text-decoration: none;
-
 			text-shadow: 0 1px hsla(0, 0%, 100%, .4);
-
-
-
 		}
-
-
-
-
-
-
 
 		#join-button:hover {
-
 			background: #fc0;
-
 			background: linear-gradient(180deg, #ffd429, #f98706);
-
 			border: 0;
-
 			border-radius: 2px;
-
 			box-shadow: 0 1px 0 rgba(0, 0, 0, .3);
-
 			color: #441f00 !important;
-
 			cursor: pointer;
-
 			display: inline-block;
-
 			font: 700 14px/30px arial, sans-serif;
-
 			height: 30px;
-
 			margin: 0;
-
 			outline: none;
-
 			padding: 0 19px;
-
 			text-align: center;
-
 			text-decoration: none;
-
 			text-shadow: 0 1px hsla(0, 0%, 100%, .4);
-
-
-
 		}
-
-
-
-
-
-
 
 		/* pretty yellow button */
-
 		#join-button-mobile {
-
 			background: #fc0;
-
 			background: linear-gradient(180deg, #fc0, #f98706);
-
 			border: 0;
-
 			border-radius: 2px;
-
 			box-shadow: 0 1px 0 rgba(0, 0, 0, .3);
-
 			color: #441f00 !important;
-
 			cursor: pointer;
-
 			display: inline-block;
-
 			font: 700 14px/40px arial, sans-serif;
-
 			height: 40px;
-
 			margin: 0;
-
 			outline: none;
-
 			padding: 0 19px;
-
 			text-align: center;
-
 			text-decoration: none;
-
 			text-shadow: 0 1px hsla(0, 0%, 100%, .4);
-
-
-
 		}
-
-
-
-
-
-
 
 		#join-button-mobile:hover {
-
 			background: #fc0;
-
 			background: linear-gradient(180deg, #ffd429, #f98706);
-
 			border: 0;
-
 			border-radius: 2px;
-
 			box-shadow: 0 1px 0 rgba(0, 0, 0, .3);
-
 			color: #441f00 !important;
-
 			cursor: pointer;
-
 			display: inline-block;
-
 			font: 700 14px/40px arial, sans-serif;
-
 			height: 40px;
-
 			margin: 0;
-
 			outline: none;
-
 			padding: 0 19px;
-
 			text-align: center;
-
 			text-decoration: none;
-
 			text-shadow: 0 1px hsla(0, 0%, 100%, .4);
-
-
-
 		}
-
-
-
-
-
-
-
-
 
 		@media screen and (max-width: 600px) {
 			.topnav a:not(:first-child) {
@@ -456,8 +257,6 @@
 				display: block;
 				text-align: left;
 			}
-
-			.open>.dropdown-menu
 		}
 
 		@media screen and (max-width: 991px) and (min-width: 768px) {
@@ -474,11 +273,6 @@
 	</style>
 	<script>
 		jQuery(document).ready(function() {
-
-
-
-
-
 			$(window).scroll(function() {
 				var sticky = $('.navbar-fixed'),
 					scroll = $(window).scrollTop();
@@ -512,13 +306,7 @@
 				jQuery(".drop_manu").toggal('');
 			});
 		});
-	</script>
 
-
-	<script>
-
-	</script>
-	<script>
 		var IDLE_TIMEOUT = 600000; //10 minutes
 		var _idleSecondsTimer = null;
 		var _idleSecondsCounter = 0;
@@ -549,19 +337,13 @@
 			}
 		}
 	</script>
-
 </head>
-
 <body>
-
-	<?php
-	//You will be auto logged out in <span id="SecondsUntilExpire"></span> seconds.
-	?>
 	<div class="navbar-fixed">
 		<nav class="pinkcs desktopmenu" role="navigation">
 			<div class="nav-wrapper">
 				<tr>
-					<td class="top-right-td" valign="top"><!-- Start css3menu.com BODY section -->
+					<td class="top-right-td" valign="top">
 						<ul id="css3menu1" class="topmenu headermaintopleft col-md-3">
 							<li class="topmenu col-md-12 col-sm-6"><a href="<?php echo $siteurl ?>">
 									<center><img src="images/logo1.png"></center>
@@ -589,10 +371,7 @@
 									<li><a href="registration/model.php">Broadcast Yourself</a></li>
 								<?php } ?>
 								<li class="dropdown">
-
-
 									<ul class="jflkjdfl-OFF">
-
 										<?php
 										if ($username) {
 											echo '<li><a href="cp/chatusers/buyminutes.php">My Account</a></li>
@@ -610,22 +389,9 @@
 										<li><a href="logout.php">Logout</a></li>';
 										}
 										?>
-
 									</ul>
-
-
-
 								<li><a href="/cp/chatusers/buyminutes.php" id="join-button" style="margin-left:5px">Get Tokens</a></li>
-
-
-
-
 								</li>
-
-
-
-
-
 								<a href="javascript:void(0);" style="font-size:15px;" class="icon" onClick="myFunction()">&#9776;</a>
 							</div>
 						</ul>
@@ -646,10 +412,6 @@
 						}
 						return $protocol . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 					}
-
-
-
-
 					foreach ($cat_array_top as $cat_top) {
 						foreach ($cat_top as $c) {
 							$dbcat_top = base64_encode($c);
@@ -663,7 +425,6 @@
 							}
 						}
 					}
-
 					?>
 				</div>
 			</div>
@@ -716,8 +477,8 @@
 						<h3 class="drop-menu-mob"><?php if (isset($username)) {
 														echo $username;
 													} ?><?php if (isset($model)) {
-																										echo $model;
-																									} ?> <i class="fa fa-angle-down" aria-hidden="true"></i></h3>
+															echo $model;
+														} ?> <i class="fa fa-angle-down" aria-hidden="true"></i></h3>
 						<div class="collection-mob drop-data-mob">
 							<?php
 							if ($username) {

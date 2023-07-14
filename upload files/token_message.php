@@ -5,12 +5,12 @@ $userid = $_COOKIE['id'];
 $modlnm = $_REQUEST['modelname'];
 $usrnm = $_REQUEST['useramme'];
 
-mysql_query("UPDATE chatmodels SET Spy_Shows='no' WHERE user='$modlnm'");
+mysqli_query($conn, "UPDATE chatmodels SET Spy_Shows='no' WHERE user='$modlnm'");
 die;
 }
 if($_COOKIE['usertype']=="chatmodels"){
 $userid = $_COOKIE['id'];
-mysql_query("UPDATE chatmodels SET Spy_Shows='no' WHERE id='$userid'");
+mysqli_query($conn, "UPDATE chatmodels SET Spy_Shows='no' WHERE id='$userid'");
 die;
 }
 

@@ -18,8 +18,8 @@
 <div class="actm_sub_main_container">
 <?php
 
-$result=mysql_query("SELECT email,user,password,emailtype,status from chatusers WHERE id = '$_GET[UID]' LIMIT 1");
-while($row = mysql_fetch_array($result)) 
+$result=mysqli_query($conn, "SELECT email,user,password,emailtype,status from chatusers WHERE id = '$_GET[UID]' LIMIT 1");
+while($row = mysqli_fetch_array($result)) 
 
 	{
 
@@ -45,7 +45,7 @@ echo '<center><h5>This account is already active</h5></center>';
 
 } else {
 
-	mysql_query("UPDATE chatusers SET password='$db_pass', status='active' WHERE id ='$_GET[UID]' LIMIT 1");	
+	mysqli_query($conn, "UPDATE chatusers SET password='$db_pass', status='active' WHERE id ='$_GET[UID]' LIMIT 1");	
 
 	if ($emailtype=="text"){
 
@@ -115,17 +115,17 @@ $subject = "Your login information at $siteurl";
 
 
 
-mail($email, $subject, $message,
+// mail($email, $subject, $message,
 
-     "MIME-Version: 1.0\r\n".
+//      "MIME-Version: 1.0\r\n".
 
-     $charset.
+//      $charset.
 
-     "From:$registrationemail\r\n".
+//      "From:$registrationemail\r\n".
 
-     "Reply-To:$registrationemail\r\n".
+//      "Reply-To:$registrationemail\r\n".
 
-     "X-Mailer: PHP/" . phpversion() );
+//      "X-Mailer: PHP/" . phpversion() );
 
 
 

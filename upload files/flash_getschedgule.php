@@ -1,9 +1,9 @@
-<?
+<?php
 include("dbase.php");
 include("settings.php");
 $model=$_GET["model"];
-	$result = mysql_query("SELECT * FROM chatmodels WHERE user='$model' LIMIT 1");
-	while($row = mysql_fetch_array($result)) 
+	$result = mysqli_query($conn, "SELECT * FROM chatmodels WHERE user='$model' LIMIT 1");
+	while($row = mysqli_fetch_array($result)) 
 	{
 		$gmt=$row['gmt'];
 		if (substr($gmt,0,1)=="+"){
