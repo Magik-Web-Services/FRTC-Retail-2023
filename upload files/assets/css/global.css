@@ -1,0 +1,30 @@
+:root{
+    --mainSiteBackgroundColor: #a40000;
+    --TopButtonOutlineColor: transparent;
+    --TopButton: transparent;
+    --TopButtonText: #fcc;
+    --TopButtonHoverOutlineColor: transparent;
+    --TopButtonActive: #EA0000;
+    --TopButtonTextActive: #FFF;
+    --TopButtonActiveOutlineColor: #850a08;
+    --topBarColor1: #ff0101;
+    --topBarColor2: #c40303;
+    --scrollTextColor: #000;
+    --thumbBarColor: #111111;
+    --thumbBarColor2: #EFEFEF;
+    --TopButtonTextHover: #FFFFFF;
+    --homepageBackgroundColor1: #3e0101;
+    --homepageBackgroundColor2: #c40303;
+    --thumbBorderColor: #ffff;
+    --thumbBarColor1: #FFFFFF;
+    --sidebarTopColor: #930000;
+    --sidebarBorderColor: #930000;
+    --sidebarMainColor: #7b0000;
+    --sidebarTextColor: #ffa8a8;
+    --sidebarHoverColor: #c70000;
+    --sidebarTextHoverColor: #fff;
+    --regTextColor: #FFFFFF;
+    --TopButtonHover: transparent;
+    --scrollTextColors: transparent;
+    --thumbTextColor: #111111;
+}

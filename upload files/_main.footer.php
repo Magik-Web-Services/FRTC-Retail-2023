@@ -4,52 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <style type="text/css">
-    .foot {
-      margin-left: 0px;
-      margin-top: 0px;
-      margin-right: 0px;
-      margin-bottom: 0px;
-      color: #666666;
-      font-family: Arial, Helvetica, sans-serif;
-
-    }
-
-    .footText1 {
-      font-family: Arial, Helvetica, sans-serif;
-      padding: 20px;
-    }
-
-    .links {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      color: #FFF;
-    }
-
-    .links a {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      color: #666666;
-      padding: 10px;
-    }
-
-    .links a:hover {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      color: #ccc;
-      padding: 10px;
-    }
-    .adults {
-      color: #939393;
-    }
-    body,
-    td,
-    th {
-      color: #666;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 14px;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style3.css">
 </head>
 
 <foot>

@@ -20,24 +20,7 @@
 	<title><?php echo $sitename; ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="styles.css" rel="stylesheet" type="text/css">
-	<style type="text/css">
-		body {
-			margin-left: 0px;
-			margin-top: 0px;
-			margin-right: 0px;
-			margin-bottom: 0px;
-		}
-
-		.hamburger {
-			width: 38px;
-			height: 38px;
-			background-color: #990000;
-			color: FFF;
-			border-bottom-style: solid;
-			border-bottom-color: #000000;
-		}
-	</style>
+	<link href="assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>

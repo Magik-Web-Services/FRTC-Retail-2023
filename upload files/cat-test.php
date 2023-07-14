@@ -85,8 +85,8 @@
 
 
 	<?php
-	$query = mysql_query("select * from category order by name asc");
-	while ($row = mysql_fetch_object($query)) {
+	$query = mysqli_query($conn, "select * from category order by name asc");
+	while ($row = mysqli_fetch_object($query)) {
 		$cats[] = $row->name;
 	}
 	$cat_array = array_chunk($cats, 1000);
@@ -101,7 +101,6 @@
 
 
 	<style type="text/css">
-		<!--
 		.button1 {
 			width: 99%;
 			height: 30px;
@@ -115,18 +114,10 @@
 			margin-top: 0px;
 			text-align: center;
 			opacity: 0.9;
-
 		}
-
-
 		.button1:hover {
 			opacity: 1;
-
-
 		}
-
-
-
 		.button2 {
 			position: relative;
 			width: 99%;
@@ -141,34 +132,14 @@
 			margin-top: 0px;
 			text-align: center;
 			opacity: 0.9;
-
 		}
-
-
-
 		.button2:hover {
 			opacity: 1;
-
-
 		}
-
-
-
-
-
-
-
-
-
 		.searchbutton {
 			margin-top: -5%;
 			margin-left: -50%;
-
-
-
 		}
-
-
 		#Layer1 {
 			position: absolute;
 			width: 10px;
@@ -185,10 +156,6 @@
 			float: right;
 			margin-top: 0px;
 			margin-right: 5%;
-
-
-
-
 		}
 
 		.categorytext {

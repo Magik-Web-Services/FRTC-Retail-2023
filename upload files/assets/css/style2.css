@@ -1,0 +1,156 @@
+viewss {
+    float: left;
+    width: 100%;
+    background-color: var(--thumbBarColor2);
+    color: var(--thumbTextColor);
+}
+
+body {
+    margin: 0;
+    /* background-image: inherit !important;  */
+    font-weight: normal !important;
+    font-size: 14px !important;
+
+    background-image: linear-gradient(var(--homepageBackgroundColor1), var(--homepageBackgroundColor2)) !important;
+    background-repeat: no-repeat !important;
+}
+.refreshh {
+    margin: 25px 0;
+}
+.anothehrhe_refreshsh {
+    width: 99%;
+    margin: 0 auto;
+    display: table;
+    margin-top: -25px;
+    margin-bottom: 20px;
+}
+.myanothercss {
+    background-color: #eeeeee;
+    box-shadow: 0px 0px 3px #999999;
+    margin: 29px 0px;
+    padding: 30px 20px;
+    float: left;
+    width: 100%;
+}
+.backgorund_urll {
+    background-color: var(--thumbBorderColor);
+    box-shadow: 0px 0px 0px 2px var(--thumbBarColor1);
+    margin-bottom: 30px;
+    float: left;
+    width: 100%;
+}
+.category_heading {
+    background: var(--sidebarTopColor);
+    border-bottom: 1px solid var(--sidebarBorderColor);
+    box-sizing: border-box;
+    color: var(--sidebarBorderColor);
+    cursor: pointer;
+    display: block;
+
+    font-weight: 700;
+
+    height: 36px;
+
+    line-height: 36px;
+
+    padding: 0 20px;
+
+    position: relative;
+
+    -webkit-user-select: none;
+
+    -moz-user-select: none;
+
+    -ms-user-select: none;
+
+    user-select: none;
+
+    margin-bottom: 0px;
+
+    margin-top: -30px;
+
+    font-size: 16px !important;
+
+    padding-top: 10px !important;
+}
+
+.sidebar_filters a {
+    background: var(--sidebarMainColor);
+
+    border-bottom: 1px solid var(--sidebarBorderColor);
+
+    box-sizing: border-box;
+
+    color: var(--sidebarTextColor);
+
+    display: block;
+
+    font-size: 12px;
+
+    height: 36px;
+
+    line-height: 36px;
+
+    padding: 0 20px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.sidebar_filters a:hover {
+    background: var(--sidebarHoverColor);
+
+    color: var(--sidebarTextHoverColor) !important;
+    padding: 0px 0px 0px 20px;
+}
+
+.collection-item:hover {
+    opacity: 1 !important;
+    border-radius: 0px !important;
+}
+.cbp-rfgrid li a div.simple {
+    height: 29px;
+    width: 100%;
+}
+@media (min-width: 1920px) and (max-width: 2560px) {
+    ul#css3menu2 {
+        float: right !important;
+
+        width: 48% !important;
+    }
+}
+
+/* Large screens ----------- */
+
+@media only screen and (min-width: 1824px) {
+    .col-md-10 {
+        width: 87.3%;
+    }
+
+    .col-md-2 {
+        width: 12.666667%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .col-md-10 {
+        width: 100%;
+    }
+
+    .col-md-2 {
+        width: 100%;
+
+        margin-bottom: 40px;
+    }
+
+    img.show-more-models {
+        width: 100% !important;
+
+        object-fit: contain;
+    }
+
+    .mobile-sidebar-class {
+        display: none !important;
+    }
+}
